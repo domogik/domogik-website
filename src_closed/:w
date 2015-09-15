@@ -2,24 +2,7 @@
 
     <div class="noslide">
       <div class="nolayer">
-
-        <div class="container chat">
-
-
-                <div class="row">
-                  <div class='who whoLeft'> 
-                    Vous
-                  </div> 
-                  <div class="bubble bubbleLeft">
-                    Aria, raconte moi ta naissance
-                  </div>
-                </div>
-                <div class="row">
-                  <div class='who whoRight'> 
-                    Domogik
-                  </div> 
-                  <div class="bubble bubbleRight">
-                    <pre>
+        <pre>
 $ dmg_version
 Domogik version 0.3.1
 
@@ -40,18 +23,25 @@ Domogik started
 
 $ dmg_version
 Domogik version 0.4.1
-                  </pre>
-                  </div>
-                </div>
+        </pre>
+
+
                 <div class="row">
                   <div class='who whoLeft'> 
                     Vous
                   </div> 
                   <div class="bubble bubbleLeft">
-                    Quelle jolie histoire de geek !
+                    Quelle est la température du salon
+                  </div>
+                </div>
+                <div class="row">
+                  <div class='who whoRight'> 
+                    Domogik
+                  </div> 
+                  <div class="bubble bubbleRight">
+                    La température du salon est 21 degrés
                   </div>
                 </div>
 
-        </div>
       </div>
     </div>

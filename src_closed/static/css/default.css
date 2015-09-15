@@ -21,6 +21,16 @@ p {
     margin-right: auto;
 }
 
+pre {
+    border-style: none;
+    background-color: white;
+}
+
+.chat {
+    margin-top: 3em;
+}
+
+
 /* CONTENEUR PRINCIPAL
 --------------------------------------------- */
 
