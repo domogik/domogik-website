@@ -3,12 +3,20 @@
     <div class="noslide">
       <div class="nolayer">
 
+        <p> </p>
+        <div class="container ">
+          <blockquote>
+            <p>
+              Cette histoire se déroule dans un futur proche...
+            </p>
+          </blockquote>
+        </div>
         <div class="container chat">
 
 
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Aria, raconte moi ta naissance

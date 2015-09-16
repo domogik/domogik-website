@@ -498,14 +498,19 @@ pre {
 /*
     background: transparent url("../images/dmg-logov1_bluelagoonl_64x64.png") 0 0 no-repeat;
     background: transparent url("../images/dmg-logov1_darkgrey_64x64.png") 0 0 no-repeat;
-*/
     background: transparent url("../images/dmg-logov1_white_64x64.png") 0 0 no-repeat;
+*/
+    background: transparent url("../images/dmg-logo.png") 0 0 no-repeat;
 }
 
 .whoLeft {
+/*
     color: transparent;
-    margin-top: -10px;
     background: transparent url("../images_non_free/girl.png") 0 0 no-repeat;
+    margin-top: -10px;
+*/
+    color: #005774;
+    text-align: center;
 }
 
 
