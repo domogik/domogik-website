@@ -53,7 +53,7 @@ Domogik version 0.4.1
                 </div>
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Quelle jolie histoire de geek !
