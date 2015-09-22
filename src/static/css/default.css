@@ -493,9 +493,13 @@ p {
 }
 
 .whoLeft {
+/*
     color: transparent;
-    margin-top: -10px;
     background: transparent url("../images_non_free/girl.png") 0 0 no-repeat;
+    margin-top: -10px;
+*/
+    color: white;
+    text-align: center;
 }
 
 

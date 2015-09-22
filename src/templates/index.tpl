@@ -278,7 +278,7 @@
                 <!-- dialog 1 -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Quelle est la température du salon
@@ -296,7 +296,7 @@
                 <!-- dialog 2 -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Allume le salon.
@@ -316,7 +316,7 @@
                 <!-- dialog 3 -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Il fait combien dehors ?
@@ -334,7 +334,7 @@
                 <!-- dialog 3 - suite -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Quand je dis il fait combien dehors ça signifie quelle est la température de dehors
@@ -352,7 +352,7 @@
                 <!-- dialog 3 - suite -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Il fait combien dehors ?
@@ -376,7 +376,7 @@
                 <!-- dialog 3 -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Peux-tu me donner la météo ?
@@ -394,7 +394,7 @@
                 <!-- dialog 3 - suite -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Oui
@@ -414,7 +414,7 @@
                 <!-- dialog various 1 -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Calcule 3 plus 4 fois 5 moins 2
@@ -432,7 +432,7 @@
                 <!-- dialog various 2 -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Dis moi quel est le poids d'une pomme ?
@@ -450,7 +450,7 @@
                 <!-- dialog various 3 -->
                 <div class="row">
                   <div class='who whoLeft'> 
-                    Vous
+                    <i class="fa fa-user fa-3x"></i>
                   </div> 
                   <div class="bubble bubbleLeft">
                     Quelle heure est-il ?
