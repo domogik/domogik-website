@@ -71,7 +71,7 @@
               <!-- <img src="./images/gicon_multitechno.png" alt="Multi technologies"> -->
               <i class="fa fa-cubes fa-4x"></i>
               <p>
-                Domogik évolue avec les nouvelles technologies (Téléinfo, Zwave, Ipx800, Velbus, Onewire, Rfxcom...). D'autres technologies sont en cours de développement. 
+                Domogik évolue avec les nouvelles technologies (Téléinfo, Velbus, Onewire, Rfxcom...). D'autres technologies sont en cours de développement (Zwave,...). 
                 Les technologies sont supportées par des plugins que vous pouvez trouver sur <a href="http://repo-public.domogik.org/" alt="Dépôt de packages">notre dépôt de packages</a>.
               </p>
             </div>
@@ -80,7 +80,7 @@
               <!-- <img src="./images/gicon_html5.png" alt="Interface web responsive"> -->
               <i class="fa fa-html5 fa-4x"></i>
               <p>
-                Domogik est livré en standard avec une interface d'administration web et responsive afin que vous puissiez l'utiliser rapidement, que ça soit depuis votre ordinateur, votre tablette ou votre smartphone.
+                Domogik est livré en standard avec une interface d'administration web et responsive afin que vous puissiez l'utiliser rapidement, que ça soit depuis votre ordinateur, votre tablette, votre smartphone ou votre liseuse.
               </p>
             </div>
             <div class="col-md-4 column">
@@ -169,6 +169,10 @@
                 <img src="images/screenshot_dmw_phone_01.png" class="img-responsive screenshot">
               </div>
             </div>
+
+            <h2>Vous pouvez même utiliser une liseuse</h2>
+              <p>De part leur faible consommation les liseuses peuvent devenir des interfaces de contrôle idéales.</p>
+              <img src="images/photo_dmw_ereader_01.png" class="img-responsive screenshot">
           </div>
         </div>
       </div>
@@ -197,9 +201,7 @@
             </div>
 
             <h2>Créez des scénarios</h2>
-            <div class="row">
                 <img src="images/screenshot_admin_scenario_01.png" class="img-responsive screenshot">
-            </div>
 
         </div>
       </div>
@@ -403,24 +405,6 @@
                     Domogik
                   </div> 
                   <div class="bubble bubbleRight">
-                    C'est noté.
-                  </div>
-                </div>
-
-                <!-- dialog 3 - suite -->
-                <div class="row">
-                  <div class='who whoLeft'> 
-                    Vous
-                  </div> 
-                  <div class="bubble bubbleLeft">
-                    Peux-tu me donner la météo ?
-                  </div>
-                </div>
-                <div class="row">
-                  <div class='who whoRight'> 
-                    Domogik
-                  </div> 
-                  <div class="bubble bubbleRight">
                     Le ciel sera partiellement nuageux. Les températures seront comprises entre 8 et 19 degrés. 
                   </div>
                 </div>
@@ -522,11 +506,11 @@
             <div class="row">
               <div class="col-md-6 column">
                 <h2>Un de vos besoins domotique n'est pas couvert ?</h2>
-                <p>Créez votre propre plugin grâce a la documentation et au code des plugins existants.</p>
+                <p>Créez votre propre plugin grâce à la documentation et au code des plugins existants.</p>
               </div>
               <div class="col-md-6 column">
                 <h2>Nos interfaces graphiques ne vous plaisent pas ?</h2>
-                <p>Tout le monde n'a as les memes goûts! Si vous n'aimez ni Domoweb, ni Domodroid vous pouvez grâce aux APIs documentées interagir avec Domogik et créer votre propre interface!</p>
+                <p>Tout le monde n'a pas les memes goûts! Si vous n'aimez ni Domoweb, ni Domodroid vous pouvez grâce aux APIs documentées interagir avec Domogik et créer votre propre interface!</p>
                 <p>Vous pouvez également utiliser des solutions existantes comme <a href="http://www.openremote.org">OpenRemote</a> pour créer vore interface graphique.</p>
               </div>
             </div>

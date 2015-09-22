@@ -4,9 +4,6 @@
 
     <h2>Questions générales</h2>
 
-    <h3>bla</h3>
-    <blockquote>ble</blockquote>
-
     <h3>Est-ce que des éléments de Domogik sont payants ?</h3>
     <blockquote>Domogik et l'écosystème qui va avec est entièrement libre et gratuit.</blockquote>
 
