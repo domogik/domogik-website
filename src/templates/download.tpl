@@ -22,6 +22,14 @@
                     <i class="fa fa-book"></i> Documentation
                   </a>
                 </div>
+                <p>
+                  Domogik utilise le composant Domogik-MQ pour la communication entre les composants.
+                </p>
+                <div>
+                  <a href="https://github.com/domogik/domogik-mq/archive/1.1.tar.gz">
+                    <i class="fa fa-download"></i> Télécharger Domogik-MQ
+                  </a>&nbsp;
+                </div>
               </div>
               <div class="col-md-6 column">
                 <h2>Domoweb 0.4</h2>
@@ -29,7 +37,7 @@
                   Domoweb est l'interface de visualisation et de contrôle. Il s'agit d'une interface web responsive qui s'adapte a toutes les tailles d'ecran : ordinateurs, tablettes et téléphones.
                 </p>
                 <div>
-                  <a href="https://github.com/domogik/domoweb/archive/0.4.tar.gz">
+                  <a href="https://github.com/domogik/domoweb/archive/0.4.0.tar.gz">
                     <i class="fa fa-download"></i> Télécharger
                   </a>&nbsp;
                   <!--

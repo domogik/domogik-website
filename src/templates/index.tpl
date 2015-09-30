@@ -156,8 +156,18 @@
               <div class="col-md-4">
                 <img src="images/screenshot_dmw_style_03.png" class="img-responsive screenshot">
               </div>
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/screenshot_dmw_style_04.png" class="img-responsive screenshot">
+              </div>
+              <div class="col-md-4">
+                <!-- <img src="images/screenshot_dmw_style_05.png" class="img-responsive screenshot"> -->
+              </div>
+              <div class="col-md-4">
+                <!-- <img src="images/screenshot_dmw_style_06.png" class="img-responsive screenshot"> -->
+              </div>
             </div>
-
+<!--
             <h2>Sur les smartphones compatibles utilisez-la comme une application native</h2>
             <div class="row">
               <div class="col-md-8">
@@ -169,6 +179,7 @@
                 <img src="images/screenshot_dmw_phone_01.png" class="img-responsive screenshot">
               </div>
             </div>
+-->
 
             <h2>Vous pouvez même utiliser une liseuse</h2>
               <p>De part leur faible consommation les liseuses peuvent devenir des interfaces de contrôle idéales.</p>
@@ -219,16 +230,10 @@
 
         <div class="container">
           <h2>Avec Domogik et Openremote, vous pouvez créer des interfaces photo réalistes</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <img src="images/open_remote_01_tablet.png" class="img-responsive screenshot">
-            </div>
-            <div class="col-md-6">
-              <div class="embed-responsive embed-responsive-16by9">
+          <img src="images/open_remote_01_tablet.png" class="img-responsive screenshot">
+<!--
                 <iframe class="col-lg-2 col-md-6 col-sm-12 col-xs-12" src="https://www.youtube.com/watch?v=fzn4ONspGNM"></iframe>
-              </div>
-            </div>
-          </div>
+-->
         </div>
       </div>
     </div>
