@@ -7,15 +7,15 @@
             <h1>Téléchargez la dernière version</h1>
             <div clas="row">
               <div class="col-md-6 column">
-                <h2>Domogik 0.4.1</h2>
+                <h2>Domogik 0.4.2</h2>
                 <p>
                   Domogik est le coeur de la solution. Il est livré avec une interface d'administration.
                 </p>
                 <div>
-                  <a href="https://github.com/domogik/domogik/archive/0.4.1.tar.gz">
+                  <a href="https://github.com/domogik/domogik/archive/0.4.2.tar.gz">
                     <i class="fa fa-download"></i> Télécharger
                   </a>&nbsp;
-                  <a href="http://docs.domogik.org/domogik/stable/en/releases/0.4.1.html">
+                  <a href="http://docs.domogik.org/domogik/stable/en/releases/0.4.2.html">
                     <i class="fa fa-list-alt"></i> Release note
                   </a>&nbsp;
                   <a href="http://docs.domogik.org/domogik/">
@@ -26,18 +26,18 @@
                   Domogik utilise le composant Domogik-MQ pour la communication entre les composants.
                 </p>
                 <div>
-                  <a href="https://github.com/domogik/domogik-mq/archive/1.1.tar.gz">
+                  <a href="https://github.com/domogik/domogik-mq/archive/1.2.tar.gz">
                     <i class="fa fa-download"></i> Télécharger Domogik-MQ
                   </a>&nbsp;
                 </div>
               </div>
               <div class="col-md-6 column">
-                <h2>Domoweb 0.4</h2>
+                <h2>Domoweb 0.4.1</h2>
                 <p>
                   Domoweb est l'interface de visualisation et de contrôle. Il s'agit d'une interface web responsive qui s'adapte a toutes les tailles d'ecran : ordinateurs, tablettes et téléphones.
                 </p>
                 <div>
-                  <a href="https://github.com/domogik/domoweb/archive/0.4.0.tar.gz">
+                  <a href="https://github.com/domogik/domoweb/archive/0.4.1.tar.gz">
                     <i class="fa fa-download"></i> Télécharger
                   </a>&nbsp;
                   <!--
