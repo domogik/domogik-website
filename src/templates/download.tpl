@@ -5,7 +5,7 @@
         <div class="nolayer">
           <div class="container">
             <h1>Téléchargez la dernière version</h1>
-            <div clas="row">
+            <div class="row">
               <div class="col-md-6 column">
                 <h2>Domogik 0.4.2</h2>
                 <p>
@@ -51,7 +51,7 @@
                 </div>
               </div>
             </div>
-            <div clas="row">
+            <div class="row">
               <div class="col-md-6 column">
                 <h2>DomoButler</h2>
                 <p>
