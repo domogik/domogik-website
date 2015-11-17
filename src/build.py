@@ -9,6 +9,7 @@ import shutil
 OUT_DIR = "../build/"
 LOCALE_DIR = "./locale/"
 STATIC_DIR = "./static/"
+ROOT_FILES = ["./index.html", "404.html", ".htaccess"]
 
 LANG = ["fr", "en"]
 
@@ -24,6 +25,8 @@ if __name__ == "__main__":
 
         # copy static files
         shutil.copytree(STATIC_DIR, dir)
+        for fic in ROOT_FILES:
+            shutil.copy(fic, OUT_DIR)
 
         # build website
         site = make_site(outpath = dir,

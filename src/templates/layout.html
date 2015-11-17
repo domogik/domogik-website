@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!-- Hey, what are you looking for ? ;) -->
-<!-- TODO list -->
-<!-- en francais parce que c'est une jolie langue ! 
-
-     * Creer une page FAQ et creer une mini slide FAQ avec un bouton qui poine vers cette page
-     * Ajouter un lien flottant back to top
-
--->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,11 +37,16 @@
             <li><a href="./faq.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
             <li><a href="http://repo-public.domogik.org/"><i class="fa fa-cube"></i> Packages</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i> Langue <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/fr/">Français</a></li>
+              <li><a href="/en/">Anglais</a></li>
+            </ul>
+          </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
-
 
 {% block content -%}
 {%- endblock content %}
