@@ -1,5 +1,3 @@
-LOGIN=fritz.smh@gmail.com
-PASSWORD=traduirecestchiant
 PROJECT=domogik-website
 RESOURCE=i18n_website_templatepot   # no dot inside!
 LOCALE_DIR=./locale/
@@ -8,6 +6,10 @@ DOMAIN=website
 LANGS="fr en"
 
 echo "Download translations from Transifex..."
+echo "Login :"
+read LOGIN
+echo "Password :"
+read PASSWORD
 for lang in $LANGS
   do
     echo "- $lang..."
