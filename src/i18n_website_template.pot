@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-18 10:15+0100\n"
+"POT-Creation-Date: 2015-11-18 13:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,81 +109,65 @@ msgstr ""
 msgid "Domogik et l'écosystème qui va avec est entièrement libre et gratuit."
 msgstr ""
 
-#: templates/faq.html:14
-msgid ""
-"Pourquoi le site vitrine est en français mais la solution et toute sa "
-"documentation sont en anglais ?"
-msgstr ""
-
 #: templates/faq.html:15
-msgid ""
-"La comunauté des utilisateurs est majoritairement francophone mais nous "
-"avons choisi à l'origine la langue de l'informatique pour favoriser les "
-"contributions. Dans la pratique nous avons dans l'équipe des développeurs"
-" anglophones, ce qui a conforté ce choix. Il est prévu de traduire les "
-"interfaces et documentations utilisateur en français lors d'une future "
-"version.  "
-msgstr ""
-
-#: templates/faq.html:18
 msgid "Niveau de compétence"
 msgstr ""
 
-#: templates/faq.html:20
+#: templates/faq.html:17
 msgid "Quel est le niveau de compétence requis pour utiliser Domogik ?"
 msgstr ""
 
-#: templates/faq.html:21
+#: templates/faq.html:18
 msgid "Domogik est fait pour être le plus simple possible d'utilisation."
 msgstr ""
 
-#: templates/faq.html:23
+#: templates/faq.html:20
 msgid "Quel est le niveau de compétence requis pour administrer Domogik ?"
 msgstr ""
 
-#: templates/faq.html:24
+#: templates/faq.html:21
 msgid ""
 "Administrer Domogik requiert quelques compétences sur l'utilisation de "
 "Linux."
 msgstr ""
 
-#: templates/faq.html:26
+#: templates/faq.html:23
 msgid "Quel est le niveau de compétence requis pour installer Domogik ?"
 msgstr ""
 
-#: templates/faq.html:27
+#: templates/faq.html:24
 msgid ""
 "Pour installer Domogik à ce jour, il faut quelques compétences sur "
 "l'utilisation de Linux."
 msgstr ""
 
-#: templates/faq.html:31 templates/layout.html:38
+#: templates/faq.html:28 templates/layout.html:38
 msgid "Packages"
 msgstr ""
 
-#: templates/faq.html:33
+#: templates/faq.html:30
 msgid ""
 "Pourquoi y a t'il moins de packages (plugins) avec la version 0.4.x "
 "qu'avec la version 0.3.x ?"
 msgstr ""
 
-#: templates/faq.html:34
+#: templates/faq.html:31
 msgid ""
 "Domogik 0.4 est un <em>reboot</em> de Domogik. La compatibilité des "
 "plugins a donc été cassée."
 msgstr ""
 
-#: templates/faq.html:36
+#: templates/faq.html:33
 msgid "Versions et fonctionnalités à venir"
 msgstr ""
 
-#: templates/faq.html:39
+#: templates/faq.html:36
 msgid ""
 "La version 0.4.0/0.4.1 de Domogik a été très longue à sortir. Est-ce que "
 "ça sera le cas pour les suivantes ?"
 msgstr ""
 
-#: templates/faq.html:40
+#: templates/faq.html:37
 msgid ""
 "En effet Domogik 0.4 a été une trop longue aventure. La solution a été "
 "quasiment entièrement réécrite et nous avons passé beaucoup de temps a "
@@ -192,19 +176,19 @@ msgid ""
 "plus souples."
 msgstr ""
 
-#: templates/faq.html:43
+#: templates/faq.html:40
 msgid "Que prévoyez-vous pour la prochaine version ?"
 msgstr ""
 
-#: templates/faq.html:44
+#: templates/faq.html:41
 msgid "Il y a tellement de sujets à adresser... Vous verrez bien ;)"
 msgstr ""
 
-#: templates/faq.html:46
+#: templates/faq.html:43
 msgid "Pourquoi la technologie XYZ n'est pas supportée ?"
 msgstr ""
 
-#: templates/faq.html:47
+#: templates/faq.html:44
 msgid ""
 "Il y a tellement de technologies domotiques différentes et il faut du "
 "temps pour ajouter le support d'une technologie. Certaines peuvent être "
@@ -213,37 +197,37 @@ msgid ""
 " pas assez vite pour vous, vous pouvez toujours venir nous aider ;)"
 msgstr ""
 
-#: templates/faq.html:51
+#: templates/faq.html:48
 msgid "Aider, participer"
 msgstr ""
 
-#: templates/faq.html:53
+#: templates/faq.html:50
 msgid ""
 "Je souhaite vous aider, mais je ne sais pas développer, que puis-je faire"
 " ?"
 msgstr ""
 
-#: templates/faq.html:54
+#: templates/faq.html:51
 msgid ""
 "Il est possible de nous aider sur différents sujets : communication, "
 "traductions (quand l'outillage sera mis en place), documentation, tests."
 msgstr ""
 
-#: templates/faq.html:56
+#: templates/faq.html:53
 msgid "Je souhaite vous aider, comment vous contacter ?"
 msgstr ""
 
-#: templates/faq.html:57
+#: templates/faq.html:54
 msgid ""
 "Vous trouverez les différents moyens de communication en bas de cette "
 "page (mail, irc, etc)."
 msgstr ""
 
-#: templates/faq.html:59
+#: templates/faq.html:56
 msgid "Je souhaite faire un don, comment faire ?"
 msgstr ""
 
-#: templates/faq.html:60
+#: templates/faq.html:57
 msgid ""
 "A ce jour, nous n'avons encore rien qui nous permette de recevoir des "
 "dons pécuniers. Toutefois, vous pouvez proposer du matériel (prêt ou don)"
