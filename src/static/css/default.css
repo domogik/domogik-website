@@ -201,7 +201,7 @@ p {
     font-weight: 200;
   }
 
-  .title h1 .strong {
+  .title h1 strong {
     text-transform: uppercase;
     font-size: 0.8em;
     font-weight: 700;
