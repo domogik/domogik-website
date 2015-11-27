@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-18 13:37+0100\n"
+"POT-Creation-Date: 2015-11-27 20:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -272,7 +272,7 @@ msgid "Et bien plus encore..."
 msgstr ""
 
 #: templates/index.html:60
-msgid "Une solution</span> <span class='strong'>moderne"
+msgid "<span class='fine'>Une solution</span> <strong>moderne</strong>"
 msgstr ""
 
 #: templates/index.html:70
@@ -345,7 +345,7 @@ msgid ""
 msgstr ""
 
 #: templates/index.html:123
-msgid "Une interface web</span> <span class='strong'>élégante"
+msgid "<span class='fine'>Une interface web</span> <strong>élégante</strong>"
 msgstr ""
 
 #: templates/index.html:129
@@ -371,7 +371,7 @@ msgid ""
 msgstr ""
 
 #: templates/index.html:188
-msgid "Administrez depuis</span> <span class='strong'>votre canapé"
+msgid "<span class='fine'>Administrez depuis</span> <strong>votre canapé</strong>"
 msgstr ""
 
 #: templates/index.html:194
@@ -389,7 +389,7 @@ msgid "Créez des scénarios"
 msgstr ""
 
 #: templates/index.html:218
-msgid "Faites du</span> <span class='strong'>photoréalisme"
+msgid "<span class='fine'>Faites du</span> <strong>photoréalisme</strong>"
 msgstr ""
 
 #: templates/index.html:223
@@ -399,7 +399,7 @@ msgid ""
 msgstr ""
 
 #: templates/index.html:238
-msgid "Votre</span> <span class='strong'>majordome"
+msgid "<span class='fine'>Votre</span> <strong>majordome</strong>"
 msgstr ""
 
 #: templates/index.html:245
@@ -510,7 +510,7 @@ msgid "Il est 23 heure 25 "
 msgstr ""
 
 #: templates/index.html:473
-msgid "Une solution</span> <span class='strong'>ouverte"
+msgid "<span class='fine'>Une solution</span> <strong>ouverte</strong>"
 msgstr ""
 
 #: templates/index.html:481
