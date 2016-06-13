@@ -28,6 +28,24 @@
       </div>
     </div>
 
+    <!-- slide blog -->
+    <div id="blogLastEntries" class="noslide">
+      <div class="container">
+        <div class="row">
+          {% for preview in blog_headers %}
+            {% if loop.index <= 3 %}
+              <div class="col-md-6">
+                <div class="xxxxx">
+                  <h2>{{ preview.title }}</h2>
+                  <img src='{{ preview.thumbnail }}'/>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
     <!-- slide bla bla -->
 
     <div id="slideDescription" class="noslide">
