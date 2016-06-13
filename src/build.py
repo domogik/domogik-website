@@ -30,9 +30,10 @@ def get_blog_headers(lang):
     mypath = "{0}-{1}".format(os.path.join(TEMPLATES_DIR, BLOG_DIR_PREFIX), lang)
     data = []
     for fic in os.listdir(mypath):
-        if os.path.isfile(os.path.join(mypath, fic)):
+        if os.path.isfile(os.path.join(mypath, fic)) and fic[-5:] == ".html":
             url = os.path.join("{0}-{1}".format(BLOG_DIR_PREFIX, lang), fic)
-            header = u""
+            header = ""
+            content = ""
             thumbnail = u"none.jpg"
             title = u"No title found !"
             # read the file to grab data
@@ -56,13 +57,17 @@ def get_blog_headers(lang):
                         in_header = False
                         print("--Fin du header")
                     if in_header:
-                        header += u"\n{0}".format(line)
+                        header += unicode(line, "utf8")
+                    content += unicode(line, "utf8")
 
             data.append({"title" : title,
                          "thumbnail" : thumbnail,
                          "url" : url,
-                         "header" : header})
-    return sorted(data, key=lambda k: k['url'], reverse = True) 
+                         "header" : header,
+                         "content" : content})
+    data = sorted(data, key=lambda k: k['url'], reverse = True) 
+    print(data)
+    return data
 
 
 
