@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+  <div class="container" id="blog">
+
+    <div class="row">
+      <div class="col-md-8">
+        {% for preview in blog_headers %}
+          {{ preview.header }}
+        {% endfor %}
+      </div>
+      
+      <div class="col-md-4">
+        <ul>
+        {% for preview in blog_headers %}
+          <li><a href="{{ preview.url }}">{{ preview.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>
+      
+    </div>
+
+  </div>
+
+
+{% endblock %}
