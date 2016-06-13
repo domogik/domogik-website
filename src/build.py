@@ -13,7 +13,8 @@ OUT_DIR = "../build/"
 LOCALE_DIR = "./locale/"
 STATIC_DIR = "./static/"
 ROOT_FILES = ["./index.html", "404.html", ".htaccess"]
-TEMPLATES_DIR = "./templates/"
+#TEMPLATES_DIR = "./templates/"
+TEMPLATES_DIR = "./"
 BLOG_DIR_PREFIX = "blog"
 
 LANG = ["fr", "en"]
@@ -101,4 +102,14 @@ if __name__ == "__main__":
 
         site.render()
 
+
+        # build blog entries
+        os.mkdir(os.path.join(dir, "{0}-{1}".format(BLOG_DIR_PREFIX, lang)))
+        site = make_site(searchpath = "./{0}-{1}".format(BLOG_DIR_PREFIX, lang),
+                         outpath = os.path.join(dir, "{0}-{1}".format(BLOG_DIR_PREFIX, lang)),
+                         extensions = ['jinja2.ext.i18n'])
+        translations = gettext.translation(domain = "website", localedir = LOCALE_DIR, languages = [lang], codeset = "utf-8")
+        site._env.install_gettext_translations(translations)
+
+        site.render()
 
