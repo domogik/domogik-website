@@ -50,7 +50,7 @@ Build the website
 
 Just go in **src** and  :
 
-* run the **build.py** script to get the last translations
+* run the **build_transifex_translations.sh** script to get the last translations
 * run the **build.py** script to build the website
 
 Example : 
