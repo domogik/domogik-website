@@ -15,6 +15,7 @@ STATIC_DIR = "./static/"
 ROOT_FILES = ["./index.html", "404.html", ".htaccess"]
 TEMPLATES_DIR = "./templates/"
 BLOG_DIR_PREFIX = "./blog"
+BLOG_URL_PREFIX = "./"
 
 LANG = ["fr", "en"]
 LANG_READMORE = {"fr" : "Lire plus...", 
@@ -34,7 +35,7 @@ def get_blog_headers(lang):
     for fic in os.listdir(mypath):
         # TODO : improve this line
         if os.path.isfile(os.path.join(mypath, fic)) and fic[-5:] == ".html" and fic != "layout.html" and fic != "blog-layout.html":
-            url = os.path.join("{0}-{1}".format(BLOG_DIR_PREFIX, lang), fic)
+            url = os.path.join("{0}".format(BLOG_URL_PREFIX), fic)
             header = ""
             content = ""
             thumbnail = u"none.jpg"
@@ -117,6 +118,7 @@ if __name__ == "__main__":
 
         ### build blog entries
         blog_dir = "./{0}-{1}".format(BLOG_DIR_PREFIX, lang)
+        """
         os.mkdir(os.path.join(dir, blog_dir))
         # copy the layout file in the blog source folder
         shutil.copy(os.path.join(TEMPLATES_DIR, "layout.html"), blog_dir)
@@ -126,9 +128,11 @@ if __name__ == "__main__":
         for fic in os.listdir(STATIC_DIR):
             if os.path.isdir(os.path.join(STATIC_DIR, fic)):
                 shutil.copytree(os.path.join(STATIC_DIR, fic), os.path.join(dir, blog_dir, fic))
+        """
 
         site = make_site(searchpath = blog_dir,
-                         outpath = os.path.join(dir, blog_dir),
+                         #outpath = os.path.join(dir, blog_dir),
+                         outpath = os.path.join(dir),
                          extensions = ['jinja2.ext.i18n'])
         translations = gettext.translation(domain = "website", localedir = LOCALE_DIR, languages = [lang], codeset = "utf-8")
         site._env.install_gettext_translations(translations)
