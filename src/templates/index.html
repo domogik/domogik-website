@@ -25,6 +25,20 @@
             </p>
             <p>
         </div>
+        <div class="container">
+          <div class="row">
+            {% for preview in blog_headers %}
+              {% if loop.index <= 3 %}
+                <div class="col-md-4">
+                  <div class="xxxxx">
+                    <a href="{{preview.url}}"> <img src='thumbnails/{{ preview.thumbnail }}' class='img-responsive img-thumbnail'/></a>
+                    <h2><a href="{{preview.url}}">{{ preview.title }}</a></h2>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
 
@@ -41,8 +55,8 @@
             {% if loop.index <= 3 %}
               <div class="col-md-4">
                 <div class="xxxxx">
-                  <img src='thumbnails/{{ preview.thumbnail }}'/>
-                  <h2>{{ preview.title }}</h2>
+                  <a href="{{preview.url}}"> <img src='thumbnails/{{ preview.thumbnail }}' class='img-responsive img-thumbnail'/></a>
+                  <h2><a href="{{preview.url}}">{{ preview.title }}</a></h2>
                 </div>
               </div>
             {% endif %}
@@ -54,6 +68,11 @@
     <!-- slide bla bla -->
 
     <div id="slideDescription" class="noslide">
+      <div class="nolayer title">
+        <div class="content">
+          <h1>{% trans %}<span class='fine'>Une solution</span> <strong>libre</strong>{% endtrans %}</h1>
+        </div>
+      </div>
       <div class="nolayer">
         <div id="description" class="container">
           <p>
