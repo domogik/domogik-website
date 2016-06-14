@@ -4,13 +4,15 @@
 
     <!-- slide 1 -->
 
-    <div id="slideStart" class="slide">
-      <div class="layer">
+    <div id="slideStart" class="noslide">
+      <div class="nolayer">
+<!--
         <div class="github-fork-ribbon-wrapper right">
           <div class="github-fork-ribbon">
             <a href="https://github.com/domogik/domogik">Fork me on GitHub</a>
           </div>
         </div>
+-->
         <div id="maintitle">
             <h1>Domogik</h1>
             <p>
@@ -25,12 +27,12 @@
             </p>
             <p>
         </div>
-        <div class="container">
+        <div class="lastPosts container">
           <div class="row">
             {% for preview in blog_headers %}
               {% if loop.index <= 3 %}
                 <div class="col-md-4">
-                  <div class="xxxxx">
+                  <div class="post">
                     <a href="{{preview.url}}"> <img src='thumbnails/{{ preview.thumbnail }}' class='img-responsive img-thumbnail'/></a>
                     <h2><a href="{{preview.url}}">{{ preview.title }}</a></h2>
                   </div>
@@ -43,6 +45,7 @@
     </div>
 
     <!-- slide blog -->
+<!--
     <div id="blogLastEntries" class="noslide">
       <div class="nolayer title">
         <div class="content">
@@ -64,15 +67,18 @@
         </div>
       </div>
     </div>
+-->
 
     <!-- slide bla bla -->
 
     <div id="slideDescription" class="noslide">
+<!--
       <div class="nolayer title">
         <div class="content">
           <h1>{% trans %}<span class='fine'>Une solution</span> <strong>libre</strong>{% endtrans %}</h1>
         </div>
       </div>
+-->
       <div class="nolayer">
         <div id="description" class="container">
           <p>

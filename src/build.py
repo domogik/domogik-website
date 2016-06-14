@@ -118,10 +118,10 @@ if __name__ == "__main__":
 
         ### build blog entries
         blog_dir = "./{0}-{1}".format(BLOG_DIR_PREFIX, lang)
-        """
-        os.mkdir(os.path.join(dir, blog_dir))
         # copy the layout file in the blog source folder
         shutil.copy(os.path.join(TEMPLATES_DIR, "layout.html"), blog_dir)
+        """
+        os.mkdir(os.path.join(dir, blog_dir))
 
         # copy static files
         # yes, we copy them twice... for static part and blog part... May be improved
