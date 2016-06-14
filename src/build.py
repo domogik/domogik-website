@@ -17,6 +17,8 @@ TEMPLATES_DIR = "./templates/"
 BLOG_DIR_PREFIX = "./blog"
 
 LANG = ["fr", "en"]
+LANG_READMORE = {"fr" : "Lire plus...", 
+                 "en" : "Read more..."}
 
 
 
@@ -30,7 +32,8 @@ def get_blog_headers(lang):
     mypath = "{0}-{1}".format(BLOG_DIR_PREFIX, lang)
     data = []
     for fic in os.listdir(mypath):
-        if os.path.isfile(os.path.join(mypath, fic)) and fic[-5:] == ".html" and fic != "layout.html":
+        # TODO : improve this line
+        if os.path.isfile(os.path.join(mypath, fic)) and fic[-5:] == ".html" and fic != "layout.html" and fic != "blog-layout.html":
             url = os.path.join("{0}-{1}".format(BLOG_DIR_PREFIX, lang), fic)
             header = ""
             content = ""
@@ -58,11 +61,18 @@ def get_blog_headers(lang):
                         print("--Fin du header")
                     if in_header:
                         # filter some jinja templates lines to get the header
-                        m1 = re.match(" *{% *extends", line)
-                        m2 = re.match(" *{% *block content", line)
+                        m1 = re.match(" *{% *(extends|block|endblock)", line)
+                        m2 = re.match(" *{% *block ", line)
                         if not m1 and not m2:
                             header += unicode(line, "utf8")
                     content += unicode(line, "utf8")
+
+            # add the 'read more' link
+            header += "<a href='{0}'>{1}</a>".format(url, LANG_READMORE[lang])
+
+            # replace the title by a link
+            header = header.replace("<h1>", "<h1><a href='{0}'>".format(url))
+            header = header.replace("</h1>", "</a></h1>")
 
             data.append({"title" : title,
                          "thumbnail" : thumbnail,
@@ -70,7 +80,6 @@ def get_blog_headers(lang):
                          "header" : header,
                          "content" : content})
     data = sorted(data, key=lambda k: k['url'], reverse = True) 
-    print(data)
     return data
 
 

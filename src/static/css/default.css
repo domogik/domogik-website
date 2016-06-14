@@ -604,3 +604,18 @@ p {
 
                                                                        
 
+/* BLOG
+--------------------------------------------- */
+
+#blog {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.blog-preview {
+    margin-bottom: 1em;
+}
+
+.blog-preview h1 {
+    margin-top: 0px;
+}
