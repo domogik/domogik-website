@@ -1,14 +1,46 @@
 {% extends "blog-layout.html" %}
-
 {% block blog %}
 
 <!-- thumbnail: dmg_box_white.jpg -->
 <h1>Sortie de Domogik 0.5</h1>
 <p>
   L'équipe de Domogik est fière de vous annoncer la sortie de la version 0.5 de Domogik.
-  Bla bla bla bla bla  bla bla  bla bla  bla bla  bla bla  bla bla  bla bla  bla bla  bla bla 
 <!-- stop -->
   Cette version est accompagnée de Domoweb, l'interface de contrôle web en version 0.5 et de Domodroid en version 1.4.
 </p>
+<p>Pour consulter la liste de toutes les évolutions, vous pouvez consulter la release note de cette version. Voici une liste simplifiées des évolutions :</p>
+
+<h2>Domogik</h2>
+  <ul>
+    <li>Fusion des composants suivants : interface d'administration et API Rest.</li>
+    <li>Simplification du processus d'installation (c'est un chantier qui continuera dans la prochaine version).</li>
+    <li>Réécriture du moteur de scénarios.</li>
+    <li>Ajout de nouvelles pages dans l'administration : timeline, suivi des batteries.</li>
+    <li>Ajout du support de plugins non xPL (pour simplifier la création des plugins).</li>
+  </ul>
+
+<h2>Domoweb</h2>
+  <img src="blog/dmw_dekstop.png" class="img-responsive img-thumbnail"/>
+  <ul>
+    <li>Création de nouveaux widgets dans l'interface web.</li>
+    <li>Améliorations diverses sur les widgets qui existaient déjà.</li>
+    <li>Ajout d'une page pour parler avec le majordome.</li>
+  </ul>
+
+<h2>Domodroid</h2>
+  <ul>
+    <li>xxxxxxxxxxxxx</li>
+    <li>xxxxxxxxxxxxx</li>
+    <li>xxxxxxxxxxxxx</li>
+  </ul>
+
+<h2>Divers</h2>
+  <ul>
+    <li>Création d'une image docker. Il s'agit pour le moment d'une image orientée développeurs. Une image plus grand public (et plus légère donc) sera réalisée plus tard.</li>
+    <li>Mise en place du SSL : l'interface d'administration et l'interface web supportent désormais le SSL (non activé par défaut).</li>
+  </ul>
+</ul>
+
+<p>Concernant les packages, il y a pour le moment peu de packages sur le dépôt de packages. Nous avons pourtant de nombreux autres packages existant, mais ils doivent d'abord passer par une phase de validation.</p>
 
 {% endblock  %}

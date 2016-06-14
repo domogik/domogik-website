@@ -44,12 +44,12 @@ def get_blog_headers(lang):
             with open(os.path.join(mypath, fic)) as f:
                 in_header = True
                 for line in f:
-                    print(line)
+                    #print(line)
 
                     # find title
                     m = re.match(".*<h1>(.*)</h1>.*", line)
                     if m:
-                        title = m.group(1)
+                        title = unicode(m.group(1), "utf8")
 
                     # find thumbnail
                     m = re.match(".*<!-- *thumbnail *: *(.*)-->.*", line)
@@ -59,7 +59,7 @@ def get_blog_headers(lang):
                     # find end of header
                     if line.strip() == "<!-- stop -->":
                         in_header = False
-                        print("--Fin du header")
+                        #print("--Fin du header")
                     if in_header:
                         # filter some jinja templates lines to get the header
                         m1 = re.match(" *{% *(extends|block|endblock)", line)
