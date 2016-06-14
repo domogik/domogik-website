@@ -13,9 +13,8 @@ OUT_DIR = "../build/"
 LOCALE_DIR = "./locale/"
 STATIC_DIR = "./static/"
 ROOT_FILES = ["./index.html", "404.html", ".htaccess"]
-#TEMPLATES_DIR = "./templates/"
-TEMPLATES_DIR = "./"
-BLOG_DIR_PREFIX = "blog"
+TEMPLATES_DIR = "./templates/"
+BLOG_DIR_PREFIX = "./blog"
 
 LANG = ["fr", "en"]
 
@@ -28,10 +27,10 @@ def get_blog_headers(lang):
     return [{"title" : "titre1", "header" : "fooo", "url" : "url1"},
             {"title" : "titre2", "header" : "bbbaaarr", "url" : "url2"}]
     """
-    mypath = "{0}-{1}".format(os.path.join(TEMPLATES_DIR, BLOG_DIR_PREFIX), lang)
+    mypath = "{0}-{1}".format(BLOG_DIR_PREFIX, lang)
     data = []
     for fic in os.listdir(mypath):
-        if os.path.isfile(os.path.join(mypath, fic)) and fic[-5:] == ".html":
+        if os.path.isfile(os.path.join(mypath, fic)) and fic[-5:] == ".html" and fic != "layout.html":
             url = os.path.join("{0}-{1}".format(BLOG_DIR_PREFIX, lang), fic)
             header = ""
             content = ""
@@ -58,7 +57,11 @@ def get_blog_headers(lang):
                         in_header = False
                         print("--Fin du header")
                     if in_header:
-                        header += unicode(line, "utf8")
+                        # filter some jinja templates lines to get the header
+                        m1 = re.match(" *{% *extends", line)
+                        m2 = re.match(" *{% *block content", line)
+                        if not m1 and not m2:
+                            header += unicode(line, "utf8")
                     content += unicode(line, "utf8")
 
             data.append({"title" : title,
@@ -88,11 +91,11 @@ if __name__ == "__main__":
         for fic in ROOT_FILES:
             shutil.copy(fic, OUT_DIR)
 
-        # list blog files
+        ### list blog files
         # notice that we assume that the blog entries can be different between each language, so they are not translated over transifex !
         blog_headers = get_blog_headers(lang)
 
-        # build website 
+        ### build website 
         site = make_site(contexts = [('index.html',  {'blog_headers' : blog_headers}),
                                      ('blog.html',  {'blog_headers' : blog_headers})],
                          outpath = dir,
@@ -103,10 +106,20 @@ if __name__ == "__main__":
         site.render()
 
 
-        # build blog entries
-        os.mkdir(os.path.join(dir, "{0}-{1}".format(BLOG_DIR_PREFIX, lang)))
-        site = make_site(searchpath = "./{0}-{1}".format(BLOG_DIR_PREFIX, lang),
-                         outpath = os.path.join(dir, "{0}-{1}".format(BLOG_DIR_PREFIX, lang)),
+        ### build blog entries
+        blog_dir = "./{0}-{1}".format(BLOG_DIR_PREFIX, lang)
+        os.mkdir(os.path.join(dir, blog_dir))
+        # copy the layout file in the blog source folder
+        shutil.copy(os.path.join(TEMPLATES_DIR, "layout.html"), blog_dir)
+
+        # copy static files
+        # yes, we copy them twice... for static part and blog part... May be improved
+        for fic in os.listdir(STATIC_DIR):
+            if os.path.isdir(os.path.join(STATIC_DIR, fic)):
+                shutil.copytree(os.path.join(STATIC_DIR, fic), os.path.join(dir, blog_dir, fic))
+
+        site = make_site(searchpath = blog_dir,
+                         outpath = os.path.join(dir, blog_dir),
                          extensions = ['jinja2.ext.i18n'])
         translations = gettext.translation(domain = "website", localedir = LOCALE_DIR, languages = [lang], codeset = "utf-8")
         site._env.install_gettext_translations(translations)
