@@ -3,6 +3,8 @@
 
 
 from staticjinja import make_site
+from csscompressor import compress
+
 import jinja2
 import gettext
 import os
@@ -15,6 +17,7 @@ STATIC_DIR = "./static/"
 ROOT_FILES = ["./index.html", "404.html", ".htaccess"]
 TEMPLATES_DIR = "./templates/"
 BLOG_DIR_PREFIX = "./blog"
+SCREENSHOTS_DIR = "./screenshots"
 BLOG_URL_PREFIX = "./"
 
 LANG = ["fr", "en"]
@@ -84,6 +87,20 @@ def get_blog_headers(lang):
     return data
 
 
+def get_screenshots():
+    """
+    Sample : 
+    return [{"file" : "file1.jpg"}, {"file" : "file2.jpg"}, ...]
+    """
+    mypath = os.path.join(STATIC_DIR, SCREENSHOTS_DIR)
+    data = []
+    for fic in os.listdir(mypath):
+        # TODO : improve this line
+        if os.path.isfile(os.path.join(mypath, fic)) and fic[-4:] in ['.jpg', '.png', '.gif']:
+            data.append({"file" : fic})
+    return data
+
+
 
 if __name__ == "__main__":
     for lang in LANG:
@@ -105,9 +122,13 @@ if __name__ == "__main__":
         # notice that we assume that the blog entries can be different between each language, so they are not translated over transifex !
         blog_headers = get_blog_headers(lang)
 
+        ### list screenshots
+        screenshots = get_screenshots()
+
         ### build website 
         site = make_site(contexts = [('index.html',  {'blog_headers' : blog_headers}),
-                                     ('blog.html',  {'blog_headers' : blog_headers})],
+                                     ('blog.html',  {'blog_headers' : blog_headers}),
+                                     ('screenshots.html',  {'screenshots' : screenshots})],
                          outpath = dir,
                          extensions = ['jinja2.ext.i18n'])
         translations = gettext.translation(domain = "website", localedir = LOCALE_DIR, languages = [lang], codeset = "utf-8")
@@ -139,3 +160,21 @@ if __name__ == "__main__":
 
         site.render()
 
+
+        ### optimize builded data
+
+        print("Optimizing css...")
+        # minify all the css files
+        mypath = OUT_DIR
+        for root, dirs, files in os.walk(mypath):
+            for fic in files:
+                fic_path = os.path.join(root, fic)
+                if fic[-4:] == ".css":
+                    # minify only not already minified files
+                    if fic[-8:-4] != ".min":
+                        print("- {0}".format(fic_path))
+                        with open(fic_path) as f:
+                           new_css = compress(f.read())
+                        with open(fic_path, "w") as f:
+                           f.write(new_css)
+                      

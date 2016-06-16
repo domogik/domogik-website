@@ -12,6 +12,7 @@ You need to install the following packages.
 
 ```
 pip install staticjinja
+pip install csscompressor
 ```
 
 
