@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domogik</title>
+<link href="./bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<!--
+<link rel="stylesheet" href="./css/gh-fork-ribbon.css">
+-->
+<link rel="stylesheet" href="./css/default.css">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,700' rel='stylesheet' type='text/css'>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+  <div class="slides">
+
+    <nav id="dmgnavbar" class="dmgfr navbar-dmg navbar navbar-static-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="logoxx" class="navbar-brand" href="./index.html">Domogik</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html"><i class="fa fa-home"></i> {% trans %}Accueil{% endtrans %}</a></li>
+            <li><a href="./blog.html"><i class="fa fa-book"></i> {% trans %}Blog{% endtrans %}</a></li>
+            <li><a href="./screenshots.html"><i class="fa fa-picture-o"></i> {% trans %}Screenshots{% endtrans %}</a></li>
+            <li><a href="./download.html"><i class="fa fa-download"></i> {% trans %}Télécharger{% endtrans %}</a></li>
+            <li><a href="./faq.html"><i class="fa fa-question-circle"></i> {% trans %}FAQ{% endtrans %}</a></li>
+            <li><a href="http://repo-public.domogik.org/"><i class="fa fa-cube"></i> {% trans %}Packages{% endtrans %}</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i> {% trans %}Langue{% endtrans %} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/fr/">{% trans %}Français{% endtrans %}</a></li>
+              <li><a href="/en/">{% trans %}Anglais{% endtrans %}</a></li>
+            </ul>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+{% block content -%}
+{%- endblock content %}
+
+
+
+
+
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>{% trans %}Derniers tweets{% endtrans %}</h1>
+            <a class="twitter-timeline"  href="https://twitter.com/Domogik" data-widget-id="616359133533487108" data-tweet-limit="2" data-theme="dark" data-chrome="noheader transparent">Tweets by @Domogik</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+          </div>
+          <div class="col-md-3">
+            <h1>{% trans %}Contacts{% endtrans %}</h1>
+            <div class="irc"><i class="fa fa-weixin"></i> irc.freenode.net#domogik</div>
+            <div class="twitter"><i class="fa fa-twitter"></i> <a href="https://twitter.com/Domogik">@domogik</a></div>
+            <!--
+            <div class="mailing"><i class="fa fa-envelope-o"></i> <a href="&#x6d;a&#x69;l&#x74;&#111;&#x3a;&#x64;o&#x6d;o&#x67;&#105;&#x6b;&#45;g&#x65;n&#x65;&#114;&#x61;&#108;&#64;&#x6c;i&#x73;t&#x73;&#46;l&#x61;b&#x73;.&#x6c;&#105;b&#x72;e&#x2d;e&#x6e;&#116;r&#x65;p&#x72;i&#x73;&#101;.&#x6f;r&#x67;">General mailing-list</a></div>
+            <div class="mailing"><i class="fa fa-envelope-o"></i> <a href="&#x6d;&#x61;&#x69;&#108;&#116;o:d&#x6f;&#x6d;&#x6f;&#x67;&#105;k-d&#x65;&#x76;&#x65;&#x6c;&#111;per&#x73;&#x40;&#x6c;&#x69;&#115;&#116;s.l&#x61;&#x62;&#x73;&#x2e;&#108;ibr&#x65;&#x2d;&#x65;&#x6e;&#116;rep&#x72;&#x69;&#x73;&#x65;&#46;&#111;rg">Developers mailing-list</a></div>
+            -->
+            <p>{% trans %}Le canal irc est le meilleur média pour prendre contact avec l'équipe de Domogik. Il est possible d'y parler français ou anglais.{% endtrans %}</p>
+          </div>
+          <div class="col-md-3">
+            <h1>{% trans %}Ressources{% endtrans %}</h1>
+            <div class="doc"><i class="fa fa-book"></i> <a href="http://docs.domogik.org/">{% trans %}Documentation{% endtrans %}</a></div>
+            <div class="doc"><i class="fa fa-book"></i> <a href="http://apidoc.domogik.org/">{% trans %}API{% endtrans %}</a></div>
+            <div class="doc"><i class="fa fa-code-fork"></i> <a href="http://github.com/domogik/">{% trans %}Sources sur GitHub{% endtrans %}</a></div>
+            <div class="packages"><i class="fa fa-cube"></i> <a href="http://repo-public.domogik.org/">{% trans %}Dépot de packages{% endtrans %}</a></div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./jquery/jquery-1.11.2.min.js"></script>
+  <script src="./bootstrap-3.3.4/js/bootstrap.min.js"></script>
+  <!-- Piwik -->
+  <script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.domogik.org/" : "http://stats.domogik.org/");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+  </script><script type="text/javascript">
+  try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+  } catch( err ) {}
+  </script><noscript><p><img src="http://stats.domogik.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+</body>
+</html>
