@@ -14,7 +14,7 @@ import re
 OUT_DIR = "../build/"
 LOCALE_DIR = "./locale/"
 STATIC_DIR = "./static/"
-ROOT_FILES = ["./index.html", "404.html", ".htaccess"]
+ROOT_FILES = ["./index.html", "404.html", ".htaccess", "robots.txt", "sitemap.xml"]
 TEMPLATES_DIR = "./templates/"
 BLOG_DIR_PREFIX = "./blog"
 SCREENSHOTS_DIR = "./screenshots"
@@ -84,6 +84,8 @@ def get_blog_headers(lang):
                          "header" : header,
                          "content" : content})
     data = sorted(data, key=lambda k: k['url'], reverse = True) 
+    data.sort()
+    data.reverse()
     return data
 
 
@@ -103,6 +105,12 @@ def get_screenshots():
 
 
 if __name__ == "__main__":
+
+    # language independant files
+    for fic in ROOT_FILES:
+        shutil.copy(fic, OUT_DIR)
+
+    # langauge specific
     for lang in LANG:
         print("==== Building {0} ====".format(lang))
         # define root folder for the lang
@@ -115,8 +123,6 @@ if __name__ == "__main__":
 
         # copy static files
         shutil.copytree(STATIC_DIR, dir)
-        for fic in ROOT_FILES:
-            shutil.copy(fic, OUT_DIR)
 
         ### list blog files
         # notice that we assume that the blog entries can be different between each language, so they are not translated over transifex !
