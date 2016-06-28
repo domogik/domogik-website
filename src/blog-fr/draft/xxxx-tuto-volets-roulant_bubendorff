@@ -1,0 +1,153 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: todo.jpg -->
+<h1>Tutoriel : volets roulants bubendroff</h1>
+<p>
+  Nous allons voir comment domotiser des volets roulants de marque Bubendorff.
+<!-- stop -->
+</p>
+<p>
+  Les volets roulants Bubendorff ne sont pas intégrables facilement dans une solution domotique : il existe des solutions à base de modules KNX, mais encore faut-il avoir du KNX chez soi! Par contre, d'un point de vue sécurité ces volets-roulants sont très intéressants car les commandes radios utilisent des codes tournants : si un voleur réussi à sniffer le code d'une télécommande lors de l'ouverture du volet, ce code ne sera pas réutilisable ensuite.
+</p>
+
+<h2>Prérequis</h2>
+
+<ul>
+  <li>Des volets roulants Bubendorff avec commande radio.</li>
+  <li>Savoir souder.</li>
+  <li>Domogik 0.5 (minimum) et le plugin script.</li>
+  <li>Un contrôleur pour gérer des contacts secs (carte relai, rapsberry + carte relai, module Zwave, ...)</li>
+</ul>
+
+<h2>Le cas pratique</h2>
+
+<p>
+  J'ai chez moi une installation avec 2 volets roulants Bubendorff qui contrôlent les volets des 2 baies vitrées d'une salle à manger. Dans cette installation j'ai 3 commandes.
+</p>
+<p>La première commande est connectée au réseau électrique et est une commande groupée des deux volets via la technologie CPL de Bubendorff.</p>
+<img src="blog/marque-bubendorff/cpl.jpg" class="img-responsive">
+
+<p>Les deux commandes restantes sont des modules radio qui fonctionnent sur piles et sont scotchés au mur. Chacune contrôle un volet.</p>
+<img src="blog/marque-bubendorff/radio.jpg" class="img-responsive">
+
+<h2>Ce qu'on veut réaliser</h2>
+<p>L'objectif ici va être de pouvoir contrôler les 2 volets indépendamment via une solution domotique. Toute communication via les protocoles radio ou cpl étant impossible, il ne reste plus que la piste bricolage! En soudant des fils sur les pattes des boutons poussoirs il va être possible de simuler des appuis sur les commandes radios.</p>
+
+<p>Pour simuler ces impulsions, il faut utiliser un module qui permet de fermer ou ouvrir des contacts secs. Il existe de tels modules en Zwave, mais ici j'ai utilisé un mini ordinateur rapsberry couplé à une mini carte relay. L'ensemble m'a coûté environ 50 euros (raspberry + une carte sd + la carte relai + des fils). Le rapsberry ainsi que les commandes seront déplacés dans le garage.</p>
+
+<p>Si vous optez pour la solution Zwave, et qu'il y a une source de courant à proximité de vos commandes, vous pourriez envisager de laisser les commandes sur le mur en cachant les modules Zwave dans un boitier électrique derrière les commandes (et en repiquant le courant évidemment). Ceci permettrait de garder le contrôle manuel de chaque volet via la commande d'origine.</p>
+
+<h2>Modification des commandes</h2>
+
+<p>Démontez chaque commande, enlevez la pile et soudez des fils ainsi :</p>
+
+<img src="blog/marque-bubendorff/soldering_01.jpg" class="img-responsive">
+
+<p>Remettez la pile, faites un test en mettant en contact l'extrémité non soudée des fils soudés sur un même bouton poussoir. Votre volet devrait être activé.</p>
+
+<h2>Connectons le tout</h2>
+
+<p>TODO TODO TODO </p>
+<img src="blog/marque-bubendorff/connecting.jpg" class="img-responsive">
+
+<h2>Création d'un script pour contrôler les volets</h2>
+
+<p>Nous allons créer un script python pour simuler l'appui sur les boutons des commandes. Ce script prendra un paramètre qui permettra de choisir l'action : ouverture ou fermeture du volet.</p>
+
+<p>Pour simplifier la création du script, j'ai créé <a href="https://github.com/fritz-smh/rpi-bubendorff/">une librairie disponible sur Github</a>. Téléchargez là et installez là dans votre dossier $HOME (par exemple).</p>
+
+<pre>wget https://github.com/fritz-smh/rpi-bubendorff/archive/master.zip
+unzip master.zip
+mv rpi-bubendorff-master/ $HOME/
+</pre>
+
+<p>Ce dossier contient 3 exemples de scripts (en l'occurence, les scripts que j'ai créé pour mon usage personnel).</p>
+
+<p>Imaginons que vous contrôliez le bouton <strong>ouvrir</strong> de votre volet avec la GPIO n°22 et le bouton <strong>fermer</strong> avec la GPIO n°18. Il vous suffit de mettre dans un script nommé par exemple <strong>vr_monvolet.py</strong>.</p>
+<pre>
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys
+from bubendorff import Bubendorff
+
+def usage():
+    print("Error : bad parameters!")
+    print("Usage : {0} [open|close]".format(sys.argv[0]))
+    sys.exit(1)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        usage()
+    if sys.argv[1] not in ['open', 'close']:
+        usage()
+
+    vr1 = Bubendorff(22, 18, 0, 0)
+    if sys.argv[1] == "open":
+        vr1.open()
+    else:
+        vr1.close()
+    print("1")
+</pre>
+
+<p>La ligne importante est celle-ci :</p>
+<pre>vr1 = Bubendorff(22, 18, 0, 0)</pre>
+<p>Elle permet de créer un objet qui va contrôler le volet. Les paramètres sont dans l'ordre : </p>
+<ul>
+  <li>Le numéro de GPIO qui contrôle l'ouverture du volet.</li>
+  <li>Le numéro de GPIO qui contrôle la fermeture du volet.</li>
+  <li>Le temps que vous avez mesuré pour que le volet s'ouvre en entier. Ce paramètre ne sert à rien à ce jour.</li>
+  <li>Le temps que vous avez mesuré pour que le volet se ferme en entier. Ce paramètre ne sert à rien à ce jour.</li>
+</ul>
+
+<p>Vous pouvez tester l'ouverture du volet ainsi : </p>
+<pre>python vr_monvolet.py open</pre>
+
+<p>Et la fermeture : </p>
+<pre>python vr_monvolet.py close</pre>
+
+
+<h2>Commande à distance via ssh</h2>
+
+<!-- TODO -->
+
+
+<h2>Interfaçage avec Domogik</h2>
+
+<p>La version de Domogik utilisée ici est la 0.5</p>
+
+<p>Pour l'interfaçage avec Domogik nous allons utiliser le <strong>plugin script</strong>. Pour l'installer :</p>
+
+<pre>dmg_package -i http://TODO TODO TODO TODO TODO </pre>
+
+<p>En version 0.5, il faut relancer Domogik après l'installation d'un nouveau package : </p>
+
+<pre>sudo service domogik restart</pre>
+
+<p>Allez dans l'administration : <strong>Clients => Plugins => script => Domogik devices</strong> et créez un nouveau device de type <strong>TODO TODD TODO</strong> :
+
+<!-- TODO : image -->
+<!-- TODO : image -->
+
+<p>Voici la valeur pour la commande ouvrir (on) : </p>
+<pre>TODO TODO</pre>
+
+<p>Et pour la commande fermer (off) : </p>
+<pre>TODO TODO</pre>
+
+<p>Une fois le device créé, cliquez dessus, et dans la partie <strong>Commands</strong> vous pouvez tester l'effet des commandes <strong>on</strong> et <strong>off</strong> sur le volet : </p>
+
+<!-- TODO : image -->
+
+<h2>Contrôle depuis Domoweb</h2>
+
+<p>Dans Domoweb, ajoutez simplement un widget <strong>TODO TODO</strong></p>
+
+<!-- TODO : image -->
+<!-- TODO : image -->
+
+
+
+
+{% endblock  %}
