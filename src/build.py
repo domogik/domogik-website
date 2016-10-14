@@ -10,19 +10,25 @@ import gettext
 import os
 import shutil
 import re
+import sys
 
+URL="http://www.domogik.org"
 OUT_DIR = "../build/"
 LOCALE_DIR = "./locale/"
 STATIC_DIR = "./static/"
-ROOT_FILES = ["./index.html", "404.html", ".htaccess", "robots.txt", "sitemap.xml"]
+ROOT_FILES = ["./index.html", "404.html", ".htaccess", "robots.txt"]    #, "sitemap.xml"]
 TEMPLATES_DIR = "./templates/"
 BLOG_DIR_PREFIX = "./blog"
 SCREENSHOTS_DIR = "./screenshots"
 BLOG_URL_PREFIX = "./"
+SITEMAP_TEMPLATE = "./sitemap.xml"
 
 LANG = ["fr", "en"]
 LANG_READMORE = {"fr" : "Lire plus...", 
                  "en" : "Read more..."}
+LANG_SCREENSHOT = {"fr" : "Capture d'ecran de Domogik",
+                   "en" : "Domogik screenshot"}
+
 
 
 
@@ -103,14 +109,53 @@ def get_screenshots():
     return data
 
 
+def build_sitemap(lang, screenschots):
+    """ Build the sitemap.xml
+    """
+    ### include the screenshots
+    img_data = ""
+    for screen in screenshots:
+        img_data += """
+  <image:image>
+    <image:loc>{0}/{1}/screenshots/{2}</image:loc>
+    <image:caption>{3}</image:caption>
+    <image:title>{3}</image:title>
+  </image:image>  
+""".format(URL, lang, screen['file'], LANG_SCREENSHOT[lang])
+
+
+    pattern_tag = re.compile("^.*<!-- SCREENSHOTS -->.*$")
+
+    fic = open(SITEMAP_TEMPLATE)
+    new_sitemap = ""
+    for line in fic:
+        new_line = line
+        if pattern_tag.match(new_line):
+            new_line += img_data
+        new_sitemap += new_line
+    fic.close()
+
+    fic = open("{0}/sitemap.xml".format(OUT_DIR), "w")
+    fic.write(new_sitemap)
+    fic.close()
 
 if __name__ == "__main__":
 
-    # language independant files
+
+    ### language independant files
     for fic in ROOT_FILES:
         shutil.copy(fic, OUT_DIR)
 
-    # langauge specific
+    ### list screenshots
+    screenshots = get_screenshots()
+
+    ### build sitemap
+    # yes, for now there is only one sitemap referenced on google side...
+    # TODO : handle multilangual sitemaps in this script and in google console
+    build_sitemap("fr", screenshots)
+
+
+    ### langauge specific
     for lang in LANG:
         print("==== Building {0} ====".format(lang))
         # define root folder for the lang
@@ -128,8 +173,6 @@ if __name__ == "__main__":
         # notice that we assume that the blog entries can be different between each language, so they are not translated over transifex !
         blog_headers = get_blog_headers(lang)
 
-        ### list screenshots
-        screenshots = get_screenshots()
 
         ### build website 
         site = make_site(contexts = [('index.html',  {'blog_headers' : blog_headers}),
@@ -147,15 +190,15 @@ if __name__ == "__main__":
         blog_dir = "./{0}-{1}".format(BLOG_DIR_PREFIX, lang)
         # copy the layout file in the blog source folder
         shutil.copy(os.path.join(TEMPLATES_DIR, "layout.html"), blog_dir)
-        """
-        os.mkdir(os.path.join(dir, blog_dir))
-
-        # copy static files
-        # yes, we copy them twice... for static part and blog part... May be improved
-        for fic in os.listdir(STATIC_DIR):
-            if os.path.isdir(os.path.join(STATIC_DIR, fic)):
-                shutil.copytree(os.path.join(STATIC_DIR, fic), os.path.join(dir, blog_dir, fic))
-        """
+        ##"""
+        ##os.mkdir(os.path.join(dir, blog_dir))
+        ##
+        ### copy static files
+        ### yes, we copy them twice... for static part and blog part... May be improved
+        ##for fic in os.listdir(STATIC_DIR):
+        ##    if os.path.isdir(os.path.join(STATIC_DIR, fic)):
+        ##        shutil.copytree(os.path.join(STATIC_DIR, fic), os.path.join(dir, blog_dir, fic))
+        ##"""
 
         site = make_site(searchpath = blog_dir,
                          #outpath = os.path.join(dir, blog_dir),

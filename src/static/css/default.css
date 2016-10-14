@@ -673,9 +673,19 @@ p {
     margin-bottom: 2em;
 }
 
+#blog h1 {
+    margin-bottom: 1em;
+    font-size: 3em;
+}
+
+#blog h2 {
+    margin-top: 2em;
+}
+
 #blog img {
     display: block;
     margin: 0 auto; 
+    margin-bottom: 1em;
 }
 
 #blog p {
