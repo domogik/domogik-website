@@ -122,7 +122,13 @@ def get_static_images():
     for fic in os.listdir(mypath):
         # TODO : improve this line
         if os.path.isfile(os.path.join(mypath, fic)) and fic[-4:] in ['.jpg', '.png', '.gif']:
-            data.append({"file" : fic})
+            # don't process icons and background
+            if fic.startswith("icon"):
+                pass
+            elif fic.startswith("background"):
+                pass
+            else:
+                data.append({"file" : fic})
     return data
 
 
