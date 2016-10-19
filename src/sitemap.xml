@@ -4,7 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
   <loc>http://www.domogik.org/fr/</loc>
@@ -14,6 +14,7 @@
   <loc>http://www.domogik.org/fr/index.html</loc>
   <changefreq>weekly</changefreq>
   <priority>1</priority>
+  <!-- IMAGES --> 
 </url>
 <url>
   <loc>http://www.domogik.org/fr/blog.html</loc>

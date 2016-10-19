@@ -20,6 +20,7 @@ ROOT_FILES = ["./index.html", "404.html", ".htaccess", "robots.txt"]    #, "site
 TEMPLATES_DIR = "./templates/"
 BLOG_DIR_PREFIX = "./blog"
 SCREENSHOTS_DIR = "./screenshots"
+IMAGES_DIR = "./images"
 BLOG_URL_PREFIX = "./"
 SITEMAP_TEMPLATE = "./sitemap.xml"
 
@@ -28,6 +29,8 @@ LANG_READMORE = {"fr" : "Lire plus...",
                  "en" : "Read more..."}
 LANG_SCREENSHOT = {"fr" : "Capture d'ecran de Domogik",
                    "en" : "Domogik screenshot"}
+LANG_IMAGES = {"fr" : "Domogik, pour connecter votre maison.",
+                   "en" : "Domogik, your connected house."}
 
 
 
@@ -109,13 +112,28 @@ def get_screenshots():
     return data
 
 
-def build_sitemap(lang, screenschots):
+def get_static_images():
+    """
+    Sample : 
+    return [{"file" : "file1.jpg"}, {"file" : "file2.jpg"}, ...]
+    """
+    mypath = os.path.join(STATIC_DIR, IMAGES_DIR)
+    data = []
+    for fic in os.listdir(mypath):
+        # TODO : improve this line
+        if os.path.isfile(os.path.join(mypath, fic)) and fic[-4:] in ['.jpg', '.png', '.gif']:
+            data.append({"file" : fic})
+    return data
+
+
+def build_sitemap(lang, screenschots, images):
     """ Build the sitemap.xml
     """
-    ### include the screenshots
-    img_data = ""
+    ### include the screenshots and images
+    screenshot_data = ""
+    image_data = ""
     for screen in screenshots:
-        img_data += """
+        screenshot_data += """
   <image:image>
     <image:loc>{0}/{1}/screenshots/{2}</image:loc>
     <image:caption>{3}</image:caption>
@@ -123,15 +141,27 @@ def build_sitemap(lang, screenschots):
   </image:image>  
 """.format(URL, lang, screen['file'], LANG_SCREENSHOT[lang])
 
+    for image in images:
+        image_data += """
+  <image:image>
+    <image:loc>{0}/{1}/images/{2}</image:loc>
+    <image:caption>{3}</image:caption>
+    <image:title>{3}</image:title>
+  </image:image>  
+""".format(URL, lang, image['file'], LANG_IMAGES[lang])
 
-    pattern_tag = re.compile("^.*<!-- SCREENSHOTS -->.*$")
+
+    pattern_screenshots_tag = re.compile("^.*<!-- SCREENSHOTS -->.*$")
+    pattern_images_tag = re.compile("^.*<!-- IMAGES -->.*$")
 
     fic = open(SITEMAP_TEMPLATE)
     new_sitemap = ""
     for line in fic:
         new_line = line
-        if pattern_tag.match(new_line):
-            new_line += img_data
+        if pattern_screenshots_tag.match(new_line):
+            new_line += screenshot_data
+        elif pattern_images_tag.match(new_line):
+            new_line += image_data
         new_sitemap += new_line
     fic.close()
 
@@ -146,13 +176,14 @@ if __name__ == "__main__":
     for fic in ROOT_FILES:
         shutil.copy(fic, OUT_DIR)
 
-    ### list screenshots
+    ### list screenshots (used bu the screenshot page  and static images (used by the index)
     screenshots = get_screenshots()
+    static_images = get_static_images()
 
     ### build sitemap
     # yes, for now there is only one sitemap referenced on google side...
     # TODO : handle multilangual sitemaps in this script and in google console
-    build_sitemap("fr", screenshots)
+    build_sitemap("fr", screenshots, static_images)
 
 
     ### langauge specific
