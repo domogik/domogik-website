@@ -11,7 +11,7 @@
   <div class="container" id="screenshots">
     <div id="links">
       <h1>{% trans %}Screenshots{% endtrans %}</h1>
-      {% for screen in screenshots %}
+      {% for screen in screenshots|sort(attribute='file', reverse=True) %}
         <div class="thumb">
           <a href="screenshots/{{ screen.file }}" title="{{ screen.file }}" data-gallery>
             <img src="screenshots/{{ screen.file }}" alt="{{ screen.file }}" class="img-responsive">

@@ -686,6 +686,8 @@ p {
     display: block;
     margin: 0 auto; 
     margin-bottom: 1em;
+    max-width: 80%;
+    max-height: 60%;
 }
 
 #blog p {

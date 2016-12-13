@@ -1,0 +1,139 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: release_0.5.jpg -->
+<h1>Sortie de Domogik 0.5</h1>
+<p>
+  L'équipe de Domogik est fière de vous annoncer la sortie de la version 0.5 de Domogik.
+<!-- stop -->
+  Cette version est accompagnée de Domoweb, l'interface de contrôle web en version 0.5 et de Domodroid en version 1.4.
+</p>
+<p>Pour consulter la liste de toutes les évolutions, vous pouvez consulter <a href="http://domogik.readthedocs.io/en/master/users/releases/0.5.0.html">la release note de cette version</a>.</p> 
+
+<img src="blog/2016-release-0.5/0.5_800x400.jpg" class="img-responsive img-thumbnail"/>
+
+<h2>Domogik</h2>
+
+<p>
+  Cette dernière version de Domogik a vu plusieurs grosses évolutions techniques afin de stabiliser notre socle architectural et d'<strong>améliorer les performances</strong> : sur certaines architectures, nous avons constaté un gain de 40% (en temps processeur). Nous avons aussi simplifié le processus de développement des plugins en rendant l'usage du protocole xPL optionnel. </p>
+<p>
+  Un <strong>nouveau moteur de scénarios</strong> a été implémenté. En plus des tests conditionnels, il permet de planifier de manière précise des évènements.
+</p>
+
+<img src="blog/2016-release-0.5/domogik_scenario_cron_01.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  Une nouvelle section <strong>timeline</strong> permet d'afficher la ligne de vie à différents niveaux : toute l'installation, un plugin ou un device.
+</p>
+
+<img src="blog/2016-release-0.5/domogik_timeline_00.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/domogik_timeline_01.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/domogik_timeline_02.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  Une autre nouvelle section a été ajoutée pour afficher le niveau de batterie de vos différents périphériques.
+</p>
+
+<img src="blog/2016-release-0.5/domogik_baterry_01.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  Il y a eu beaucoup d'autres améliorations diverses : gestion de nouveaux types de données, amélioration du script de sauvegarde, mise en place d'une image docker (pour tests uniquement), début de la mise en place du SSL, gestion des utilisateurs, mise en place de métriques, ...
+</p>
+
+
+<h2>Packages</h2>
+
+<!-- TODO : mettre a jour en janvier !!!!! -->
+<p>
+  La liste des packages officiellements reconnus (on va les nommer comme ça) est disponible sur <a href="http://repo-public.domogik.org/">notre dépôt de packages</a>. A ce jour (mi-décembre), cette liste est assez courte car beaucoup de plugins existants n'ont pas encore subit une passe de tests. Il y a actuellement plus de 40 plugins qui sont en cours de développement, dont beaucoup sont déjà fonctionnels.
+</p>
+
+<p>
+  Nous avons prévu de publier des articles pour la plupart des plugins au fur et à mesure de leur validation.
+</p>
+
+
+<h2>Domoweb</h2>
+
+<p>Domoweb, l'interface web de Domogik a au le droit également à un gros lifting : </p>
+<ul>
+  <li>amélioration des widgets existants</li>
+  <li>création de nouveaux widgets</li>
+  <li>inclusion du majordome via l'interface vocale du navigateur</li>
+  <li>...</li>
+</ul>
+
+<p>
+  Mais les images sont plus parlantes que les mots. Voici quelques exemples de ce qui peut être réalisé :
+</p>
+
+  <img src="blog/2016-release-0.5/domoweb_01_dashboard.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_02_meteo.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_03_electricity.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_04_history.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  Voici l'écran dédié au majordome est accessible directement depuis le bouton en haut à droite de l'interface :
+</p>
+
+  <img src="blog/2016-release-0.5/domoweb_05_butler1.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_05_butler2.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  Certains widgets permettent un affichage plein écran via simple clic :
+</p>
+
+  <img src="blog/2016-release-0.5/domoweb_06_map1.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_06_map2.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  Et les widgets sont évidemment modifiables très facilement pour s'adapter à vos besoins!
+</p>
+  <img src="blog/2016-release-0.5/domoweb_07_round.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_08_allwidgets.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_09_widgets.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_10_widgets.jpg" class="img-responsive img-thumbnail"/>
+
+
+<h2>Domodroid</h2>
+
+<p>
+  La nouvelle version de Domodroid a eu aussi beaucoup d'évolutions. Il y a entre autres : 
+</p>
+<ul>
+  <li>Revue complète du menu de configuration.</li>
+  <li>Configuration simplifiée possible via le scan d'un QR-code (code barre à 2 dimensions) depuis la page d'accueil de l'administration de Domogik).</li>
+  <li>Amélioration de l'ergonomie du mode plan.</li>
+  <li>Création de nouveaux widgets.</li>
+  <li>Amélioration de beaucoup de widgets.</li>
+  <li>...</li>
+</ul>
+
+<!-- TODO : comments -->
+
+<p>Voici quelques exemples des widgets :</p>
+
+<img src="blog/2016-release-0.5/dmd_widgets_01.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_02.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_03.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_04.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_05.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_06.jpg" class="img-responsive img-thumbnail"/>
+
+<p>Et voivi quelques exemples du mode plan : </p>
+
+<img src="blog/2016-release-0.5/dmd_map_01.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_map_02.jpg" class="img-responsive img-thumbnail"/>
+
+<h2>Documentation</h2>
+
+<p>La documentation utilisateur a été revue, que ça soit sur le visuel ou le contenu : elle est plus claire et plus accessible.</p>
+<img src="blog/2016-release-0.5/doc.jpg" class="img-responsive img-thumbnail"/>
+
+<h2>Le mot de la fin</h2>
+
+<p>Cette version fut encore une foiss une grosse version de Domogik. Nous tenons à remercier tous les acteurs qui ont contribué à cette release, que ça soit en développement, en test, en remontée de bugs. Nous voulons remercier aussi les développeurs des différents plugins! Nous avons aussi une pensée pour le développeur de plugin Zwave qui va bientôt avoir une très grosse pression sur les épaules, et le développeur de la solution Domodroid qui a fait un travail formidable!</p>
+
+<p>La prochaine version sera une version technique qui a pour objectifs la simplification de l'installation (qui reste encore longue à ce jour) et l'optimisation des ressources.</p>
+
+{% endblock  %}
