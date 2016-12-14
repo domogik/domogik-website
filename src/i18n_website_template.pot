@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-06-21 22:08+0200\n"
+"POT-Creation-Date: 2016-12-14 18:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Téléchargez la dernière version"
 msgstr ""
 
 #: templates/download.html:14
-msgid "Domogik 0.4.2"
+msgid "Domogik 0.5.1"
 msgstr ""
 
 #: templates/download.html:16
@@ -57,7 +57,7 @@ msgid "Télécharger Domogik-MQ"
 msgstr ""
 
 #: templates/download.html:40
-msgid "Domoweb 0.4.1"
+msgid "Domoweb 0.5.1"
 msgstr ""
 
 #: templates/download.html:42
@@ -289,16 +289,16 @@ msgstr ""
 
 #: templates/index.html:119
 msgid ""
-"Domogik évolue avec les nouvelles technologies (Téléinfo, Velbus, "
-"Onewire, Rfxcom...). D'autres technologies sont en cours de développement"
-" (Zwave,...). "
+"Domogik évolue avec toutes les technologies, qu'elles soient anciennes ou"
+" nouvelles. Il existe de multiple plugins pour supporter ces différentes "
+"technologies : Velbus, Téléinformation, Météo, Zwave, .... "
 msgstr ""
 
 #: templates/index.html:120
 msgid ""
-"Les technologies sont supportées par des plugins que vous pouvez trouver "
-"sur <a href=\"http://repo-public.domogik.org/\" alt=\"Dépôt de "
-"packages\">notre dépôt de packages</a>."
+"Ces plugins sont référencés sur <a href=\"http://repo-"
+"public.domogik.org/\" alt=\"Dépôt de packages\">notre dépôt de "
+"packages</a>."
 msgstr ""
 
 #: templates/index.html:124
@@ -364,6 +364,11 @@ msgstr ""
 msgid "L'interface s'adapte à toutes les tailles d'écrans"
 msgstr ""
 
+#: templates/index.html:181 templates/index.html:184 templates/index.html:191
+#: templates/index.html:194 templates/index.html:197 templates/index.html:201
+msgid "Interface de Domogik"
+msgstr ""
+
 #: templates/index.html:188
 msgid "Personnalisez facilement le style de votre interface"
 msgstr ""
@@ -382,6 +387,10 @@ msgid ""
 "interfaces de contrôle idéales."
 msgstr ""
 
+#: templates/index.html:226
+msgid "Interface de Domogik sur une liseuse"
+msgstr ""
+
 #: templates/index.html:237
 msgid "<span class='fine'>Administrez depuis</span> <strong>votre canapé</strong>"
 msgstr ""
@@ -396,6 +405,10 @@ msgid ""
 "plugin, créer un périphérique  ou encore créer un scénario."
 msgstr ""
 
+#: templates/index.html:247 templates/index.html:250 templates/index.html:255
+msgid "Administration de Domogik"
+msgstr ""
+
 #: templates/index.html:254
 msgid "Créez des scénarios"
 msgstr ""
@@ -408,6 +421,10 @@ msgstr ""
 msgid ""
 "Avec Domogik et Openremote, vous pouvez créer des interfaces photo "
 "réalistes"
+msgstr ""
+
+#: templates/index.html:273
+msgid "Openremote et Domogik"
 msgstr ""
 
 #: templates/index.html:287
@@ -541,7 +558,7 @@ msgstr ""
 
 #: templates/index.html:535
 msgid ""
-"Tout le monde n'a pas les memes goûts! Si vous n'aimez ni Domoweb, ni "
+"Tout le monde n'a pas les mêmes goûts! Si vous n'aimez ni Domoweb, ni "
 "Domodroid vous pouvez grâce aux APIs documentées interagir avec Domogik "
 "et créer votre propre interface!"
 msgstr ""
