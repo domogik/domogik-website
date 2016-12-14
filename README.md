@@ -46,6 +46,31 @@ You need to upgrade the below files :
 
 Then Launch the script **src/build_i18n_catalog.sh** to build the new language catalogs.
 
+Website updated with new content
+================================
+
+When new content is added, to allow translation, do :
+
+```
+cd src
+./build_i18n_catalog.sh
+```
+
+Then, the file **i18n_website_template.pot** is updated. Commit it and push it :
+
+```
+git add i18n_website_template.pot
+git commit -m "i18n pot file updated"
+git push
+```
+
+The Transifex project should see the new entries.
+
+Do the translation stuff.
+
+When ok, rebuild the website (next chapter).
+
+
 Build the website
 =================
 
