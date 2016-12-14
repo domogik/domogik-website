@@ -1,0 +1,135 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: release_0.5.jpg -->
+<h1>Domogik 0.5 release</h1>
+<p>
+  The Domogik team is proud to announce the release of Domogik 0.5!
+</p>
+<!-- stop -->
+<p>
+  This release is to be used with Domoweb 0.5 (the web interface) and the Domogik-MQ 1.4 component.
+</p>
+<p>You can check the improvments list in the <a href="http://domogik.readthedocs.io/en/master/users/releases/0.5.0.html">release note</a>.</p> 
+
+<img src="blog/2016-release-0.5/0.5_800x400.jpg" class="img-responsive img-thumbnail"/>
+
+<h2>Domogik</h2>
+
+<p>
+  This Domogik release include several big technical improvments, mainly on architecture and performances. The plugins development process has also been improved by allowing the development of non xPL plugins.
+</p>
+<p>
+  A <strong>new scenario engine</strong> have been implemented.
+</p>
+
+<img src="blog/2016-release-0.5/domogik_scenario_cron_01.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  A new <strong>timeline</strong> section allows to display the timeline for all Domogik, a plugin or a device.
+</p>
+
+<img src="blog/2016-release-0.5/domogik_timeline_00.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/domogik_timeline_01.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/domogik_timeline_02.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  Another new section have been added to show the devices batteries levels.
+</p>
+
+<img src="blog/2016-release-0.5/domogik_baterry_01.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  There were many other improvments : new data types, backup script, docker image (for test only), SSL support, users managements, metrics, ...
+</p>
+
+
+<h2>Packages</h2>
+
+<!-- TODO : mettre a jour en janvier !!!!! -->
+<p>
+  The official packages list is available on <a href="http://repo-public.domogik.org/"> our packages repository</a>. Today (december), this list is quite short because lot of the existing plugins have not been tested yet. There is currently amore than 40 plugins in development. Most of them are already working fine.
+</p>
+
+
+<h2>Domoweb</h2>
+
+<p>Domoweb, the web interface includes also a lot of improvments : </p>
+<ul>
+  <li>Improvment of the existing widgets.</li>
+  <li>New widgets.</li>
+  <li>The Butler can now been used with the browser voice interface.</li>
+  <li>...</li>
+</ul>
+
+<p>
+  Here are some examples of what you can do :
+</p>
+
+  <img src="blog/2016-release-0.5/domoweb_01_dashboard.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_02_meteo.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_03_electricity.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_04_history.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  The Butler screen is available from the top right button on the interface :
+</p>
+
+  <img src="blog/2016-release-0.5/domoweb_05_butler1.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_05_butler2.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  Some widgets allow a fullscreen mode when cliking on them :
+</p>
+
+  <img src="blog/2016-release-0.5/domoweb_06_map1.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_06_map2.jpg" class="img-responsive img-thumbnail"/>
+
+<p>
+  The widgets are highly customisable : 
+</p>
+  <img src="blog/2016-release-0.5/domoweb_07_round.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_08_allwidgets.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_09_widgets.jpg" class="img-responsive img-thumbnail"/>
+  <img src="blog/2016-release-0.5/domoweb_10_widgets.jpg" class="img-responsive img-thumbnail"/>
+
+
+<h2>Domodroid</h2>
+
+<p>
+  The new Domodroid release includes also a lot of improvments :
+</p>
+<ul>
+  <li>The configuration menu have been rewrite.</li>
+  <li>The configuration can now be done by scanning a QR-code available from the Domogik administration home page.</li>
+  <li>Map mode improvment.</li>
+  <li>New widgets.</li>
+  <li>Improvment of existing widgets.</li>
+  <li>...</li>
+</ul>
+
+<!-- TODO : comments -->
+
+<img src="blog/2016-release-0.5/dmd_widgets_01.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_02.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_03.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_04.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_05.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_widgets_06.jpg" class="img-responsive img-thumbnail"/>
+
+
+<img src="blog/2016-release-0.5/dmd_map_01.jpg" class="img-responsive img-thumbnail"/>
+<img src="blog/2016-release-0.5/dmd_map_02.jpg" class="img-responsive img-thumbnail"/>
+
+<h2>Documentation</h2>
+
+<p>The end user documentation have been reviewed on visual and content. It is now more clear.</p>
+<img src="blog/2016-release-0.5/doc.jpg" class="img-responsive img-thumbnail"/>
+
+<h2>To conclude...</h2>
+
+<p>This was a big release of Domogik. We want to thanks everybody involved in the project : developpers, testers, issues creators, ...</p>
+
+<p>The next release will be a technical one, focused on the installation and resources improvments.</p>
+
+{% endblock  %}
