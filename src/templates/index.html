@@ -29,7 +29,7 @@
         </div>
         <div class="lastPosts container">
           <div class="row">
-            {% for preview in blog_headers %}
+            {% for preview in blog_headers|sort(attribute='url', reverse=True) %}
               {% if loop.index <= 3 %}
                 <div class="col-md-4">
                   <div class="post">
