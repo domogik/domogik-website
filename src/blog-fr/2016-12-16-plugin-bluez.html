@@ -1,0 +1,195 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: bluetooth.jpg -->
+<h1>Plugin bluez pour détecter les appareils bluetooth</h1>
+<p>
+  Aujourd'hui, découvrons le plugin <strong>bluez</strong>! Ce plugin va vous permettre de détecter la présence d'appareils bluetooth, et donc de réaliser des actions en conséquence.
+</p>
+<!-- stop -->
+
+<img src="blog/2016-plugin-bluez/dongle_01.jpg" class="img-responsive">
+
+<h2>Cas d'usage</h2>
+
+<p>Le cas d'usage principal est la détection de personne. En supposant qu'une personne de la maison prenne son smartphone en quittant la maison, si le smartphone n'est plus détecté vie bluetooth, la personne n'est plus là. Et inversement quand la personne revient.</p>
+
+<p>La même méthode peut être utilisée avec les bracelets connectés et portes clés bluetooth.</p>
+
+<p>Une fois que vous savez si une personne est là ou pas vous pouvez envisagez des scénarios qui se déclenchent sous ces conditions (activation de l'alarme automatiquement, envoi de notifications, message vocal de bienvenue, ...)</p>
+
+
+<h2>Prérequis</h2>
+
+<ul>
+  <li>Domogik 0.5</li>
+  <li>Le support du bluetooth sur le serveur où est installé Domogik. Si le serveur ne supporte pas le bluetooth, il suffit de lui ajotuer un clé bluetooth usb : vous en trouverez à peu près n'importe où.</li>
+</ul>
+
+<h2>Installation du plugin</h2>
+
+<p>Pour le moment, dans Domogik (version 0.5), les installations se font en ligne de commande.</p>
+
+
+<p>Pour trouver la commande pour installer le plugin, il suffit d'aller sur le dépôt de plugins : <a href="http://repo-public.domogik.org/packages">http://repo-public.domogik.org/packages</a>. Sur cette page, vous trouvez tous les plugins qui ont été validés.</p>
+
+<img src="blog/2016-plugin-bluez/repo_bluez_01.jpg" class="img-responsive">
+
+<p> Une fois le plugin désiré trouvé, il suffit de cliquer sur <strong>Install</strong> et une fenêtre s'affiche avec la ligne de commande pour installer le plugin.</p>
+
+<img src="blog/2016-plugin-bluez/repo_bluez_02.jpg" class="img-responsive">
+
+<p>Lancez la commande avec l'utilisateur système utilisé lors de l'installation de Domogik (domogik par défaut), puis relancez Domogik. Par exemple pour la version 1.4 du plugin :</p>
+
+<pre>
+$ dmg_package --install https://github.com/Cereal2nd/domogik-plugin-bluez/archive/1.4.zip
+$ sudo /etc/init.d/domogik restart
+</pre>
+
+<h2>Configuration</h2>
+
+<p>Dans l'administration de Domogik, dans la liste des clients, allez sur le plugin bluez :</p>
+
+<img src="blog/2016-plugin-bluez/clients_01.jpg" class="img-responsive">
+<img src="blog/2016-plugin-bluez/clients_02.jpg" class="img-responsive">
+
+<p>Allez dans l'onglet <strong>configuration</strong> du plugin et configurez le :</p>
+
+
+<img src="blog/2016-plugin-bluez/configuration.jpg" class="img-responsive">
+
+<ul>
+  <li>scan-delay : il s'agit du temps entre 2 vérifications des appareils bluetooth. Ajustez le à votre besoin (mais par défaut 30s est une bonne valeur).</li>
+  <li>error-delay : en cas d'erreur lors de la détection, il s'agit du temps d'attente avant de retenter une vérification des appareils.</li>
+  <li>hysteresis : le nombre de 'non détections' acceptables avant de considérer qu'un appareil n'est plus présent.</li>
+</ul>
+
+<h2>Création d'un device</h2>
+
+<p>Allez dans l'onglet <strong>Domogik devices</strong> et cliquez sur <strong>Create a new Domogik device</strong>.</p>
+
+<img src="blog/2016-plugin-bluez/create_device_01.jpg" class="img-responsive">
+
+<p>Choisissez l'unique type de device disponible : </p>
+
+<img src="blog/2016-plugin-bluez/create_device_01b.jpg" class="img-responsive">
+
+<p>Remplissez les champs :</p>
+
+<img src="blog/2016-plugin-bluez/create_device_02.jpg" class="img-responsive">
+
+<ul>
+  <li>Device name : le nom de l'appareil</li>
+  <li>Description (facultatif) : une description</li>
+  <li>Reference (facultatif) : la référence de l'appareil</li>
+  <li>Device : l'adresse MAC (un identifiant réseau censé être unique) de l'appareil bluetooth</li>
+</ul>
+
+<p>Si vous ne connaissez pas l'adresse MAC de l'appareil bluetooth, il vous suffit d'aller dans l'onglet <strong>Advanced</strong> : l'onglet va mettre quelques secondes à s'afficher (c'est normal) et il va vous afficher le résultat de la commande de recherche des appareils visibles. L'adresse MAC a ce format : xx:xx:xx:xx:xx:xx</p>
+
+<img src="blog/2016-plugin-bluez/advanced.jpg" class="img-responsive">
+
+<p>Une fois les champs remplis, cliquez sur <strong>Create the device</strong>. Vous pouvez maintenant voir le device dans la liste :</p>
+
+<img src="blog/2016-plugin-bluez/device_detail.jpg" class="img-responsive">
+
+<h2>Historique du device</h2>
+
+<p>Après quelques changements d'état, il sera possible de voir l'historique des changements d'états du device en consultant sa timeline. Elle est accessible depuis le détail du device via le lien <strong>View the device timeline</strong></p>
+
+<img src="blog/2016-plugin-bluez/timeline.jpg" class="img-responsive">
+
+<h2>Mon smartphone n'est pas visible!</h2>
+
+<p>Les smartphones Android (et probablement d'autres) ne sont par défaut pas visibles des autres équipements bluetooth. Il peut vous falloir configurer votre smartphone afin de le rendre visible en permanence. De nombreux sites expliquent ceci très bien.</p>
+
+
+
+
+<h2>Utilisation sous Domoweb</h2>
+
+<p>Dans Domoweb, l'interface web de Domogik, cliquez sur le logo de Domogik en bas à droite de l'écran.</p>
+
+<img src="blog/2016-plugin-bluez/widget_01.jpg" class="img-responsive">
+
+<p>Sélectionnez le menu <strong>Widgets</strong>.</p>
+
+<img src="blog/2016-plugin-bluez/widget_02.jpg" class="img-responsive">
+
+<p>Cliquez sur <strong>Add</strong> pour ajouter un nouveau widget</strong>.</p>
+
+<img src="blog/2016-plugin-bluez/widget_03.jpg" class="img-responsive">
+
+<p>Allez sur le widget <strong>Sensor Bool</strong>, cliquez sur <strong>Add and close</strong>.</p>
+
+<img src="blog/2016-plugin-bluez/widget_04.jpg" class="img-responsive">
+
+<p>Le widget s'affiche et la page est encore en mode édition des widgets. Cliquez sur l'icône avec la roue crantée pour configurer le widget.</p>
+
+<img src="blog/2016-plugin-bluez/widget_05.jpg" class="img-responsive">
+
+<p>Dans le menu <strong>Sensors</strong>, sélectionnez le capteur (sensor) <strong>availability</strong> pour votre device. Puis cliquez sur <strong>Save</strong>.</p>
+
+<img src="blog/2016-plugin-bluez/widget_06.jpg" class="img-responsive">
+
+
+<img src="blog/2016-plugin-bluez/widget_07.jpg" class="img-responsive">
+
+<p>Le widget est configuré.</p>
+
+<img src="blog/2016-plugin-bluez/widget_08.jpg" class="img-responsive">
+
+<p>Recliquez sur le logo de Domogik en bas à droite, et choisissez <strong>Finish</strong> pour sortir du mode édition des widgets.</p>
+
+<img src="blog/2016-plugin-bluez/widget_09.jpg" class="img-responsive">
+
+<p>Et voilà, votre widget est affiché!</p>
+
+<img src="blog/2016-plugin-bluez/widget_10.jpg" class="img-responsive">
+
+<p>Vous pouvez modifier son style au besoin en retournant dans la configuration du widget.</p>
+
+
+
+
+
+
+<h2>Utilisation sous Domodroid</h2>
+
+<p>Domogik a aussi son application domotique, nommée <strong>Domodroid</strong>. Vous pouvez télécharger la dernière version sur <em>Google Play</em>, <em>F-droid</em> ou <a href="https://github.com/domogik/domodroid/releases">le compte Github du projet Domodroid</a>.</p>
+<p>Une fois l'application installée, pour la configurer, rien de plus simple : démarrez la. Le menu de configuration s'ouvre. Allez dans <strong>Configurer Serveur</strong>.</p>
+
+<img src="blog/2016-plugin-bluez/domodroid_01.png" class="img-responsive">
+
+<p>Puis cliquez sur <strong>Configuration automatique via QR code</strong>.</p>
+
+<img src="blog/2016-plugin-bluez/domodroid_02.png" class="img-responsive">
+
+<p>Sur votre pc ou tablette, allez sur la page d'accueil de l'administration de Domogik et visez avec votre téléphone le QR code affiché à l'écran.</p>
+
+<img src="blog/2016-plugin-bluez/domodroid_03.png" class="img-responsive">
+
+<p>Une fois la configuration appliquée, depuis l'écran d'accueil, dans le menu (en haut à droite, cliquez sur <strong>Synchroniser</strong> pour synchroniser Domodroid avec Domogik.</p>
+
+<img src="blog/2016-plugin-bluez/domodroid_04.png" class="img-responsive">
+
+<img src="blog/2016-plugin-bluez/domodroid_05.png" class="img-responsive">
+
+<p>Une fois la synchronisation effectuée, vous pourrez retrouver le widget qui correspond à votre device bluetooth!</p>
+
+<img src="blog/2016-plugin-bluez/domodroid_06.png" class="img-responsive">
+
+<p>Il est également possible de placer un widget sur une carte (un mode plan), mais ceci fera l'objet d'un autre billet!</p>
+
+
+
+
+<h2>Un exemple de scénario</h2>
+
+<p>Ce scénario va réaliser une action si le device <em>Android Fred</em> n'est plus/pas détecté et une autre action si il est à nouveau détecté. Le bloc <em>Trigger mode hysteresis</em> permet de ne réaliser les actions que si l'état change.</p>
+<p>Ici les actions du scénario affectent à un device virtuel (plugin <em>vdevice</em>) une chaîne de caractère. Ce device virtuel permet de géré l'envoi de notifications via un scénario évolué (qui sera abordé dans un futur billet).</p>
+
+<img src="blog/2016-plugin-bluez/scenario.jpg" class="img-responsive">
+
+
+{% endblock  %}
