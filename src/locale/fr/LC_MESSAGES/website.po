@@ -3,14 +3,14 @@ Server: nginx
 Vary: Accept-Encoding
 Cache-Control: max-age=0
 Content-Type: text/x-po
-Date: Sun, 18 Dec 2016 19:05:16 GMT
-Expires: Sun, 18 Dec 2016 19:05:16 GMT
+Date: Sun, 18 Dec 2016 21:04:03 GMT
+Expires: Sun, 18 Dec 2016 21:04:03 GMT
 Accept-Ranges: bytes
 X-Content-Type-Options: nosniff
 Content-Disposition: attachment; filename*="UTF-8''i18n_website_template.pot_fr.po"
 Connection: keep-alive
-Set-Cookie: X-Mapping-fjhppofk=100E7CB61F7D5C274279F09EADF920A3; path=/
-Last-Modified: Sun, 18 Dec 2016 19:05:16 GMT
+Set-Cookie: X-Mapping-fjhppofk=371E5B112B2394FA3017E8BE0809059C; path=/
+Last-Modified: Sun, 18 Dec 2016 21:04:03 GMT
 Content-Length: 16234
 
 # Translations template for PROJECT.
