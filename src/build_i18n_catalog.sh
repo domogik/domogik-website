@@ -1,7 +1,7 @@
 LOCALE_DIR=./locale/
 DOMAIN=website
 #LANGUAGES="fr_FR en_US it_IT"
-LANGUAGES="fr en it"
+LANGUAGES="fr en it ru"
 
 
 # extract all things to translate from the templates
