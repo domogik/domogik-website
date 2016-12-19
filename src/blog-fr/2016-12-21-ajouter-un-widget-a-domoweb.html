@@ -1,0 +1,89 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: dmw_widgets.jpg -->
+<h1>Ajouter un widget à Domoweb</h1>
+<p>
+  Nous allons voir comment ajouter un widget à l'interface web Domoweb.
+</p>
+<!-- stop -->
+
+<p>Domoweb est fournit avec plus de 30 widgets. Voici un aperçu des différents widgets qui existent : </p>
+<img src="blog/2016-widget-domoweb/allwidgets.jpg" class="img-responsive">
+
+<p>Nous allons voir qu'ajouter un widget à une section (que nous pourrions aussi nommer une page, une vue, un dashboard) est très simple.</p>
+
+
+
+
+<h2>Prérequis</h2>
+
+<ul>
+  <li>Avoir installé Domogik, Domoweb et créé au moins un device.</li>
+</ul>
+
+
+
+
+<h2>Ajouter un widget</h2>
+
+<p>Dans Domoweb, cliquez sur le logo de Domogik en bas à droite de l'écran.</p>
+
+<img src="blog/2016-widget-domoweb/widget_01.jpg" class="img-responsive">
+
+<p>Sélectionnez le menu <strong>Widgets</strong>.</p>
+
+<img src="blog/2016-widget-domoweb/widget_02.jpg" class="img-responsive">
+
+<p>Cliquez sur <strong>Add</strong> pour ajouter un nouveau widget</strong>.</p>
+
+<img src="blog/2016-widget-domoweb/widget_03.jpg" class="img-responsive">
+
+<p>Dans la liste des widgets, choisissez le widget adapté à votre besoin. Par exemple pour un capteur d'ouverture, allez sur le widget <strong>Sensor Bool</strong> et cliquez sur <strong>Add and close</strong>.</p>
+
+<img src="blog/2016-widget-domoweb/widget_04.jpg" class="img-responsive">
+
+<p>Le widget s'affiche et la page est encore en mode édition des widgets. Cliquez sur l'icône avec la roue crantée pour configurer le widget.</p>
+
+<img src="blog/2016-widget-domoweb/widget_05.jpg" class="img-responsive">
+
+<p>Dans le menu <strong>Sensors</strong>, sélectionnez le capteur (sensor) qui vous intéresse. Puis cliquez sur <strong>Save</strong>.</p>
+
+<img src="blog/2016-widget-domoweb/widget_06.jpg" class="img-responsive">
+
+
+<img src="blog/2016-widget-domoweb/widget_07.jpg" class="img-responsive">
+
+<p>Le widget est configuré. SI vous souhaitez le déplacer, vous pouver utiliser l'ancre en haut à droite du widget.</p>
+
+<img src="blog/2016-widget-domoweb/widget_08.jpg" class="img-responsive">
+
+<p>Recliquez sur le logo de Domogik en bas à droite, et choisissez <strong>Finish</strong> pour sortir du mode édition des widgets.</p>
+
+<img src="blog/2016-widget-domoweb/widget_09.jpg" class="img-responsive">
+
+<p>Et voilà, votre widget est affiché!</p>
+
+<img src="blog/2016-widget-domoweb/widget_10.jpg" class="img-responsive">
+
+<p>Vous pouvez modifier son style au besoin en retournant dans la configuration du widget.</p>
+
+
+
+
+<h2>Aller plus loin</h2>
+
+<p>Il est possible de configurer le style de chaque widget de manière indépendante (dans la configuration du widget) ou globale à la section (dans la configuration de la section). Les éléments suivants peuvent être personnalisés : <p>
+<ul>
+  <li><strong>La couleur de fond</strong> : il peut s'agir d'un nom de couleur en anglais : <em>red, blue, ...</em>, d'un code hexadécimal RGB : <em>#ff0000, #9ad45c, ...</em>, ou encore du mot clé <em>transparent</em> pour avoir une couleur transparente.</li>
+  <li><strong>La couleur du texte</strong> : elle se configure de la même manière que la couleur du fond.</li>
+  <li><strong>La couleur des bords du widget</strong> : elle se configure de la même manière que la couleur du fond.</li>
+  <li><strong>L'arrondi des angles du widget</strong> : la valeur peut être en pixels : <em>5px, 3px, 0px...</em> ou en pourcentages : <em>5%, ...</em>. Une valeur de 50% va créer un widget rond! Il est possible de spécifier uniquement une valeur ou 4 valeurs séparées par un espace pour différencier chaque angle, par exemple : <em>10px 10px 0px 0px</em>.</li>
+  <li><strong>L'ombre du widget</strong> : il faut indiquer plusieurs valeurs : la distance horizontale, la distance verticale, le flou et pour finir la couleur en code hexadécimal RGB. Par exemple : <em>10px 10px 5px #656565</em>.</li>
+</ul>
+
+<img src="blog/2016-widget-domoweb/widget_cfg_01.jpg" class="img-responsive">
+
+<p>Certains widgets ont des options spécifiques qui permettent de les personnaliser : il est donc intéressant de regarder toutes les options disponibles sur un widget!</p>
+
+{% endblock  %}
