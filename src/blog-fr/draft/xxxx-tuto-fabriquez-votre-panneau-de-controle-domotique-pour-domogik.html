@@ -1,0 +1,263 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: pad.jpg -->
+<h1>Tutoriel : fabriquez votre panneau de contrôle domotique pour Domogik</h1>
+<p>
+  Aujourd'hui nous allons voir comment intégrer proprement une tablette Android (ou autre) sur un mur dans un encadrement en bois et sans fil apparent !
+</p>
+<!-- stop -->
+
+<!-- TODO : image finie -->
+<img src="blog/2016-panneau/fin_01.jpg" class="img-responsive">
+
+<h2>Cahier des charges</h2>
+
+<p>
+Le but de cette intégration est d'avoir un point de contrôle fixe et toujours disponibles pour l'installation domotique. Nous appelerons l'installation de la tablette dans son cadre le <strong>panneau</strong> pour la suite de l'article.
+</p>
+<p>
+Voici les objectifs :
+</p>
+<ul>
+  <li>Afficher en permanence une interface de contrôle de Domogik. L'article détaillera la mise en place de Domoweb, mais nous pourrons ausis utiliser Domodroid.</li>
+  <li>Le panneau doit être allumé en permanence.</li>
+  <li>Le panneau doit avoir un coût faible.</li>
+</ul>
+
+<h2>Les étapes</h2>
+
+<p>Avant de rentrer dans le détail, voyons les différentes étapes :</p>
+<ul>
+  <li>Acheter une tablette.</li>
+  <li>Prendre les mesures de la tablette pour faire les courses.</li>
+  <li>Faire les courses.</li>
+  <li>Fabriquer le panneau.</li>
+  <li>Installer le panneau.</li>
+  <li>Mettre en place Domoweb sur la tablette.</li>
+  <li>Affiner la gestion de la batterie.</li>
+</ul>
+
+<h2>Prérequis</h2>
+
+<p>Hormis les achats à réaliser, voici ce qu'il faut avoir :</p>
+<ul>
+  <li>Pour fabriquer le panneau : une boîte à onglets, une scie à bois, un tournevis, des serres-joints (pour faciliter le collage des pièces), une perceuse et des petits forêts à bois, un ciseau à bois.</li>
+  <li>Pour installer le panneau : une perceuse et des forêts adaptés au moyen d'accroche et au mur.</li>
+  <li>Pour adapter l'installation électrique (si besoin) : des connaissances de base en électricité.</li>
+  <li>Du temps.</li>
+</ul>
+
+
+<h2>Acheter une tablette</h2>
+
+<p>
+  Le choix de la tablette dépend avant tout de votre besoin et de votre budget. Pour ma part j'ai commencé ce projet quand je suis tombé par hasard sur une tablette 10" en soldes à 29€. Elle est de marque <strong>mpman</strong> et il s'agit du modèle <strong>MP10 Quad</strong> sous Android 4.4. 
+</p>
+<img src="blog/2016-panneau/modele.jpg" class="img-responsive">
+<p>
+  A ce prix là je ne prenais pas trop de risques! Mais il s'avère que la qualité est plus que moyenne :
+</p>
+<ul>
+  <li>L'angle de vision de l'écran est moyen (mais je m'y attendais) </li>
+  <li>Le gros point noir : il y a toute une ligne horizontale où le tactile ne fonctionne pas. Cette ligne se situe pile poil au niveau de la barre d'adresse du navigateur! En inversant l'écran ça fonctionne mais du coup on perd une ligne du clavier... Je ne sais pas si c'est un défaut lié à la série ou particulier à la mienne.</li>
+  <li>par contre elle répond vraiment bien et semble plus que suffisante en terme de performances par rapport à ce à quoi je m'attendais</li>
+  <li>Je soupçonne le micro de mal filtrer les bruits de fond car l'acquisition vocale mets plusieurs secondes avant de détecter la fin de la parole</li>
+</ul>
+
+<p>
+  Si vous avez le budget, prenez une tablette de marque avec un bon écran! Sinon tant qu'à acheter du moyen, attendez les soldes pour avoir du moyen à bon prix ;).
+</p>
+
+<img src="blog/2016-panneau/tablette_01.jpg" class="img-responsive">
+<img src="blog/2016-panneau/tablette_02.jpg" class="img-responsive">
+<img src="blog/2016-panneau/tablette_03.jpg" class="img-responsive">
+
+<h2>Prendre les mesures de la tablette pour faire les courses</h2>
+
+<p>
+  L'intégration de la tablette dans le panneau ne doit laisser apparaître que l'écran de la tablette. Il faut donc prendre les mesures (hauteur et largeur) de la zone d'affichage de l'écran. Nous les noterons <strong>H</strong> et <strong>L</strong>
+</p>
+
+<p>
+  Toutes les tablettes sont alimentées via un câble qui se branche sur le côté. Branchez le câble et mesurez la distance entre le bord de l'écran et l'extrémité du câble plié. Ceci vous donnera la largeur minimale de votre encadrement (prévoyez 5mm de marge quand même). Nous la noterons <strong>C</strong>
+</p>
+
+<p>
+  Pour finir, il vous faudra mesurer l'épaisseur de votre tablette et ajouter un bon demi centimètre au minimum (aération, passage du câble d'alimentation). Ceci donnera l'épaisseur des tasseaux à fixer sur les côtés du paneau. Elle sera notée <strong>E</strong>.
+</p>
+
+<h2>Faire les courses</h2>
+
+<p>
+  Pour un budget d'environ 20€ (hors partie électricité variable suivant vos besoins), vous allez avoir besoin de :
+</p>
+<ul>
+  <li>Un profilé ou une baguette de bois pour le cadre de largeur <strong>C</strong> minimum et de longueur <strong>(H + 2*C + L + 2*C)*2</strong></li>
+  <li>Un tasseau de section <strong>10mm * C</strong> et de la même longueur que le profilé.</li>
+  <li>4 équerres plates pour lier les profilés coupés.</li>
+  <li>de la colle à bois.</li>
+  <li>du mastic à bois et/ou de l'enduit de lissage à bois.</li>
+  <li>des petites pointes sans tête (au moins 16 si vous prenez les mêmes équerres que moi).</li>
+  <li>2 équerres en plastique.</li>
+  <li>Des vis de longueur inférieure à l'épaisseur du profilé.</li>
+  <li>Des chevilles pour la fixation de petits crochets au mur.</li>
+  <li>2 petits crochets en L.</li>
+</ul>
+
+<p>
+  Pour la partie électricité j'ai eu besoin dans mon cas de :
+</p>
+<ul>
+  <li>De la gaine murale.</li>
+  <li>Du fil électrique avec 3 fils de section 1mm².</li>
+  <li>Une prise murale en saillie avec la terre.</li>
+  <li>Une prise mâle.</li>
+  <li>Une gaine ronde rigide du diamètre du trou que j'ai percé dans mon mur (pour un rendu plus propre).</li>
+  <li>De l'enduit de lissage pour réparer mes bêtises...</li>
+  <li>Une prise télécommandée horaire avec pas de 30 minutes (pour ne pas alimenter en permanence la batterie) : on pourrait aussi utiliser une prise commandée via domotique et un relevé de la jauge de la batterie de la tablette, mais le coût est différent. Ici la prise m'a coûté 5€ environ!</li>
+</ul>
+
+<p>
+  Je n'ai pas mentionné ici la peinture, j'ai réutilisé un fond de pot de la couleur d'un autre mur de la pièce pour faire un rappel de couleur (et surtout pour faire plaisir à ma femme!).
+</p>
+
+<h2>Fabriquer le panneau</h2>
+
+<h3>Découper l'encadrement</h3>
+
+<p>Avec la boîte à onglet et la scie à bois, coupez les 4 morceaux de profilés nécessaires à l'encadrement. La découpe peut ne pas être parfaitil suffira de corriger le tir avec le mastic ou l'enduit de lissage.</p>
+
+<img src="blog/2016-panneau/scie_et_boite_onglet.jpg" class="img-responsive">
+<img src="blog/2016-panneau/decoupe_01.jpg" class="img-responsive">
+<img src="blog/2016-panneau/decoupe_02.jpg" class="img-responsive">
+
+<h3>Assembler l'encadrement</h3>
+
+<p>Avec les équerres plates et les petites vis, assemblez l'encadrement pour qu'il encadre parfaitement l'écran : on ne doit plus voir le bord de la tablette.</p>
+
+<img src="blog/2016-panneau/montage_01.jpg" class="img-responsive">
+<img src="blog/2016-panneau/montage_02.jpg" class="img-responsive">
+<img src="blog/2016-panneau/montage_03.jpg" class="img-responsive">
+
+<h3>Découper les tasseaux et les ajuster</h3>
+
+<p>Coupez 2 morceaux de la largeur totale du panneau dans le tasseau. Coupez ensuite 2 morceaux légèrement plus petits que la hauteur du panneau moins 2 fois la largeur du tasseau.</p>
+
+<img src="blog/2016-panneau/montage_04.jpg" class="img-responsive">
+
+<p>Positionnez les tasseaux et si besoin, enlevez de la matière à l'emplacement des équerres avec un ciseau à bois ou un outil multifunction. Vous serez aussi probablement amené à enlever de la manière au niveau du câble d'alimentation!</p>
+
+<img src="blog/2016-panneau/alim_03.jpg" class="img-responsive">
+
+<img src="blog/2016-panneau/montage_05.jpg" class="img-responsive">
+
+<h3>Collez les morceaux de tasseaux</h3>
+
+<p>Collez les morceaux de tasseaux à l'encadrement.</p>
+
+<img src="blog/2016-panneau/montage_06.jpg" class="img-responsive">
+<img src="blog/2016-panneau/montage_07.jpg" class="img-responsive">
+
+<p>Une fois la colle sèche, vous pouvez consolider l'ensemble avec des petites pointes sans têtes.</p>
+
+<h3>Aération</h3>
+
+<p>Afin de faciliter l'aération de la chaleur générée par la tablette, j'ai créé une ouverture dans le bas du panneau.</p>
+
+<h3>Des petits trous</h3>
+
+<p>Maintenant, en fonction de votre tablette, vous pouvez avoir besoin de réaliser des trous. J'ai fait deux trous : un premier pour l'accès au bouton on/off sur le côté, et un second pour libérer la caméra frontale et pouvoir l'utiliser.</p>
+
+<img src="blog/2016-panneau/camera_01.jpg" class="img-responsive">
+
+<h3>Mastiquage</h3>
+
+<p>Maintenant que le panneau est complet sur son côté visible, il faut boucher les trous. Utilisez du mastic ou de l'enduit de lissage pour les boucher.</p>
+
+<img src="blog/2016-panneau/mastic_01.jpg" class="img-responsive">
+
+<p>Une fois le mastic ou l'enduit sec, il faudra le poncer avec du papier à poncer.</p>
+
+<img src="blog/2016-panneau/poncage_01.jpg" class="img-responsive">
+
+<h3>Caler la tablette</h3>
+
+<p>Il va maintenant falloir caler la tablette pour qu'elle soit bien positionnée. Avec l'aide de petits morceaux de bois découpés dans le tasseau faites en sorte de caler la tablette pour que l'écran soit correctement positionné. Puis collez ces cales en bois.</p>
+
+<p>Pour ma part, je n'ai mis des cales que en bas et sur les côtés, la tablette sera calée en haut via les équerres de fixation en plastique.
+
+<h3>Ajout des équerres de fixation</h3>
+
+<p>Pour fixer le panneau au mur j'ai choisi d'utiliser 2 équerres en plastiques. Le fait qu'elles soient en plastique m'a permis de les découper aux bonnes dimensions pour qu'elles rentrent dans le cadre, mais aussi pour qu'elles permettent de caler la tablette en haut.</p>
+
+<img src="blog/2016-panneau/accroche_01.jpg" class="img-responsive">
+<img src="blog/2016-panneau/accroche_02.jpg" class="img-responsive">
+
+
+<h2>Installer le panneau</h2>
+
+<p>Pour installer le panneau, mesurez l'écart entre les trous des 2 équerres, faites des répères sur votre mur, percez, mettez 2 chevilles adaptées au mur et vissez y les petits crochets.</p>
+
+<img src="blog/2016-panneau/fixation_01.jpg" class="img-responsive">
+<img src="blog/2016-panneau/fixation_02.jpg" class="img-responsive">
+<img src="blog/2016-panneau/fixation_03.jpg" class="img-responsive">
+
+<p>Notez ici l'aération sous le panneau.</p>
+
+<img src="blog/2016-panneau/aeration_01.jpg" class="img-responsive">
+
+<p>En fonction de votre maison, la manière d'ammener le courant à votre panneau sera différente. Pour ma part, j'ai réalisé un trou qui traverse le mur pour arriver dans un placard qui est équipé d'une prise libre.</p>
+
+<img src="blog/2016-panneau/electricite_01.jpg" class="img-responsive">
+<img src="blog/2016-panneau/electricite_02.jpg" class="img-responsive">
+
+<p>Votre panneau est presque prêt !</p>
+
+<img src="blog/2016-panneau/accroche_03.jpg" class="img-responsive">
+
+<h3>La peinture</h3>
+
+<p>Retirez le panneau pour le peindre. Pour commencer, reponcez votre panneau jusqu'à obtenir un rendu lisse, puis appliquez 3 couches de peinture de votre choix.</p>
+
+<img src="blog/2016-panneau/peinture_01.jpg" class="img-responsive">
+
+
+<h2>Configurer la tablette</h2>
+
+<p>Avant de l'utiliser la tablette nécessite un peu de configuration :</p>
+
+<ul>
+  <li>Désactivation de l'écran de déverouillage.</li>
+  <li>Désactivation de la mise en veille de l'écran (pour le moment je veux un écran allumé 24h/24).</li>
+  <li>Installation de <strong>SSH Droid</strong> pour pouvoir déposer des fichiers sur la tablette.</li>
+</ul>
+
+
+
+<h2>Mettre en place Domoweb sur la tablette</h2>
+
+<!-- TODO 
+ add to homescreen
+ ssl
+
+ images
+-->
+TODO
+
+<h2>Affiner la gestion de la batterie.</h2>
+
+<p>Afin d'éviter la surchauffe de la batterie de la tablette, il vaut mieux ne pas mettre la tablette en charge tout le temps. Il y a plusieurs manières de procéder :</p>
+
+<ul>
+  <li>Domotiser la gestion de la prise avec une prise commandable et un scénario qui l'active en fonction du niveau de batterie de la tablette. Le coût minimum de 15€ environ pour prise compatible RFXCOM et pourra monter facilement jusq'à 40 ou 60€ pour du Zwave.</li>
+  <li>Utiliser une bonne vieille prise programmable qui vaut 5€.</li>
+</ul>
+
+<p>J'ai choisi la bonne vieille prise programmable. Ma tablette tient environ 7h allumée. Par sécurité (et comme la batterie va sûrement faiblir dans le temps), je choisis un cycle d'alimentation de 4h : charge pendant 4h, décharge pendant 4h, ...</p>
+
+<!-- TODO image -->
+TODO
+
+
+{% endblock  %}
