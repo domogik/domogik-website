@@ -1,0 +1,72 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: release_0.5.2.jpg -->
+<h1>Sortie de Domogik 0.5.2</h1>
+<p>
+  L'équipe de Domogik est fière de vous annoncer la sortie de la version 0.5.2 de Domogik.
+</p>
+<!-- stop -->
+<p>
+  Cette version est accompagnée de Domoweb, l'interface de contrôle web en version 0.5.2. Et bien entendu, l'application Domodroid, interface de contrôle de Domogik sous Android est toujours disponible.
+</p>
+<p>
+  Une nouvelle application Android débarque également : <em>Butler Android</em>. Il s'agit uniquement d'un interface vocale avec le Majordome. Nous en parlerons dans un billet dédié!
+</p>
+
+<img src="blog/2017-release-0.5.2/0.5.2_800x532.jpg" class="img-responsive img-thumbnail"/>
+
+<h2>Domogik</h2>
+
+<p>Pour consulter la liste de toutes les évolutions de Domogik, vous pouvez consulter <a href="http://domogik.readthedocs.io/en/master/users/releases/0.5.2.html">la release note de cette version</a>.</p> 
+
+<p>
+  Cette version contient une seule évolution majeure : l'amélioration du temps de réponse du Majordome aux requêtes. Cette amélioration a malheureusement un effet de bord et il faudra réinstaller la dernière version des packages suivants : </p>
+<ul>
+  <li>brain-base</li>
+  <li>brain-shopping</li>
+  <li>plugin-weather</li>
+  <li>plugin-callerid</li>
+</ul>
+
+<p>Par extension, le package <strong>brain-base</strong> apporte beaucoup de confort dans l'utilisation du Majordome avec une meilleure intégration de formules usuelles de langage naturel. Par exemple, les phrases suivantes sont équivalentes : </p>
+
+<blockquote>
+<p>— Quelle est la température du salon ?</p>
+</blockquote>
+
+<blockquote>
+<p>— Peux-tu m'indiquer la température du salon ?</p>
+</blockquote>
+
+<blockquote>
+<p>— Est-ce que tu peux me dire quelle est la température dans le salon ?</p>
+</blockquote>
+
+<blockquote>
+<p>— Il fait combien dans le salon ?</p>
+</blockquote>
+
+<blockquote>
+<p>— Combien fat-il dans le salon ?</p>
+</blockquote>
+
+<blockquote>
+<p>— Pourais-tu me donner la température dans le salon ?</p>
+</blockquote>
+
+
+<h2>Domoweb</h2>
+
+<p>Domoweb n'a quasiment pas évolué, il y a simplement eu un correctif sur le widget <em>health / body</em>.</p>
+
+
+
+<h2>Le mot de la fin</h2>
+
+<p>Cette version qui sort deux mois après la version précédente a permit, grâce à une communauté active de corriger les petites imperfections de la version 0.5.</p>
+
+<p>Nous vous donnons rendez-vous dans quelques semaines pour la prochaine version, la 0.6 qui commencera à introduire de nouvelles possibilités plus qu'intéressantes!</p>
+
+
+{% endblock  %}

@@ -1,0 +1,44 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: release_0.5.2.jpg -->
+<h1>Domogik 0.5.2 release</h1>
+<p>
+  The Domogik team is proud to announce the release of Domogik 0.5.2!
+</p>
+<!-- stop -->
+<p>
+  This is to be used with Domoweb 0.5.2. You can use your current Domodroid release with it.
+</p>
+<p>
+  A new Android application is available : <em>Butler Android</em>. It is a voice interface application to speak with Domogik's Butler. This is a <em>beta</em> application : there is still a few bugs in it.
+</p>
+
+<img src="blog/2017-release-0.5.2/0.5.2_800x532.jpg" class="img-responsive img-thumbnail"/>
+
+<h2>Domogik</h2>
+
+<p>You can read <a href="http://domogik.readthedocs.io/en/master/users/releases/0.5.2.html">the release note</a> to be aware of all the content of this release.</p> 
+
+<p>
+  This release has only one major improvment : the Butler response time have been increased a lot. This improvment has a side effect : you will need to upgrade some packages to their latest release. Here are the concerned packages : </p>
+<ul>
+  <li>brain-base</li>
+  <li>brain-shopping</li>
+  <li>plugin-weather</li>
+  <li>plugin-callerid</li>
+</ul>
+
+<p>Today, the best supported language by the Butler is French (just because the main Butler developper is French). If you want to help us improve the English part (or any other language), just come on irc and tell us : #domogik@freenode.net</p>
+
+<h2>Domoweb</h2>
+
+<p>Domoweb did not change a lot : only the <em>health / body</em> widget have been improved.</p>
+
+
+<h2>To conclude</h2>
+
+<p>This release goal was to fix all the little defaults of Domogik 0.5 and, thanks to the community, it is a success!</p>
+
+
+{% endblock  %}

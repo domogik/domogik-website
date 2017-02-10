@@ -8,12 +8,12 @@
 </p>
 <!-- stop -->
 
-<img src="blog/2016-plugin-weather/dmw_weather_dashboard.jpg" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmw_weather_dashboard.jpg" class="img-responsive">
 
 <p>Avec Domogik, vous allez pouvoir également : </p>
 <ul>
   <li>Créer des scénarios en fonction de la météo.</li>
-  <li>Demander à votre majordome des informations sur la météo en cours ou à venir.</li>
+  <li>Demander à votre majordome des informations sur la météo en cours ou à venir, les heures de lever et couher de soleil, la température de dehors, ...</li>
 </ul>
 
 
@@ -35,14 +35,14 @@
 
 <p>Pour trouver la commande pour installer le plugin, il suffit d'aller sur le dépôt de plugins : <a href="http://repo-public.domogik.org/packages">http://repo-public.domogik.org/packages</a>. Sur cette page, vous trouvez tous les plugins qui ont été validés. pour chaque plugin, vous trouverez ici le lien vers la documentation.</p>
 
-<img src="blog/2016-plugin-weather/repo_weather.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/repo_weather.png" class="img-responsive">
 
 <p> Une fois le plugin désiré trouvé, il suffit de cliquer sur <strong>Install</strong> et une fenêtre s'affiche avec la ligne de commande pour installer le plugin.</p>
 
-<p>Lancez la commande avec l'utilisateur système utilisé lors de l'installation de Domogik (domogik par défaut), puis relancez Domogik. Par exemple pour la version 1.4 du plugin :</p>
+<p>Lancez la commande avec l'utilisateur système utilisé lors de l'installation de Domogik (domogik par défaut), puis relancez Domogik. Par exemple pour la version 1.7 du plugin :</p>
 
 <pre>
-$ dmg_package --install https://github.com/fritz-smh/domogik-plugin-weather/archive/1.6.zip
+$ dmg_package --install https://github.com/fritz-smh/domogik-plugin-weather/archive/1.7.zip
 $ sudo /etc/init.d/domogik restart
 </pre>
 
@@ -55,7 +55,7 @@ $ sudo /etc/init.d/domogik restart
 
 <p>Dans l'administration de Domogik, dans la liste des clients, allez sur le plugin weather, puis dans l'onglet configuration.</p>
 
-<img src="blog/2016-plugin-weather/dmg_weather_01.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmg_weather_01.png" class="img-responsive">
 
 <p>Ce plugin n'a aucun paramètre de configuration, hormis le paramètre commun à tous les plugins : le démarrage automatique.</p>
 
@@ -67,15 +67,15 @@ $ sudo /etc/init.d/domogik restart
 
 <p>Allez dans l'onglet <strong>Domogik devices</strong> et cliquez sur <strong>Create a new Domogik device</strong>.</p>
 
-<img src="blog/2016-plugin-weather/dmg_weather_02.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmg_weather_02.png" class="img-responsive">
 
 <p>Choisissez l'unique type de device disponible : </p>
 
-<img src="blog/2016-plugin-weather/dmg_weather_03.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmg_weather_03.png" class="img-responsive">
 
 <p>Remplissez les champs :</p>
 
-<img src="blog/2016-plugin-weather/dmg_weather_04.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmg_weather_04.png" class="img-responsive">
 
 <ul>
   <li>Device name : le nom de votre ville</li>
@@ -86,15 +86,15 @@ $ sudo /etc/init.d/domogik restart
 
 <p>Pour trouver le code de votre ville, il faut aller sur le site <a href="https://www.yahoo.com/news/weather/">https://www.yahoo.com/news/weather/</a>. Cliquez sur le bouton pour changer d'emplacement et saisissez le nom de votre ville :</p>
 
-<img src="blog/2016-plugin-weather/dmg_yahoo_01.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmg_yahoo_01.png" class="img-responsive">
 
 <p>Vous allez être redirigé vers une page qui affiche la météo de votre ville. Dans l'url, derrière le nom de votre ville, vous trouverez le code qui correspond à votre ville : </p>
 
-<img src="blog/2016-plugin-weather/dmg_yahoo_02.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmg_yahoo_02.png" class="img-responsive">
 
 <p>Une fois les champs remplis, cliquez sur <strong>Create the device</strong>. Vous pouvez maintenant voir le device dans la liste :</p>
 
-<img src="blog/2016-plugin-weather/dmg_weather_05.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmg_weather_05.png" class="img-responsive">
 
 
 <h2>Utilisation avec le majordome</h2>
@@ -121,7 +121,7 @@ $ sudo /etc/init.d/domogik restart
 <p>— Dans deux jours, le ciel sera assez nuageux. Les températures seront comprises entre 2 et 8 degrés.</p>
 </blockquote>
 
-<img src="blog/2016-plugin-weather/dmw_weather_butler.jpg" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmw_weather_butler.jpg" class="img-responsive">
 
 
 
@@ -132,13 +132,13 @@ $ sudo /etc/init.d/domogik restart
 
 <p>Il existe plusieurs widgets sous Domoweb pour afficher la météo et les prévisions météos. Ils sont tous regroupés dans la catégorie <strong>weather</strong> : </p>
 
-<img src="blog/2016-plugin-weather/dmw_weather_widgets.jpg" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmw_weather_widgets.jpg" class="img-responsive">
 
 <p>Contrairement aux widgets plus génériques, ces widgets sont liés aux devices de météo. Vous n'aurez donc à choisir dans la configuration du widget que le device qui correspond à la ville dont vous voulez afficher les informations et non chaque capteur/sensor.</p>
 
 <p>La multitude de widgets disponibles vous permet de personnaliser l'apparance comme vous le souhaitez. Voici un exemple :</p>
 
-<img src="blog/2016-plugin-weather/dmw_weather_diff.png" class="img-responsive">
+<img src="blog/2017-plugin-weather/dmw_weather_diff.png" class="img-responsive">
 
 
 
@@ -150,11 +150,11 @@ $ sudo /etc/init.d/domogik restart
 
 <p>On peut utiliser les informations heure de lever et de coucher du soleil pour réaliser des actions diverses : ouvrir et fermer les volets automatiquement, allumer des lumières extérieures, ...</p>
 
-<img src="blog/2016-plugin-weather/scenario_01.jpg" class="img-responsive">
+<img src="blog/2017-plugin-weather/scenario_01.jpg" class="img-responsive">
 
 <p>On peut utiliser la température extérieure pour envoyer des notifications le matin : "risque de gel", ...</p>
 
-<img src="blog/2016-plugin-weather/scenario_02.jpg" class="img-responsive">
+<img src="blog/2017-plugin-weather/scenario_02.jpg" class="img-responsive">
 
 <p>En cas de vent fort, un scénario pourrait envoyer une notification et déclencher la fermeture d'un store banne. </p>
 
