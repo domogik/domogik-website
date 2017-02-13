@@ -3,18 +3,18 @@ Server: nginx
 Vary: Accept-Encoding
 Cache-Control: max-age=0
 Content-Type: text/x-po
-Date: Sun, 18 Dec 2016 21:04:03 GMT
-Expires: Sun, 18 Dec 2016 21:04:03 GMT
+Date: Mon, 13 Feb 2017 19:28:14 GMT
+Expires: Mon, 13 Feb 2017 19:28:14 GMT
 Accept-Ranges: bytes
 X-Content-Type-Options: nosniff
-Content-Disposition: attachment; filename*="UTF-8''i18n_website_template.pot_fr.po"
+Content-Disposition: attachment; filename=UTF-8''i18n_website_template.pot_fr.po
 Connection: keep-alive
-Set-Cookie: X-Mapping-fjhppofk=371E5B112B2394FA3017E8BE0809059C; path=/
-Last-Modified: Sun, 18 Dec 2016 21:04:03 GMT
-Content-Length: 16234
+Set-Cookie: X-Mapping-fjhppofk=100E7CB61F7D5C274279F09EADF920A3; path=/
+Last-Modified: Mon, 13 Feb 2017 19:28:14 GMT
+Content-Length: 16307
 
 # Translations template for PROJECT.
-# Copyright (C) 2016 ORGANIZATION
+# Copyright (C) 2017 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # 
 # Translators:
@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: domogik-website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-12-14 18:42+0100\n"
-"PO-Revision-Date: 2016-12-14 17:53+0000\n"
+"POT-Creation-Date: 2017-02-13 20:26+0100\n"
+"PO-Revision-Date: 2017-02-13 19:26+0000\n"
 "Last-Translator: fritzsmh <fritz.smh@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/domogik/domogik-website/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgid "Téléchargez la dernière version"
 msgstr ""
 
 #: templates/download.html:14
-msgid "Domogik 0.5.1"
+msgid "Domogik 0.5.2"
 msgstr ""
 
 #: templates/download.html:16
@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 
 #: templates/download.html:20 templates/download.html:46
-#: templates/download.html:68 templates/download.html:88
+#: templates/download.html:68 templates/download.html:83
 #: templates/layout.html:40
 msgid "Télécharger"
 msgstr ""
@@ -58,7 +58,7 @@ msgid "Release note"
 msgstr ""
 
 #: templates/download.html:26 templates/download.html:54
-#: templates/download.html:96 templates/layout.html:83
+#: templates/download.html:91 templates/layout.html:84
 msgid "Documentation"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgid "Télécharger Domogik-MQ"
 msgstr ""
 
 #: templates/download.html:40
-msgid "Domoweb 0.5.1"
+msgid "Domoweb 0.5.2"
 msgstr ""
 
 #: templates/download.html:42
@@ -84,26 +84,26 @@ msgid ""
 msgstr ""
 
 #: templates/download.html:62
-msgid "DomoButler"
+msgid "Butler Android"
 msgstr ""
 
 #: templates/download.html:64
 msgid ""
-"Domogik butler est l'application Android qui vous permet de parler avec "
-"Domogik."
+"Butler Android est l'application Android qui vous permet de parler avec le "
+"Majordome de Domogik."
 msgstr ""
 
-#: templates/download.html:81
+#: templates/download.html:76
 msgid "Domodroid"
 msgstr ""
 
-#: templates/download.html:83
+#: templates/download.html:78
 msgid ""
 "Domodroid est l'application Android compatible avec Domogik. Elle vous "
 "permet de contrôler votre maison depuis une tablette ou votre smartphone."
 msgstr ""
 
-#: templates/download.html:85
+#: templates/download.html:80
 msgid ""
 "Attention, l'application est encore en cours de développment. Elle peut "
 "contenir des bugs."
@@ -634,32 +634,36 @@ msgstr ""
 msgid "Anglais"
 msgstr ""
 
-#: templates/layout.html:66
+#: templates/layout.html:49
+msgid "Russe"
+msgstr ""
+
+#: templates/layout.html:67
 msgid "Derniers tweets"
 msgstr ""
 
-#: templates/layout.html:72
+#: templates/layout.html:73
 msgid "Contacts"
 msgstr ""
 
-#: templates/layout.html:79
+#: templates/layout.html:80
 msgid ""
 "Le canal irc est le meilleur média pour prendre contact avec l'équipe de "
 "Domogik. Il est possible d'y parler français ou anglais."
 msgstr ""
 
-#: templates/layout.html:82
+#: templates/layout.html:83
 msgid "Ressources"
 msgstr ""
 
-#: templates/layout.html:84
+#: templates/layout.html:85
 msgid "API"
 msgstr ""
 
-#: templates/layout.html:85
+#: templates/layout.html:86
 msgid "Sources sur GitHub"
 msgstr ""
 
-#: templates/layout.html:86
+#: templates/layout.html:87
 msgid "Dépot de packages"
 msgstr ""

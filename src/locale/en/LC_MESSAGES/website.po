@@ -3,30 +3,30 @@ Server: nginx
 Vary: Accept-Encoding
 Cache-Control: max-age=0
 Content-Type: text/x-po
-Date: Sun, 18 Dec 2016 21:04:04 GMT
-Expires: Sun, 18 Dec 2016 21:04:04 GMT
+Date: Mon, 13 Feb 2017 19:28:14 GMT
+Expires: Mon, 13 Feb 2017 19:28:14 GMT
 Accept-Ranges: bytes
 X-Content-Type-Options: nosniff
-Content-Disposition: attachment; filename*="UTF-8''i18n_website_template.pot_en.po"
+Content-Disposition: attachment; filename=UTF-8''i18n_website_template.pot_en.po
 Connection: keep-alive
-Set-Cookie: X-Mapping-fjhppofk=100E7CB61F7D5C274279F09EADF920A3; path=/
-Last-Modified: Sun, 18 Dec 2016 21:04:04 GMT
-Content-Length: 23574
+Set-Cookie: X-Mapping-fjhppofk=A44BEC4CD0B51682CDC2AA3E9CCFDDF4; path=/
+Last-Modified: Mon, 13 Feb 2017 19:28:14 GMT
+Content-Length: 23671
 
 # Translations template for PROJECT.
-# Copyright (C) 2016 ORGANIZATION
+# Copyright (C) 2017 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # 
 # Translators:
-# fritzsmh <fritz.smh@gmail.com>, 2015-2016
+# fritzsmh <fritz.smh@gmail.com>, 2015-2017
 # cereal <maikel.punie@gmail.com>, 2015
 # tikismoke <webmaster@tikijs.dyndns.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: domogik-website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-12-14 18:42+0100\n"
-"PO-Revision-Date: 2016-12-16 22:39+0000\n"
+"POT-Creation-Date: 2017-02-13 20:26+0100\n"
+"PO-Revision-Date: 2017-02-13 19:27+0000\n"
 "Last-Translator: fritzsmh <fritz.smh@gmail.com>\n"
 "Language-Team: English (http://www.transifex.com/domogik/domogik-website/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -41,8 +41,8 @@ msgid "Téléchargez la dernière version"
 msgstr "Download the last release"
 
 #: templates/download.html:14
-msgid "Domogik 0.5.1"
-msgstr "Domogik 0.5.1"
+msgid "Domogik 0.5.2"
+msgstr "Domogik 0.5.2"
 
 #: templates/download.html:16
 msgid ""
@@ -51,7 +51,7 @@ msgid ""
 msgstr "Domogik is the core of the solution. It is delivered with an administration interface."
 
 #: templates/download.html:20 templates/download.html:46
-#: templates/download.html:68 templates/download.html:88
+#: templates/download.html:68 templates/download.html:83
 #: templates/layout.html:40
 msgid "Télécharger"
 msgstr "Download"
@@ -61,7 +61,7 @@ msgid "Release note"
 msgstr "Release note"
 
 #: templates/download.html:26 templates/download.html:54
-#: templates/download.html:96 templates/layout.html:83
+#: templates/download.html:91 templates/layout.html:84
 msgid "Documentation"
 msgstr "Documentation"
 
@@ -76,8 +76,8 @@ msgid "Télécharger Domogik-MQ"
 msgstr "Download Domogik-MQ"
 
 #: templates/download.html:40
-msgid "Domoweb 0.5.1"
-msgstr "Domoweb 0.5.1"
+msgid "Domoweb 0.5.2"
+msgstr "Domoweb 0.5.2"
 
 #: templates/download.html:42
 msgid ""
@@ -87,26 +87,26 @@ msgid ""
 msgstr "Domoweb is the web user interface to view informations and control Domogik. This is a responsive web interface that adapts to all sizes Desktop computers, tablets and phones."
 
 #: templates/download.html:62
-msgid "DomoButler"
-msgstr "DomoButler"
+msgid "Butler Android"
+msgstr "Butler Android"
 
 #: templates/download.html:64
 msgid ""
-"Domogik butler est l'application Android qui vous permet de parler avec "
-"Domogik."
-msgstr "Domogik butler is an Android application that allows voice control with Domogik."
+"Butler Android est l'application Android qui vous permet de parler avec le "
+"Majordome de Domogik."
+msgstr "Butler Android is the Android application that allows you to speak with the Domogik's Butler."
 
-#: templates/download.html:81
+#: templates/download.html:76
 msgid "Domodroid"
 msgstr "Domodroid"
 
-#: templates/download.html:83
+#: templates/download.html:78
 msgid ""
 "Domodroid est l'application Android compatible avec Domogik. Elle vous "
 "permet de contrôler votre maison depuis une tablette ou votre smartphone."
 msgstr "Domodroid is an Android Domogik interface. It allows you to control your home from a tablet or smartphone."
 
-#: templates/download.html:85
+#: templates/download.html:80
 msgid ""
 "Attention, l'application est encore en cours de développment. Elle peut "
 "contenir des bugs."
@@ -637,32 +637,36 @@ msgstr "French"
 msgid "Anglais"
 msgstr "English"
 
-#: templates/layout.html:66
+#: templates/layout.html:49
+msgid "Russe"
+msgstr "Russian"
+
+#: templates/layout.html:67
 msgid "Derniers tweets"
 msgstr "Last tweets"
 
-#: templates/layout.html:72
+#: templates/layout.html:73
 msgid "Contacts"
 msgstr "Contact us"
 
-#: templates/layout.html:79
+#: templates/layout.html:80
 msgid ""
 "Le canal irc est le meilleur média pour prendre contact avec l'équipe de "
 "Domogik. Il est possible d'y parler français ou anglais."
 msgstr "The irc channel is the best way to contact the Domogik team. On this channel you can speak french or english as well."
 
-#: templates/layout.html:82
+#: templates/layout.html:83
 msgid "Ressources"
 msgstr "Resources"
 
-#: templates/layout.html:84
+#: templates/layout.html:85
 msgid "API"
 msgstr "API"
 
-#: templates/layout.html:85
+#: templates/layout.html:86
 msgid "Sources sur GitHub"
 msgstr "Sources on GitHub"
 
-#: templates/layout.html:86
+#: templates/layout.html:87
 msgid "Dépot de packages"
 msgstr "Packages repository"

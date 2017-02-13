@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-02-10 15:42+0100\n"
+"POT-Creation-Date: 2017-02-13 20:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 
 #: templates/download.html:20 templates/download.html:46
-#: templates/download.html:69 templates/download.html:88
+#: templates/download.html:68 templates/download.html:83
 #: templates/layout.html:40
 msgid "Télécharger"
 msgstr ""
@@ -42,7 +42,7 @@ msgid "Release note"
 msgstr ""
 
 #: templates/download.html:26 templates/download.html:54
-#: templates/download.html:96 templates/layout.html:84
+#: templates/download.html:91 templates/layout.html:84
 msgid "Documentation"
 msgstr ""
 
@@ -67,27 +67,27 @@ msgid ""
 "ordinateurs, tablettes et téléphones."
 msgstr ""
 
-#: templates/download.html:63
+#: templates/download.html:62
 msgid "Butler Android"
 msgstr ""
 
-#: templates/download.html:65
+#: templates/download.html:64
 msgid ""
-"Domogik Android est l'application Android qui vous permet de parler avec "
-"Domogik."
+"Butler Android est l'application Android qui vous permet de parler avec "
+"le Majordome de Domogik."
 msgstr ""
 
-#: templates/download.html:81
+#: templates/download.html:76
 msgid "Domodroid"
 msgstr ""
 
-#: templates/download.html:83
+#: templates/download.html:78
 msgid ""
 "Domodroid est l'application Android compatible avec Domogik. Elle vous "
 "permet de contrôler votre maison depuis une tablette ou votre smartphone."
 msgstr ""
 
-#: templates/download.html:85
+#: templates/download.html:80
 msgid ""
 "Attention, l'application est encore en cours de développment. Elle peut "
 "contenir des bugs."
