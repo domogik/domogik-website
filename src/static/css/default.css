@@ -14,6 +14,10 @@ h2 {
     color: #005774;
 }
 
+h4 {
+    color: #005774;
+}
+
 p {
     text-align: justify;
     font-size: 1.5em;
@@ -685,6 +689,16 @@ p {
 
 #blog h2 {
     margin-top: 2em;
+}
+
+#blog h3 {
+    margin-top: 2em;
+    color: #005774;
+}
+
+#blog h4 {
+    margin-top: 2em;
+    color: #005774;
 }
 
 #blog img {
