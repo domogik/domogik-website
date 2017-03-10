@@ -1,0 +1,125 @@
+{% extends "blog-layout.html" %}
+{% block blog %}
+
+<!-- thumbnail: butler_android_01.jpg -->
+<h1>L'application Butler pour Android</h1>
+<p>
+  L'application <strong>Butler Android</strong> est une interface vocale pour utiliser le Majordome de Domogik.
+</p>
+<!-- stop -->
+
+<img src="blog/2017-butler-android/domogik_smartwatch_001_temperature.jpg" class="img-responsive">
+
+<p>Voici ses principales  caractéristiques :</p>
+
+<ul>
+  <li>Elle fonctionne sur téléphone, tablette et montres Android (Android, pas encore Android Wear!)</li>
+  <li>Elle permet d'activer en option le réveil à la voix (façon <em>OK Google</em> ou <em>Dis Siri</em>) avec la phrase de votre choix.</li>
+  <li>Elle permet le dialogue continu : vous pouvez enchaîner plusieurs demande de suite sans devoir appuyer sur un bouton ou utiliser le réveil à la voix.</li>
+  <li>Elle fonctionne en tâche de fond : avec le réveil à la voix, si besoin elle allume l'écran et affiche l'application.</li>
+  <li>L'affichage s'adapte aux écrans classiques (téléphones, tablettes) ou écrans de montres.</li>
+</ul>
+
+<p>A ce jour, cette application n'est pas encore compatible Android Wear, mais cela fait partie de la roadmap.</p>
+
+<img src="blog/2017-butler-android/domogik-smartphone_001_1000x625.jpg" class="img-responsive">
+
+
+
+
+<h2>Installation sur un smartphone ou une tablette</h2>
+
+<p>Il suffit de télécharger la dernière version de l'application depuis <a href="http://www.domogik.org/fr/download.html">la page de téléchargement du site</a>.</p>
+
+<p>A ce jour, il s'agit encore d'une version <em>bêta</em> : il y a encore quelques imperfections à corriger.</p>
+<!-- TODO  : enlever ça quand ça sera ok -->
+
+
+
+<h2>Installation sur une montre Android (et pas Android Wear</h2>
+
+<p>De la même manière que pour un téléphone ou une tablette, il suffit de télécharger la dernière version de l'application depuis <a href="http://www.domogik.org/fr/download.html">la page de téléchargement du site</a>.</p>
+
+
+
+<h2>Configuration</h2>
+
+<p>Pour configurer l'application, allez dans le menu de configuration, en cliquant sur l'icône en forme de roue dentée (note : les captures suivantes viennent d'une smartwatch).</p>
+
+<img src="blog/2017-butler-android/config_001.png" class="img-responsive">
+
+<p>Tout d'abord, il va falloir aller dans le menu <strong>Domogik</strong> pour configurer les coordonnées de votre serveur Domogik.</p>
+<img src="blog/2017-butler-android/config_002.png" class="img-responsive">
+
+<p>Indiquez l'url (externe pour un téléphone, interne pour une tablette accrochée au mur) d'accès à l'administration de Domogik. Par exemple en interne : <em>http://192.168.1.10:40406</em>.</p>
+<img src="blog/2017-butler-android/config_003.png" class="img-responsive">
+
+<p>Donnez ensuite un login valide et son mot de passe.</p>
+<img src="blog/2017-butler-android/config_004.png" class="img-responsive">
+
+<p>si vous désirez pouvoir réveiller l'application à la voix, allez dans le menu <strong>Réveil via un mot clé</strong>.</p>
+<img src="blog/2017-butler-android/config_005.png" class="img-responsive">
+<img src="blog/2017-butler-android/config_006.png" class="img-responsive">
+
+<p>Tout d'abord, choisissez la langue du mot clé (anglais ou français).</p>
+<img src="blog/2017-butler-android/config_007.png" class="img-responsive">
+
+
+<p>Saisissez ensuite le mot clé ou plusieurs mots si vous le souhaitez (plus il y aura de mots, plus ça sera précis).</p>
+<img src="blog/2017-butler-android/config_008.png" class="img-responsive">
+
+<p>Choisissez le seuil de sensibilité : plus il sera bas, plus le mot clé sera difficile à détecter, mais plus il sera haut, plus le mot clé risque d'être détecté alors qu'il n'a pas été dis. Commencez par une valeur de 20 ou 15, puis adaptez-là.</p>
+<img src="blog/2017-butler-android/config_009.png" class="img-responsive">
+
+<p>Pour finir, cochez l'option <strong>Activer le réveil par mot clé</strong>.</p>.
+<img src="blog/2017-butler-android/config_010.png" class="img-responsive">
+
+
+<h2>Usage</h2>
+
+<p>L'usage le plus simple est de cliquer sur le bouton avec le logo de Domogik en bas de l'écran. Une fois cliqué, le bouton change de couleur et un micro apparaît : cela signifie que vous pouvez parler. Une fois l'acquisition vocale terminée, votre demande sera transmise au Majordome qui vous renverra la réponse.</p>
+
+<img src="blog/2017-butler-android/usage_001.png" class="img-responsive">
+<img src="blog/2017-butler-android/usage_002.png" class="img-responsive">
+<img src="blog/2017-butler-android/usage_003.png" class="img-responsive">
+<img src="blog/2017-butler-android/usage_004.png" class="img-responsive">
+
+<p>A la fin de la diffusion de la réponse, l'application se remet tout de suite en écoute afin d'éviter de devoir recliquer sur le bouton. Ceci permet d'avoir une discussion continue avec le Majordome.</p>
+
+<p>Si vous avez activé le réveil à la voix, il suffit de dire le mot (ou les mots) clé afin de passer en mode écoute.</p>
+
+
+
+
+<h2>Détail de l'interface</h2>
+
+
+<h3>Sur smartphone et tablette</h3>
+
+<img src="blog/2017-butler-android/detail_smartphone.png" class="img-responsive">
+
+<p>Dans le menu en haut, nous retrouvons dans l'ordre : </p>
+
+<ul>
+  <li>Le nom de l'application</li>
+  <li>Une icône en forme de micro : elle permet d'activer et de désactiver le réveil à la voix dans passer par le menu de configuration.</li>
+  <li>Une icône en forme de haut parleur : elle permet de rendre silencieuses les réponses du majordome. C'est très pratique au bureau ou au supermarché pour éviter que tout le monde se retourne vers vous pendant que le majordome vous donne la météo ou la liste des courses!</li>
+  <li>Une icône en forme de roue crantée pour l'accès au menu de configuration.</li>
+</ul>
+
+<p>Ensuite, sur le haut de la partie noire, nous avons la phrase d'accueil. Celle-ci sera remplacée par la question que nous avons posé au majordome, suivie de sa réponse.</p>
+
+<p>En bas de l'écran il y a le logo du projet Domogik qui fait office de bouton. Quand vous cliquez dessus, vous pouvez commencer à parler au majordome. Le bouton changera d'apparence en fonction du statut (écoute, interrogation du butler, restitution de la réponse).</p>
+
+<p>Pour finir, tout en bas, si le réveil à la voix est activé, le mot (ou les mots) clé est affiché en gris.</p>
+
+
+
+<h3>Sur smartwatch</h3>
+
+<img src="blog/2017-butler-android/detail_smartwatch.png" class="img-responsive">
+
+<p>Nous retrouvons les mêmes éléments que sur les smartphones, modulo le bouton pour activer/désactiver le réveil à la voix qui n'est pas disponible ici.</p>
+
+{% endblock  %}
+
