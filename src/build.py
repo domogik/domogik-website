@@ -13,6 +13,7 @@ import re
 import sys
 
 URL="http://www.domogik.org"
+TWITTER_ACCOUNT="@domogik"
 OUT_DIR = "../build/"
 LOCALE_DIR = "./locale/"
 STATIC_DIR = "./static/"
@@ -79,7 +80,9 @@ def get_blog_headers(lang):
                         # filter some jinja templates lines to get the header
                         m1 = re.match(" *{% *(extends|block|endblock)", line)
                         m2 = re.match(" *{% *block ", line)
-                        if not m1 and not m2:
+                        m3 = re.match(" *{%- *endblock ", line)
+                        m4 = re.match(" *<meta ", line)
+                        if not m1 and not m2 and not m3 and not m4:
                             header += unicode(line, "utf8")
                     content += unicode(line, "utf8")
 
@@ -195,6 +198,10 @@ if __name__ == "__main__":
     build_sitemap("fr", screenshots, static_images)
 
 
+    context_meta_twitter = {
+                              'url':URL,
+                              'twitter_account':TWITTER_ACCOUNT
+                           }
     ### langauge specific
     for lang in LANG:
         print("==== Building {0} ====".format(lang))
@@ -215,15 +222,25 @@ if __name__ == "__main__":
 
 
         ### build website 
-        site = make_site(contexts = [('index.html',  {'blog_headers' : blog_headers}),
-                                     ('blog.html',  {'blog_headers' : blog_headers}),
-                                     ('screenshots.html',  {'screenshots' : screenshots})],
+        print("AAA")
+        context_index = {'blog_headers' : blog_headers}
+        context_blog = {'blog_headers' : blog_headers}
+        context_screenshots = {'screenshots' : screenshots}
+        context_index.update(context_meta_twitter)
+        context_blog.update(context_meta_twitter)
+        context_screenshots.update(context_meta_twitter)
+
+        site = make_site(contexts = [('index.html',  context_index),
+                                     ('blog.html',  context_blog),
+                                     ('screenshots.html',  context_screenshots)],
                          outpath = dir,
                          extensions = ['jinja2.ext.i18n'])
+        print("AAA")
         translations = gettext.translation(domain = "website", localedir = LOCALE_DIR, languages = [lang], codeset = "utf-8")
         site._env.install_gettext_translations(translations)
 
         site.render()
+        print("AAA")
 
 
         ### build blog entries
@@ -243,7 +260,9 @@ if __name__ == "__main__":
         site = make_site(searchpath = blog_dir,
                          #outpath = os.path.join(dir, blog_dir),
                          outpath = os.path.join(dir),
-                         extensions = ['jinja2.ext.i18n'])
+                         extensions = ['jinja2.ext.i18n'],
+                         contexts = [('.*.html', context_meta_twitter)]
+                         )
         translations = gettext.translation(domain = "website", localedir = LOCALE_DIR, languages = [lang], codeset = "utf-8")
         site._env.install_gettext_translations(translations)
 
