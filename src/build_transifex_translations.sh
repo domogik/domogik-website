@@ -3,7 +3,7 @@ RESOURCE=i18n_website_templatepot   # no dot inside!
 LOCALE_DIR=./locale/
 DOMAIN=website
 
-LANGS="fr en ru"
+LANGS="fr en ru_RU"
 
 echo "Download translations from Transifex..."
 echo "Login :"

@@ -7,38 +7,36 @@ Date: Tue, 21 Mar 2017 18:51:23 GMT
 Expires: Tue, 21 Mar 2017 18:51:23 GMT
 Accept-Ranges: bytes
 X-Content-Type-Options: nosniff
-Content-Disposition: attachment; filename=UTF-8''i18n_website_template.pot_en.po
+Content-Disposition: attachment; filename=UTF-8''i18n_website_template.pot_ru_RU.po
 Connection: keep-alive
 Set-Cookie: X-Mapping-fjhppofk=300CA58EE011BC6BC0E393EE4F2B31F6; path=/
 Last-Modified: Tue, 21 Mar 2017 18:51:23 GMT
-Content-Length: 23671
+Content-Length: 29450
 
 # Translations template for PROJECT.
 # Copyright (C) 2017 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # 
 # Translators:
-# fritzsmh <fritz.smh@gmail.com>, 2015-2017
-# cereal <maikel.punie@gmail.com>, 2015
-# tikismoke <webmaster@tikijs.dyndns.org>, 2016
+# axboct <axboct@gmail.com>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: domogik-website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-02-13 20:26+0100\n"
-"PO-Revision-Date: 2017-02-13 19:27+0000\n"
-"Last-Translator: fritzsmh <fritz.smh@gmail.com>\n"
-"Language-Team: English (http://www.transifex.com/domogik/domogik-website/language/en/)\n"
+"PO-Revision-Date: 2017-03-21 16:45+0000\n"
+"Last-Translator: axboct <axboct@gmail.com>\n"
+"Language-Team: Russian (Russia) (http://www.transifex.com/domogik/domogik-website/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
-"Language: en\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: templates/download.html:11
 msgid "Téléchargez la dernière version"
-msgstr "Download the last release"
+msgstr "Скачать последний релиз"
 
 #: templates/download.html:14
 msgid "Domogik 0.5.2"
@@ -48,32 +46,32 @@ msgstr "Domogik 0.5.2"
 msgid ""
 "Domogik est le coeur de la solution. Il est livré avec une interface "
 "d'administration."
-msgstr "Domogik is the core of the solution. It is delivered with an administration interface."
+msgstr "Domogik - ядро решения. Он устанавливается с интерфейсом для администрирования."
 
 #: templates/download.html:20 templates/download.html:46
 #: templates/download.html:68 templates/download.html:83
 #: templates/layout.html:40
 msgid "Télécharger"
-msgstr "Download"
+msgstr "Скачать"
 
 #: templates/download.html:23
 msgid "Release note"
-msgstr "Release note"
+msgstr "Примечания к выпуску"
 
 #: templates/download.html:26 templates/download.html:54
 #: templates/download.html:91 templates/layout.html:84
 msgid "Documentation"
-msgstr "Documentation"
+msgstr "Документация"
 
 #: templates/download.html:30
 msgid ""
 "Domogik utilise le composant Domogik-MQ pour la communication entre les "
 "composants."
-msgstr "Domogik uses the Domogik-MQ component for the communication between the components"
+msgstr "Domogik использует Domogik-MQ для связи между компонентами"
 
 #: templates/download.html:34
 msgid "Télécharger Domogik-MQ"
-msgstr "Download Domogik-MQ"
+msgstr "Скачать Domogik-MQ"
 
 #: templates/download.html:40
 msgid "Domoweb 0.5.2"
@@ -84,7 +82,7 @@ msgid ""
 "Domoweb est l'interface de visualisation et de contrôle. Il s'agit d'une "
 "interface web responsive qui s'adapte a toutes les tailles d'ecran : "
 "ordinateurs, tablettes et téléphones."
-msgstr "Domoweb is the web user interface to view informations and control Domogik. This is a responsive web interface that adapts to all sizes Desktop computers, tablets and phones."
+msgstr "Domoweb - веб-интерфейс пользователя для просмотра информации и управления Domogik. Это адаптивный веб-интерфейс, который масштабируется ко всем размерам экранов - настольные компьютеры, планшеты и телефоны."
 
 #: templates/download.html:62
 msgid "Butler Android"
@@ -94,7 +92,7 @@ msgstr "Butler Android"
 msgid ""
 "Butler Android est l'application Android qui vous permet de parler avec le "
 "Majordome de Domogik."
-msgstr "Butler Android is the Android application that allows you to speak with the Domogik's Butler."
+msgstr "Butler Android - Android-приложение, которое позволяет разговаривать с Дворецким в Domogik."
 
 #: templates/download.html:76
 msgid "Domodroid"
@@ -104,87 +102,87 @@ msgstr "Domodroid"
 msgid ""
 "Domodroid est l'application Android compatible avec Domogik. Elle vous "
 "permet de contrôler votre maison depuis une tablette ou votre smartphone."
-msgstr "Domodroid is an Android Domogik interface. It allows you to control your home from a tablet or smartphone."
+msgstr "Domodroid - Android приложение для Domogik. Позволяет вам контролировать ваш дом с планшета или смартфона."
 
 #: templates/download.html:80
 msgid ""
 "Attention, l'application est encore en cours de développment. Elle peut "
 "contenir des bugs."
-msgstr "Warning, the application is still under development. It may contain bugs."
+msgstr "Внимание, приложение в разработке. Может содержать ошибки."
 
 #: templates/faq.html:7
 msgid "FAQ <small>La Foire Aux Questions...</small>"
-msgstr "FAQ <small>Frequently asked questions...</small>"
+msgstr "FAQ <small>Часто задаваемые вопросы...</small>"
 
 #: templates/faq.html:9
 msgid "Questions générales"
-msgstr "General questions"
+msgstr "Общие вопросы"
 
 #: templates/faq.html:11
 msgid "Est-ce que des éléments de Domogik sont payants ?"
-msgstr "Is there a license-fee for Domogik?"
+msgstr "В Domogik есть платные компоненты?"
 
 #: templates/faq.html:12
 msgid "Domogik et l'écosystème qui va avec est entièrement libre et gratuit."
-msgstr "Domogik and all of its components are completely free."
+msgstr "Domogik и все его компоненты полностью бесплатны."
 
 #: templates/faq.html:15
 msgid "Niveau de compétence"
-msgstr "Skill level"
+msgstr "Уровень квалификации"
 
 #: templates/faq.html:17
 msgid "Quel est le niveau de compétence requis pour utiliser Domogik ?"
-msgstr "What is the required competence level to use Domogik?"
+msgstr "Какие навыки необходимы для использования Domogik?"
 
 #: templates/faq.html:18
 msgid "Domogik est fait pour être le plus simple possible d'utilisation."
-msgstr "Domogik is made to be as simple as possible to use."
+msgstr "Domogik сделан, чтобы быть как можно более простым в использовании."
 
 #: templates/faq.html:20
 msgid "Quel est le niveau de compétence requis pour administrer Domogik ?"
-msgstr "What is the level of competence required to administer Domogik?"
+msgstr "Какие знания требуются для администрирования Domogik?"
 
 #: templates/faq.html:21
 msgid ""
 "Administrer Domogik requiert quelques compétences sur l'utilisation de "
 "Linux."
-msgstr "Domogik administration requires some Linux skills."
+msgstr "Администрирование Domogik требует определенных навыков использования Linux."
 
 #: templates/faq.html:23
 msgid "Quel est le niveau de compétence requis pour installer Domogik ?"
-msgstr "What is the level of expertise required to install Domogik?"
+msgstr "Каков уровень знаний, необходимых для установки Domogik?"
 
 #: templates/faq.html:24
 msgid ""
 "Pour installer Domogik à ce jour, il faut quelques compétences sur "
 "l'utilisation de Linux."
-msgstr "To install Domogik, you need some Linux skills."
+msgstr "Чтобы установить Domogik, вам потребуются некоторые навыки работы с Linux."
 
 #: templates/faq.html:28 templates/layout.html:42
 msgid "Packages"
-msgstr "Packages"
+msgstr "Пакеты"
 
 #: templates/faq.html:30
 msgid ""
 "Pourquoi y a t'il moins de packages (plugins) avec la version 0.4.x qu'avec "
 "la version 0.3.x ?"
-msgstr "Why are there fewer packages (plugins) with Version 0.4.x as with version 0.3.x?"
+msgstr "Почему в  версии 0.4.x меньшее количество пакетов (плагины) чем в 0.3.x?"
 
 #: templates/faq.html:31
 msgid ""
 "Domogik 0.4 est un <em>reboot</em> de Domogik. La compatibilité des plugins "
 "a donc été cassée."
-msgstr "Domogik 0.4 is a <em> rewrite </em> of the Domogik core. The compatibility of plugins has been broken."
+msgstr "В Domogik 0,4 мы <em> переписали </em> ядро. Совместимость плагинов была нарушена."
 
 #: templates/faq.html:33
 msgid "Versions et fonctionnalités à venir"
-msgstr "Versions and upcoming features"
+msgstr "Версии и новые функции"
 
 #: templates/faq.html:36
 msgid ""
 "La version 0.4.0/0.4.1 de Domogik a été très longue à sortir. Est-ce que ça "
 "sera le cas pour les suivantes ?"
-msgstr "It took a long time for 0.4.0 / 0.4.1 version Domogik to come out. Will it be the case for the following?"
+msgstr "Ожидание Domogik версии 0.4.0 / 0.4.1  было очень длительным. Будет ли ожидание следующего релиза долгим?"
 
 #: templates/faq.html:37
 msgid ""
@@ -193,19 +191,19 @@ msgid ""
 "peaufiner des détails de fond. Maintenant que cette base saine est posée, "
 "nous avons pour objectif de faire des évolutions plus régulièares et plus "
 "souples."
-msgstr "Indeed Domogik 0.4 was a long adventure. The solution was almost completely rewritten and we spent a lot of time tweaking the background details. Now that we have a healthy foundation, it will be easyer to extend domogik in the future."
+msgstr "Действительно Domogik 0,4 был слишком длинным приключением. Основа была практически полностью переписана, и мы провели много времени, настраивая мелкие детали. Теперь, когда  здоровый фундамент заложен, мы стремимся делать все более и более гибкие регулярные релизы."
 
 #: templates/faq.html:40
 msgid "Que prévoyez-vous pour la prochaine version ?"
-msgstr "What are your plans for the next release?"
+msgstr "Каковы ваши планы на следующий релиз?"
 
 #: templates/faq.html:41
 msgid "Il y a tellement de sujets à adresser... Vous verrez bien ;)"
-msgstr "There are so many topics ... You'll see;)"
+msgstr "Есть очень много тем ... Вы увидите;)"
 
 #: templates/faq.html:43
 msgid "Pourquoi la technologie XYZ n'est pas supportée ?"
-msgstr "Why is technology XYZ not supported?"
+msgstr "Почему технология XYZ не поддерживается?"
 
 #: templates/faq.html:44
 msgid ""
@@ -214,36 +212,36 @@ msgid ""
 "simple et d'autres très complexes. Le nombre de technologies supportées par "
 "Domogik va croître avec le temps. Toutefois si cela ne vas pas assez vite "
 "pour vous, vous pouvez toujours venir nous aider ;)"
-msgstr "There are so many different home automation technologies and it takes time to add support of a technology. Some may be very simple and others complex. The number of technologies supported by Domogik will grow with time. However if this does not go fast enough for you, you can always come and help us ;)"
+msgstr "Существует очень много различных технологий домашней автоматизации и добавление поддержки технологии занимает много времени. Часть из них могут быть очень простыми, некоторые очень сложные. Количество технологий при поддержке Domogik будет расти со временем. Но, если Вам кажется, что дело движется не достаточно быстро, Вы всегда можете прийти и помочь нам;)"
 
 #: templates/faq.html:48
 msgid "Aider, participer"
-msgstr "Helping, Participate"
+msgstr "Помощь проекту, участие"
 
 #: templates/faq.html:50
 msgid ""
 "Je souhaite vous aider, mais je ne sais pas développer, que puis-je faire ?"
-msgstr "I want to help you, but I'm not a developper, what can I do?"
+msgstr "Я хочу помочь Вам, но я не программист, что я могу сделать?"
 
 #: templates/faq.html:51
 msgid ""
 "Il est possible de nous aider sur différents sujets : communication, "
 "traductions (quand l'outillage sera mis en place), documentation, tests."
-msgstr "You can help us on different topics: communication, translations (when the equipment will be set up), documentation, testing."
+msgstr "Вы можете помочь нам по различным темам: связь, переводы (когда инструмент будет настроен), документация, тестирование."
 
 #: templates/faq.html:53
 msgid "Je souhaite vous aider, comment vous contacter ?"
-msgstr "I want to help you, how to contact you?"
+msgstr "Я хочу помочь, как с Вами связаться?"
 
 #: templates/faq.html:54
 msgid ""
 "Vous trouverez les différents moyens de communication en bas de cette page "
 "(mail, irc, etc)."
-msgstr "You can find different means of communication at the bottom of this page (email, irc, etc)."
+msgstr "В нижней части этой страницы Вы можете найти различные варианты связи  (электронная почта, IRC, и т.д.)."
 
 #: templates/faq.html:56
 msgid "Je souhaite faire un don, comment faire ?"
-msgstr "I wish to make a donation, how can i do it?"
+msgstr "Я хочу помочь материально, как я могу это сделать?"
 
 #: templates/faq.html:57
 msgid ""
@@ -251,201 +249,201 @@ msgid ""
 "pécuniers. Toutefois, vous pouvez proposer du matériel (prêt ou don) aux "
 "développeurs actifs afin de nous aider à compléter la couverture "
 "technologique."
-msgstr "Until today we still have nothing that allows us to receive donations. However, you can share equipment (loan or grant) to active developers to help us improve the technological coverage."
+msgstr "На сегодняшний день, у нас до сих пор нет возможности получать денежные пожертвования. Тем не менее, Вы можете предоставить оборудование (кредит или грант) разработчикам плагинов, чтобы помочь нам полностью обеспечить работоспособность технологии."
 
 #: templates/index.html:19
 msgid "Prenez le contrôle de votre maison!"
-msgstr "Take control of your home!"
+msgstr "Возьмите дом под свой контроль!"
 
 #: templates/index.html:52
 msgid "<span class='fine'>En direct du</span> <strong>blog</strong>"
-msgstr "<span class='fine'>Live on the</span> <strong>blog</strong>"
+msgstr "<span class='fine'>Живой</span> <strong>блог</strong>"
 
 #: templates/index.html:78
 msgid "<span class='fine'>Une solution</span> <strong>libre</strong>"
-msgstr "<span class='fine'>A free</span> <strong>solution</strong>"
+msgstr "<span class = 'fine'>Свободное</ span> <strong>решение</ strong>"
 
 #: templates/index.html:85
 msgid ""
 "<strong>Domogik</strong> est une solution de Domotique "
 "<strong>libre</strong> (GPLv3)."
-msgstr "<strong> Domogik </strong> is a <strong> free </strong> (GPLv3)  Home Automation solution."
+msgstr "<strong> Domogik </strong>это<strong> свободное</strong>(GPLv3) решение домашней автоматизации"
 
 #: templates/index.html:88
 msgid "Elle vous permet de :"
-msgstr "It allows you to:"
+msgstr "Позволяет Вам:"
 
 #: templates/index.html:91
 msgid "<strong>Contrôler</strong> vos lumières, volets, etc."
-msgstr "<strong> Controlling </strong> your lights, shutters, etc."
+msgstr "<strong> Управлять </strong> освещением, ролетами, и т.д."
 
 #: templates/index.html:92
 msgid ""
 "<strong>Monitorer</strong> votre maison (température, électricité, ...)."
-msgstr "<strong>Monitor</strong> your house (temperature, electricty, ...)."
+msgstr "<strong>Монитор</ strong> вашего дома (температура, электричество, ...)."
 
 #: templates/index.html:93
 msgid ""
 "Créer des <strong>scénarios</strong> pour rendre votre maison plus autonome."
-msgstr "Create <strong> scenarios </strong> to make your home more independently."
+msgstr "Создавать <strong> сценарии </strong> чтобы сделать ваш дом самостоятельным."
 
 #: templates/index.html:94
 msgid "Contrôler votre maison à la <strong>voix</strong>."
-msgstr "Controlling your home with <strong> Voice </strong>."
+msgstr " Управлять домом с помощью <strong> голоса </strong>."
 
 #: templates/index.html:97
 msgid "Et bien plus encore..."
-msgstr "And much more ..."
+msgstr "И многое другое ..."
 
 #: templates/index.html:108
 msgid "<span class='fine'>Une solution</span> <strong>moderne</strong>"
-msgstr "<span class='fine'>A</span> <strong>modern</strong> <span class='fine'>solution</span>"
+msgstr "<strong>Современное</strong> <span class='fine'>решение</span>"
 
 #: templates/index.html:116
 msgid "Multi-technologies"
-msgstr "Multi-technologies"
+msgstr "Multi-технологии"
 
 #: templates/index.html:119
 msgid ""
 "Domogik évolue avec toutes les technologies, qu'elles soient anciennes ou "
 "nouvelles. Il existe de multiple plugins pour supporter ces différentes "
 "technologies : Velbus, Téléinformation, Météo, Zwave, .... "
-msgstr "Domogik is compliant with both old and new technologies. Many plugins exist to support these technologies : Velbus, weather, Zwave, ..."
+msgstr "Domogik совместим как со старыми так и с новыми технологиями. Много плагинов уже существуют для поддержки технологий: Velbus, погода, Zwave, ..."
 
 #: templates/index.html:120
 msgid ""
 "Ces plugins sont référencés sur <a href=\"http://repo-public.domogik.org/\" "
 "alt=\"Dépôt de packages\">notre dépôt de packages</a>."
-msgstr "These plugins are referenced on <a href=\"http://repo-public.domogik.org/\" alt=\"Packages repository\">our packages repository</a>."
+msgstr "Все плагины находятся в официальном <a href=\"http://repo-public.domogik.org/\" alt=\"Packages repository\"> репозитории пакетов</a>"
 
 #: templates/index.html:124
 msgid "Interface web responsive"
-msgstr "Responsive web interface"
+msgstr "Адаптивный веб-интерфейс"
 
 #: templates/index.html:127
 msgid ""
 "Domogik est livré en standard avec une interface d'administration web et "
 "responsive afin que vous puissiez l'utiliser rapidement, que ça soit depuis "
 "votre ordinateur, votre tablette, votre smartphone ou votre liseuse."
-msgstr "Domogik comes standard with a responsive web administration interface and so you can use it quickly, be it from your computer, tablet, smartphone or reading light."
+msgstr "Domogik стандартно поставляется с адаптивным интерфейсом веб-администрирования. Вы можете использовать его сразу, будь то с вашего компьютера, планшета, смартфона или электронной книги."
 
 #: templates/index.html:131
 msgid "Contrôlez votre maison à la voix"
-msgstr "Control your home with voice"
+msgstr "Управляйте домом с помощью голоса"
 
 #: templates/index.html:134
 msgid ""
 "Vous pouvez interagir de manière intuitive avec votre installation domotique"
 " en lui parlant. Elle est même capable d'apprendre toute seule!"
-msgstr "You can interact intuitively with your home automation system by talking to him. It is even capable of learning by itself!"
+msgstr "Вы можете интуитивно общаться с вашей системой домашней автоматизации, просто разговаривая с ней. Она даже способна обучаться самостоятельно!"
 
 #: templates/index.html:140
 msgid "Réellement gratuit"
-msgstr "Really free"
+msgstr "Действительно бесплатно"
 
 #: templates/index.html:143
 msgid ""
 " Domogik est un logiciel libre (GPLv3) et OpenSource. Vous pouvez donc le "
 "télécharger, l'utiliser le redistribuer et le modifier gratuitement. Que ça "
 "soit le core ou les packages, tout est gratuit et libre."
-msgstr "Domogik is free software (GPL v3) and OpenSource. So you can download, use and modify or redistribute for free. Whether it's the core or packages, all are free."
+msgstr "Domogik - свободное программное обеспечение (GPL v3) и OpenSource. Вы можете загружать, использовать и модифицировать или распространять бесплатно. Будь это ядро или пакеты, всё свободно и бесплатно."
 
 #: templates/index.html:147
 msgid "Adapté à vos besoins"
-msgstr "For your needs"
+msgstr "Для ваших потребностей"
 
 #: templates/index.html:150
 msgid ""
 "Grâce à une API documentée il est facile de modifier ou de développer son "
 "propre plugin ou sa propre interface graphique."
-msgstr "With a documented API it is easy to modify or develop your own plugin or your own GUI."
+msgstr "С документированным API легко модифицировать или разработать свой собственный плагин или свой собственный графический интерфейс."
 
 #: templates/index.html:154
 msgid "Ouvert aux autres"
-msgstr "Open to others"
+msgstr "Открыт для других"
 
 #: templates/index.html:157
 msgid ""
 "Grâce à son API, vous pouvez utiliser Domogik avec d'autres solutions, comme"
 " <a href=\"http://www.openremote.org\" alt=\"OpenRemote\">OpenRemote</a> qui"
 " permet de créer des interfaces de contrôle photo réalistes."
-msgstr "Through its API, you can use Domogik with other solutions, such as <a href=\"http://www.openremote.org\" alt=\"OpenRemote\"> OpenRemote </a> for creating or control interfaces."
+msgstr "Благодаря API, вы можете использовать Domogik с другими решениями, например <a href=\"http://www.openremote.org\" alt=\"OpenRemote\"> OpenRemote </a> для создания фотореалистичных интерфейсов управления."
 
 #: templates/index.html:172
 msgid "<span class='fine'>Une interface web</span> <strong>élégante</strong>"
-msgstr "<span class='fine'>A</span> <strong>modern</strong> <span class='fine'>web interface</span>"
+msgstr "<strong>Современный</strong> <span class='fine'>веб интерфейс</span>"
 
 #: templates/index.html:178
 msgid "L'interface s'adapte à toutes les tailles d'écrans"
-msgstr "The interface fits all screen sizes"
+msgstr "Интерфейс адаптируется под любой размер экрана"
 
 #: templates/index.html:181 templates/index.html:184 templates/index.html:191
 #: templates/index.html:194 templates/index.html:197 templates/index.html:201
 msgid "Interface de Domogik"
-msgstr "Domogik's interface"
+msgstr "Интерфейс Domogik"
 
 #: templates/index.html:188
 msgid "Personnalisez facilement le style de votre interface"
-msgstr "Easily customize the look of your interface"
+msgstr "Простая настройка внешнего вида вашего интерфейса"
 
 #: templates/index.html:211
 msgid ""
 "Sur les smartphones compatibles utilisez-la comme une application native"
-msgstr "On compatible smartphones use the native application"
+msgstr "Для смартфонов используйте специальное приложение"
 
 #: templates/index.html:224
 msgid "Vous pouvez même utiliser une liseuse"
-msgstr "You can even use a light reader"
+msgstr "Вы можете использовать даже электронную книгу"
 
 #: templates/index.html:225
 msgid ""
 "De part leur faible consommation les liseuses peuvent devenir des interfaces"
 " de contrôle idéales."
-msgstr "Their low power consumption make them ideal controling interfaces."
+msgstr "Низкое потребление делает их идеальными интерфейсами для управления."
 
 #: templates/index.html:226
 msgid "Interface de Domogik sur une liseuse"
-msgstr "Domogik's interface on an e-reader"
+msgstr "Интерфейс Domogik на электронной книге"
 
 #: templates/index.html:237
 msgid ""
 "<span class='fine'>Administrez depuis</span> <strong>votre canapé</strong>"
-msgstr "<span class='fine'>Administrate from</span> <strong>your couche</strong>"
+msgstr "<span class='fine'>Настраивайте не вставая</span> <strong> с дивана</strong>"
 
 #: templates/index.html:243
 msgid "L'administration aussi est responsive"
-msgstr "The administration is also responsive"
+msgstr "Интерфейс администрирования тоже адаптивный"
 
 #: templates/index.html:244
 msgid ""
 "Vous n'avez plus besoin d'aller sur votre ordinateur pour configurer un "
 "plugin, créer un périphérique  ou encore créer un scénario."
-msgstr "You no longer need to go to a computer to configure a plugin, create a device or create edit a scenario."
+msgstr "Вам больше не нужно идти к компьютеру, чтобы настроить плагин, создать устройство ,создать или отредактировать сценарий."
 
 #: templates/index.html:247 templates/index.html:250 templates/index.html:255
 msgid "Administration de Domogik"
-msgstr "Domogik's administration"
+msgstr "Управление Domogik"
 
 #: templates/index.html:254
 msgid "Créez des scénarios"
-msgstr "Create scenarios"
+msgstr "Создание сценариев"
 
 #: templates/index.html:267
 msgid "<span class='fine'>Faites du</span> <strong>photoréalisme</strong>"
-msgstr "<span class='fine'>Create</span <strong>photorealism</strong> <span class='fine'>interfaces</span>"
+msgstr "<span class='fine'>Созданиеe</span <strong> фотореалистичного</strong> <span class='fine'> интерфейса</span>"
 
 #: templates/index.html:272
 msgid ""
 "Avec Domogik et Openremote, vous pouvez créer des interfaces photo réalistes"
-msgstr "With Domogik and OpenRemote, you can create photo realistic interfaces"
+msgstr "С Domogik и OpenRemote вы можете создавать фотореалистичные интерфейсы "
 
 #: templates/index.html:273
 msgid "Openremote et Domogik"
-msgstr "Openremote & Domogik"
+msgstr "Openremote и Domogik"
 
 #: templates/index.html:287
 msgid "<span class='fine'>Votre</span> <strong>majordome</strong>"
-msgstr "<span class='fine'>Your</span> <strong>butler</strong>"
+msgstr "<span class='fine'>Ваш</span> <strong>дворецкий</strong>"
 
 #: templates/index.html:294
 msgid ""
@@ -453,29 +451,29 @@ msgid ""
 "lui écrire afin d'interagir avec lui. Une application Android permet de "
 "parler de vive voix avec ce majordome et d'autres interfaces viendront la "
 "rejoindre au fil du temps."
-msgstr "The butler Domogik assistant. Just talk to him or write to him to interact with it. An Android application let you talk in person with the butler and other interfaces will join over time."
+msgstr "Дворецкий Ваш Domogik ассистент. Просто говорите или пишите ему, чтобы взаимодействовать с ним. Android приложение может поговорить непосредственно с дворецким и другие интерфейсы присоединятся в течение долгого времени."
 
 #: templates/index.html:295
 msgid ""
 "Il est également très simple de faire progresser et de personnaliser votre "
 "majordome, que ça soit en lui parlant ou même en éditant un simple fichier."
-msgstr "It is very easy to extend and personalize your butler, be it by talking to him or even by editing a single file."
+msgstr "Дворецкий очень легко обучается и настраивается, просто разговаривая с ним, или путем редактирования файла."
 
 #: templates/index.html:298
 msgid "Contrôlez..."
-msgstr "Control ..."
+msgstr "Управление ..."
 
 #: templates/index.html:306
 msgid "Quelle est la température du salon"
-msgstr "What is the temperature in the living room"
+msgstr "Какая температура в гостинной"
 
 #: templates/index.html:314
 msgid "La température du salon est 21 degrés"
-msgstr "The temperature in the living room is 21 degrees"
+msgstr "Температура в гостинной 21 градус"
 
 #: templates/index.html:324
 msgid "Allume le salon."
-msgstr "Illuminate the living room."
+msgstr "Включи свет в гостинной"
 
 #: templates/index.html:332
 msgid "OK."
@@ -483,111 +481,111 @@ msgstr "OK."
 
 #: templates/index.html:336
 msgid "Eduquez..."
-msgstr "Educate ..."
+msgstr "Обучение..."
 
 #: templates/index.html:344 templates/index.html:380
 msgid "Il fait combien dehors ?"
-msgstr "How is the temperature outside ?"
+msgstr "Какая температура на улице?"
 
 #: templates/index.html:352
 msgid "Je n'ai pas compris"
-msgstr "I don't understand"
+msgstr "Я не понимаю"
 
 #: templates/index.html:362
 msgid ""
 "Quand je dis il fait combien dehors ça signifie quelle est la température de"
 " dehors"
-msgstr "When I say how is the temperature outside ? it means what is the temperature outside"
+msgstr "Когда я говорю - какая температура снаружи,  это означает - скажи температуру на улице"
 
 #: templates/index.html:370
 msgid "C'est noté."
-msgstr "Its noted"
+msgstr "Запомнил."
 
 #: templates/index.html:388
 msgid "La température de dehors est 13 degrés"
-msgstr "The outside temperature is 13 degrees"
+msgstr "Температура на улице 13 градусов"
 
 #: templates/index.html:396
 msgid "Laissez le apprendre..."
-msgstr "Let us learn..."
+msgstr "Запоминание..."
 
 #: templates/index.html:404
 msgid "Peux-tu me donner la météo ?"
-msgstr "Whats the weather?"
+msgstr "Какая погода?"
 
 #: templates/index.html:412
 msgid "Est-ce que cela signifie : quelle est la météo aujourd'hui ?"
-msgstr "Does this mean: What is the weather today?"
+msgstr "Означает ли это: Какая погода сегодня?"
 
 #: templates/index.html:422
 msgid "Oui"
-msgstr "Yes"
+msgstr "Да"
 
 #: templates/index.html:430
 msgid ""
 "Le ciel sera partiellement nuageux. Les températures seront comprises entre "
 "8 et 19 degrés. "
-msgstr "The sky will be mostly cloudy. Temperatures will be between 8 and 19 degrees."
+msgstr "Небо будет облачно. Температура будет от 8 до 19 градусов."
 
 #: templates/index.html:434
 msgid "Faites vous assister..."
-msgstr "Can i help you ...."
+msgstr "Могу ли я помочь вам ...."
 
 #: templates/index.html:442
 msgid "Calcule 3 plus 4 fois 5 moins 2"
-msgstr "Calculate 3 times 5 plus 4 minus 2"
+msgstr "Рассчитай 3 плюс 4 умножить на 5 минус  2"
 
 #: templates/index.html:460
 msgid "Dis moi quel est le poids d'une pomme ?"
-msgstr "Tell me what is the weight of an apple?"
+msgstr "Скажи мне сколько весит яблоко?"
 
 #: templates/index.html:468
 msgid "182 grammes."
-msgstr "182 grams."
+msgstr "182 грамма."
 
 #: templates/index.html:478
 msgid "Quelle heure est-il ?"
-msgstr "What time is it ?"
+msgstr "Который час?"
 
 #: templates/index.html:486
 msgid "Il est 23 heure 25 "
-msgstr "It is 23 25"
+msgstr "сейчас 23 25"
 
 #: templates/index.html:522
 msgid "<span class='fine'>Une solution</span> <strong>ouverte</strong>"
-msgstr "<span class='fine'>A</span> <strong>open</strong> <span class='fine'>solution</span>"
+msgstr "<strong>Открытое</strong><span class='fine'>решение</span> "
 
 #: templates/index.html:530
 msgid "Un de vos besoins domotique n'est pas couvert ?"
-msgstr "One of your automation needs is not covered?"
+msgstr "Одна из ваших задач автоматизации не реализована?"
 
 #: templates/index.html:531
 msgid ""
 "Créez votre propre plugin grâce à la documentation et au code des plugins "
 "existants."
-msgstr "Create your own plugin with documentation and code to extend existing plugins."
+msgstr "Создайте свой собственный плагин с документацией и увеличьте количество существующих плагинов."
 
 #: templates/index.html:534
 msgid "Nos interfaces graphiques ne vous plaisent pas ?"
-msgstr "You do not like our GUI?"
+msgstr "Вам не нравиться наш GUI?"
 
 #: templates/index.html:535
 msgid ""
 "Tout le monde n'a pas les mêmes goûts! Si vous n'aimez ni Domoweb, ni "
 "Domodroid vous pouvez grâce aux APIs documentées interagir avec Domogik et "
 "créer votre propre interface!"
-msgstr "Everyone does not have the same tastes! If you don't like Domoweb or Domodroid, thanks to the documented API you can create your own interface!"
+msgstr "У каждого свой вкус! Если вам не нравится Domoweb или Domodroid, с помощью документированного API вы можете создать свой собственный интерфейс!"
 
 #: templates/index.html:536
 msgid ""
 "Vous pouvez également utiliser des solutions existantes comme <a "
 "href=\"http://www.openremote.org\">OpenRemote</a> pour créer vore interface "
 "graphique."
-msgstr "You can also use existing solutions like <a href=\"http://www.openremote.org\"> OpenRemote </a> to create a GUI."
+msgstr "Вы также можете использовать существующие решения, такие как <a href=\"http://www.openremote.org\"> OpenRemote </a>, для создания GUI."
 
 #: templates/index.html:541
 msgid "Votre majordome est trop rigide ?"
-msgstr "Your butler is too stiff?"
+msgstr "Ваш дворецкий слишком суровый?"
 
 #: templates/index.html:542
 msgid "Personnalisez le en lui apprenant facilement d'autres interactions."
@@ -597,29 +595,29 @@ msgstr "Customize easily by teaching him other interactions."
 msgid ""
 "Vous pouvez egalement développer des extensions qui lui feront aller "
 "chercher des informations en ligne."
-msgstr "You can also develop extensions that will make it go for information online."
+msgstr "Вы можно создавать расширения, которые получают информацию в Интернете."
 
 #: templates/index.html:546
 msgid "Vous souhaitez participer à l'aventure ?"
-msgstr "You want to join the adventure?"
+msgstr "Желаете присоединиться к приключениям?"
 
 #: templates/index.html:547
 msgid ""
 "Que ça soit pour une petite contribution ou une grosse, vous êtes le "
 "bienvenue! Ne soyez pas timides et passez nous voir sur irc."
-msgstr "Whether in a small or large contribution, you are welcome! Do not be shy and visit us on irc."
+msgstr "Независимо от вашего вклада, добро пожаловать! Не стесняйтесь посетить наш IRC канал."
 
 #: templates/layout.html:37
 msgid "Accueil"
-msgstr "Home"
+msgstr "Главная"
 
 #: templates/layout.html:38
 msgid "Blog"
-msgstr "Blog"
+msgstr "Блог"
 
 #: templates/layout.html:39 templates/screenshots.html:13
 msgid "Screenshots"
-msgstr "Screenshots"
+msgstr "Снимки экрана"
 
 #: templates/layout.html:41
 msgid "FAQ"
@@ -627,37 +625,37 @@ msgstr "FAQ"
 
 #: templates/layout.html:45
 msgid "Langue"
-msgstr "Language"
+msgstr "Язык"
 
 #: templates/layout.html:47
 msgid "Français"
-msgstr "French"
+msgstr "Французский"
 
 #: templates/layout.html:48
 msgid "Anglais"
-msgstr "English"
+msgstr "Английский"
 
 #: templates/layout.html:49
 msgid "Russe"
-msgstr "Russian"
+msgstr "Русский"
 
 #: templates/layout.html:67
 msgid "Derniers tweets"
-msgstr "Last tweets"
+msgstr "Последние твиты"
 
 #: templates/layout.html:73
 msgid "Contacts"
-msgstr "Contact us"
+msgstr "Контакты"
 
 #: templates/layout.html:80
 msgid ""
 "Le canal irc est le meilleur média pour prendre contact avec l'équipe de "
 "Domogik. Il est possible d'y parler français ou anglais."
-msgstr "The irc channel is the best way to contact the Domogik team. On this channel you can speak french or english as well."
+msgstr "Канал IRC является лучшим способом, чтобы связаться с командой Domogik. На этом канале вы можете говорить по-французски или по-английски."
 
 #: templates/layout.html:83
 msgid "Ressources"
-msgstr "Resources"
+msgstr "Ресурсы"
 
 #: templates/layout.html:85
 msgid "API"
@@ -665,8 +663,8 @@ msgstr "API"
 
 #: templates/layout.html:86
 msgid "Sources sur GitHub"
-msgstr "Sources on GitHub"
+msgstr "Исходники на GitHub"
 
 #: templates/layout.html:87
 msgid "Dépot de packages"
-msgstr "Packages repository"
+msgstr " Репозиторий пакетов"
