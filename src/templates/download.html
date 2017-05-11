@@ -1,5 +1,11 @@
-
 {% extends "layout.html" %}
+
+{% block metatwitter -%}
+<meta name="twitter:title" content="Domogik">
+<meta name="twitter:description" content="{% trans %}Téléchargez la dernière version{% endtrans %}">
+<meta name="twitter:image" content="{{ twitter_card_image }}">
+{%- endblock metatwitter %}
+
 
 {% block content %}
 

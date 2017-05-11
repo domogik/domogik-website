@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 
+{% block metatwitter -%}
+<meta name="twitter:title" content="Domogik">
+<meta name="twitter:description" content="{% trans %}Screenshots{% endtrans %}">
+<meta name="twitter:image" content="{{ twitter_card_image }}">
+{%- endblock metatwitter %}
+
+
 {% block content %}
 
 <!-- https://github.com/blueimp/Bootstrap-Image-Gallery/blob/master/README.md -->

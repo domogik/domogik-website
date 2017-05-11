@@ -14,6 +14,8 @@ import sys
 
 URL="http://www.domogik.org"
 TWITTER_ACCOUNT="@domogik"
+TWITTER_CARD_IMAGE="{0}/fr/images/twitter_card_default.jpg".format(URL)
+
 OUT_DIR = "../build/"
 LOCALE_DIR = "./locale/"
 STATIC_DIR = "./static/"
@@ -199,10 +201,11 @@ if __name__ == "__main__":
 
 
     context_meta_twitter = {
-                              'url':URL,
-                              'twitter_account':TWITTER_ACCOUNT
+                              'url' : URL,
+                              'twitter_account' : TWITTER_ACCOUNT,
+                              'twitter_card_image' : TWITTER_CARD_IMAGE
                            }
-    ### langauge specific
+    ### language specific
     for lang in LANG:
         print("==== Building {0} ====".format(lang))
         # define root folder for the lang
@@ -222,7 +225,6 @@ if __name__ == "__main__":
 
 
         ### build website 
-        print("AAA")
         context_index = {'blog_headers' : blog_headers}
         context_blog = {'blog_headers' : blog_headers}
         context_screenshots = {'screenshots' : screenshots}
@@ -235,12 +237,10 @@ if __name__ == "__main__":
                                      ('screenshots.html',  context_screenshots)],
                          outpath = dir,
                          extensions = ['jinja2.ext.i18n'])
-        print("AAA")
         translations = gettext.translation(domain = "website", localedir = LOCALE_DIR, languages = [lang], codeset = "utf-8")
         site._env.install_gettext_translations(translations)
 
         site.render()
-        print("AAA")
 
 
         ### build blog entries
