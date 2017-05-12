@@ -28,15 +28,18 @@ BLOG_URL_PREFIX = "./"
 SITEMAP_TEMPLATE = "./sitemap.xml"
 
 LANG = ["fr", "en", "ru_RU"]
-LANG_READMORE = {"fr" : "Lire plus...", 
-                 "en" : "Read more...",
-                 "ru_RU" : "Read more..."}
-LANG_SCREENSHOT = {"fr" : "Capture d'ecran de Domogik",
-                   "en" : "Domogik screenshot",
-                   "ru_RU" : "Domogik screenshot"}
-LANG_IMAGES = {"fr" : "Domogik, pour connecter votre maison.",
-                   "en" : "Domogik, your connected house.",
-                   "ru_RU" : "Domogik, your connected house."}
+#LANG_READMORE = {"fr" : u"Lire plus...", 
+#                 "en" : u"Read more...",
+#                 "ru_RU" : u"Read more..."}
+#LANG_PUBLISHED = {"fr" : u"Publié le ",
+#                  "en" : u"Published on ",
+#                  "ru_RU" : u"Published on "}
+LANG_SCREENSHOT = {"fr" : u"Capture d'écran de Domogik",
+                   "en" : u"Domogik screenshot",
+                   "ru_RU" : u"Domogik screenshot"}
+LANG_IMAGES = {"fr" : u"Domogik, pour connecter votre maison.",
+                   "en" : u"Domogik, your connected house.",
+                   "ru_RU" : u"Domogik, your connected house."}
 
 
 
@@ -45,8 +48,8 @@ LANG_IMAGES = {"fr" : "Domogik, pour connecter votre maison.",
 def get_blog_headers(lang):
     """
     Sample : 
-    return [{"title" : "titre1", "header" : "fooo", "url" : "url1"},
-            {"title" : "titre2", "header" : "bbbaaarr", "url" : "url2"}]
+    return [{"title" : "titre1", "header" : "fooo", "url" : "url1", "date" : "YYYY-MM-DD"},
+            {"title" : "titre2", "header" : "bbbaaarr", "url" : "url2", "date" : "YYYY-MM-DD"}]
     """
     mypath = "{0}-{1}".format(BLOG_DIR_PREFIX, lang)
     data = []
@@ -54,8 +57,16 @@ def get_blog_headers(lang):
         # TODO : improve this line
         if os.path.isfile(os.path.join(mypath, fic)) and fic[-5:] == ".html" and fic != "layout.html" and fic != "blog-layout.html":
             url = os.path.join("{0}".format(BLOG_URL_PREFIX), fic)
-            header = ""
-            content = ""
+            header = u""
+            content = u""
+
+            # extract publication date
+            if fic.startswith("20"):    # if it starts by 20.. it is a year, so a date :) 2017-04-01 for example
+                date_pub = fic[0:10]
+            else:
+                date_pub = None
+
+
             thumbnail = u"none.jpg"
             title = u"No title found !"
             # read the file to grab data
@@ -83,13 +94,18 @@ def get_blog_headers(lang):
                         m1 = re.match(" *{% *(extends|block|endblock)", line)
                         m2 = re.match(" *{% *block ", line)
                         m3 = re.match(" *{%- *endblock ", line)
-                        m4 = re.match(" *<meta ", line)
-                        if not m1 and not m2 and not m3 and not m4:
+                        m4 = re.match(".*<h1>(.*)</h1>.*", line)
+                        m5 = re.match(" *<meta ", line)
+                        if not m1 and not m2 and not m3 and not m4 and not m5:
                             header += unicode(line, "utf8")
                     content += unicode(line, "utf8")
 
+            # add the publication date information
+            #if date_pub != None:
+            #    header += u"<p>{0}<time datetime='{1}'>{1}</time></p>".format(LANG_PUBLISHED[lang], date_pub)
+
             # add the 'read more' link
-            header += "<a href='{0}'>{1}</a>".format(url, LANG_READMORE[lang])
+            #header += "<a href='{0}'>{1}</a>".format(url, LANG_READMORE[lang])
 
             # replace the title by a link
             header = header.replace("<h1>", "<h1><a href='{0}'>".format(url))
@@ -99,6 +115,7 @@ def get_blog_headers(lang):
                          "thumbnail" : thumbnail,
                          "url" : url,
                          "header" : header,
+                         "date_pub" : date_pub,
                          "content" : content})
     data = sorted(data, key=lambda k: k['url'], reverse = True) 
     data.sort()
@@ -147,7 +164,7 @@ def build_sitemap(lang, screenschots, images):
     screenshot_data = ""
     image_data = ""
     for screen in screenshots:
-        screenshot_data += """
+        screenshot_data += u"""
   <image:image>
     <image:loc>{0}/{1}/screenshots/{2}</image:loc>
     <image:caption>{3}</image:caption>
@@ -169,9 +186,9 @@ def build_sitemap(lang, screenschots, images):
     pattern_images_tag = re.compile("^.*<!-- IMAGES -->.*$")
 
     fic = open(SITEMAP_TEMPLATE)
-    new_sitemap = ""
+    new_sitemap = u""
     for line in fic:
-        new_line = line
+        new_line = u"{0}".format(line)
         if pattern_screenshots_tag.match(new_line):
             new_line += screenshot_data
         elif pattern_images_tag.match(new_line):
@@ -180,7 +197,7 @@ def build_sitemap(lang, screenschots, images):
     fic.close()
 
     fic = open("{0}/sitemap.xml".format(OUT_DIR), "w")
-    fic.write(new_sitemap)
+    fic.write(new_sitemap.encode('UTF-8'))
     fic.close()
 
 if __name__ == "__main__":

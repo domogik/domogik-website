@@ -720,11 +720,48 @@ p {
 }
 
 .blog-preview {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
-.blog-preview h1 {
+.blog-preview p,
+.blog-preview p:focus,
+.blog-preview p:hover {
+    color: black;
+}
+
+.blog-preview .row {
+    border: 1px solid  #005774;
+    border-bottom: 0px;
+    padding: 1em;
+}
+
+.blog-preview .row + .row {
+   border-top: 0;
+}
+
+.blog-preview .row:last-child {
+  border-bottom: 5px solid #005774;
+}
+
+.blog-preview hr {
     margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#blog .blog-preview h1 {
+    padding: 0px 0px 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+    color: #2D2C2F;
+}
+
+.blog-preview img {
+    margin-left: 0;
+}
+
+.blog-preview .time {
+    text-align: right;
+    font-style: italic;
 }
 
 /* SCREENSHOTS

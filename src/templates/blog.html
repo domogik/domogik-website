@@ -13,14 +13,25 @@
   <div class="container" id="blog">
 
         {% for preview in blog_headers|sort(attribute='url', reverse=True) %}
-          <div class="row blog-preview">
-            <div class="col-md-4">
-              <img src="thumbnails/{{ preview.thumbnail }}" class="img-responsive img-thumbnail" alt="Responsive image"/>
+          <a href="{{ preview.url }}">
+            <div class="blog-preview">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>{{ preview.title }}</h1>
+                  <hr>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="thumbnails/{{ preview.thumbnail }}" class="img-responsive img-thumbnail" alt="Responsive image"/>
+                </div>
+                <div class="col-md-8 blog-preview-text">
+                  {{ preview.header }} 
+                  <p class="time">{% trans %}Publié le {% endtrans %}<time datetime="{{ preview.date_pub }}">{{ preview.date_pub }}</time></p>
+                </div>
+              </div>
             </div>
-            <div class="col-md-8 blog-preview-text">
-              {{ preview.header }} 
-            </div>
-          </div>
+          </a>
         {% endfor %}
       
       
