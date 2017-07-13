@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-02-13 20:26+0100\n"
+"POT-Creation-Date: 2017-07-13 13:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,157 +17,165 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 
-#: templates/download.html:11
+#: templates/blog.html:30
+msgid "Publié le "
+msgstr ""
+
+#: templates/download.html:5 templates/download.html:17
 msgid "Téléchargez la dernière version"
 msgstr ""
 
-#: templates/download.html:14
+#: templates/download.html:20
 msgid "Domogik 0.5.2"
 msgstr ""
 
-#: templates/download.html:16
+#: templates/download.html:22
 msgid ""
 "Domogik est le coeur de la solution. Il est livré avec une interface "
 "d'administration."
 msgstr ""
 
-#: templates/download.html:20 templates/download.html:46
-#: templates/download.html:68 templates/download.html:83
-#: templates/layout.html:40
+#: templates/download.html:26 templates/download.html:52
+#: templates/download.html:74 templates/download.html:89
+#: templates/layout.html:46
 msgid "Télécharger"
 msgstr ""
 
-#: templates/download.html:23
+#: templates/download.html:29
 msgid "Release note"
 msgstr ""
 
-#: templates/download.html:26 templates/download.html:54
-#: templates/download.html:91 templates/layout.html:84
+#: templates/download.html:32 templates/download.html:60
+#: templates/download.html:97 templates/layout.html:90
 msgid "Documentation"
 msgstr ""
 
-#: templates/download.html:30
+#: templates/download.html:36
 msgid ""
 "Domogik utilise le composant Domogik-MQ pour la communication entre les "
 "composants."
 msgstr ""
 
-#: templates/download.html:34
+#: templates/download.html:40
 msgid "Télécharger Domogik-MQ"
 msgstr ""
 
-#: templates/download.html:40
+#: templates/download.html:46
 msgid "Domoweb 0.5.2"
 msgstr ""
 
-#: templates/download.html:42
+#: templates/download.html:48
 msgid ""
 "Domoweb est l'interface de visualisation et de contrôle. Il s'agit d'une "
 "interface web responsive qui s'adapte a toutes les tailles d'ecran : "
 "ordinateurs, tablettes et téléphones."
 msgstr ""
 
-#: templates/download.html:62
+#: templates/download.html:68
 msgid "Butler Android"
 msgstr ""
 
-#: templates/download.html:64
+#: templates/download.html:70
 msgid ""
 "Butler Android est l'application Android qui vous permet de parler avec "
 "le Majordome de Domogik."
 msgstr ""
 
-#: templates/download.html:76
+#: templates/download.html:82
 msgid "Domodroid"
 msgstr ""
 
-#: templates/download.html:78
+#: templates/download.html:84
 msgid ""
 "Domodroid est l'application Android compatible avec Domogik. Elle vous "
 "permet de contrôler votre maison depuis une tablette ou votre smartphone."
 msgstr ""
 
-#: templates/download.html:80
+#: templates/download.html:86
 msgid ""
 "Attention, l'application est encore en cours de développment. Elle peut "
 "contenir des bugs."
 msgstr ""
 
-#: templates/faq.html:7
+#: templates/faq.html:5 templates/layout.html:47
+msgid "FAQ"
+msgstr ""
+
+#: templates/faq.html:14
 msgid "FAQ <small>La Foire Aux Questions...</small>"
 msgstr ""
 
-#: templates/faq.html:9
+#: templates/faq.html:16
 msgid "Questions générales"
 msgstr ""
 
-#: templates/faq.html:11
+#: templates/faq.html:18
 msgid "Est-ce que des éléments de Domogik sont payants ?"
 msgstr ""
 
-#: templates/faq.html:12
+#: templates/faq.html:19
 msgid "Domogik et l'écosystème qui va avec est entièrement libre et gratuit."
 msgstr ""
 
-#: templates/faq.html:15
+#: templates/faq.html:22
 msgid "Niveau de compétence"
 msgstr ""
 
-#: templates/faq.html:17
+#: templates/faq.html:24
 msgid "Quel est le niveau de compétence requis pour utiliser Domogik ?"
 msgstr ""
 
-#: templates/faq.html:18
+#: templates/faq.html:25
 msgid "Domogik est fait pour être le plus simple possible d'utilisation."
 msgstr ""
 
-#: templates/faq.html:20
+#: templates/faq.html:27
 msgid "Quel est le niveau de compétence requis pour administrer Domogik ?"
 msgstr ""
 
-#: templates/faq.html:21
+#: templates/faq.html:28
 msgid ""
 "Administrer Domogik requiert quelques compétences sur l'utilisation de "
 "Linux."
 msgstr ""
 
-#: templates/faq.html:23
+#: templates/faq.html:30
 msgid "Quel est le niveau de compétence requis pour installer Domogik ?"
 msgstr ""
 
-#: templates/faq.html:24
+#: templates/faq.html:31
 msgid ""
 "Pour installer Domogik à ce jour, il faut quelques compétences sur "
 "l'utilisation de Linux."
 msgstr ""
 
-#: templates/faq.html:28 templates/layout.html:42
+#: templates/faq.html:35 templates/layout.html:48
 msgid "Packages"
 msgstr ""
 
-#: templates/faq.html:30
+#: templates/faq.html:37
 msgid ""
 "Pourquoi y a t'il moins de packages (plugins) avec la version 0.4.x "
 "qu'avec la version 0.3.x ?"
 msgstr ""
 
-#: templates/faq.html:31
+#: templates/faq.html:38
 msgid ""
 "Domogik 0.4 est un <em>reboot</em> de Domogik. La compatibilité des "
 "plugins a donc été cassée."
 msgstr ""
 
-#: templates/faq.html:33
+#: templates/faq.html:40
 msgid "Versions et fonctionnalités à venir"
 msgstr ""
 
-#: templates/faq.html:36
+#: templates/faq.html:43
 msgid ""
 "La version 0.4.0/0.4.1 de Domogik a été très longue à sortir. Est-ce que "
 "ça sera le cas pour les suivantes ?"
 msgstr ""
 
-#: templates/faq.html:37
+#: templates/faq.html:44
 msgid ""
 "En effet Domogik 0.4 a été une trop longue aventure. La solution a été "
 "quasiment entièrement réécrite et nous avons passé beaucoup de temps a "
@@ -176,19 +184,19 @@ msgid ""
 "plus souples."
 msgstr ""
 
-#: templates/faq.html:40
+#: templates/faq.html:47
 msgid "Que prévoyez-vous pour la prochaine version ?"
 msgstr ""
 
-#: templates/faq.html:41
+#: templates/faq.html:48
 msgid "Il y a tellement de sujets à adresser... Vous verrez bien ;)"
 msgstr ""
 
-#: templates/faq.html:43
+#: templates/faq.html:50
 msgid "Pourquoi la technologie XYZ n'est pas supportée ?"
 msgstr ""
 
-#: templates/faq.html:44
+#: templates/faq.html:51
 msgid ""
 "Il y a tellement de technologies domotiques différentes et il faut du "
 "temps pour ajouter le support d'une technologie. Certaines peuvent être "
@@ -197,37 +205,37 @@ msgid ""
 " pas assez vite pour vous, vous pouvez toujours venir nous aider ;)"
 msgstr ""
 
-#: templates/faq.html:48
+#: templates/faq.html:55
 msgid "Aider, participer"
 msgstr ""
 
-#: templates/faq.html:50
+#: templates/faq.html:57
 msgid ""
 "Je souhaite vous aider, mais je ne sais pas développer, que puis-je faire"
 " ?"
 msgstr ""
 
-#: templates/faq.html:51
+#: templates/faq.html:58
 msgid ""
 "Il est possible de nous aider sur différents sujets : communication, "
 "traductions (quand l'outillage sera mis en place), documentation, tests."
 msgstr ""
 
-#: templates/faq.html:53
+#: templates/faq.html:60
 msgid "Je souhaite vous aider, comment vous contacter ?"
 msgstr ""
 
-#: templates/faq.html:54
+#: templates/faq.html:61
 msgid ""
 "Vous trouverez les différents moyens de communication en bas de cette "
 "page (mail, irc, etc)."
 msgstr ""
 
-#: templates/faq.html:56
+#: templates/faq.html:63
 msgid "Je souhaite faire un don, comment faire ?"
 msgstr ""
 
-#: templates/faq.html:57
+#: templates/faq.html:64
 msgid ""
 "A ce jour, nous n'avons encore rien qui nous permette de recevoir des "
 "dons pécuniers. Toutefois, vous pouvez proposer du matériel (prêt ou don)"
@@ -235,77 +243,77 @@ msgid ""
 "technologique."
 msgstr ""
 
-#: templates/index.html:19
+#: templates/index.html:5 templates/index.html:26
 msgid "Prenez le contrôle de votre maison!"
 msgstr ""
 
-#: templates/index.html:52
+#: templates/index.html:59
 msgid "<span class='fine'>En direct du</span> <strong>blog</strong>"
 msgstr ""
 
-#: templates/index.html:78
+#: templates/index.html:85
 msgid "<span class='fine'>Une solution</span> <strong>libre</strong>"
 msgstr ""
 
-#: templates/index.html:85
+#: templates/index.html:92
 msgid ""
 "<strong>Domogik</strong> est une solution de Domotique "
 "<strong>libre</strong> (GPLv3)."
 msgstr ""
 
-#: templates/index.html:88
+#: templates/index.html:95
 msgid "Elle vous permet de :"
 msgstr ""
 
-#: templates/index.html:91
+#: templates/index.html:98
 msgid "<strong>Contrôler</strong> vos lumières, volets, etc."
 msgstr ""
 
-#: templates/index.html:92
+#: templates/index.html:99
 msgid "<strong>Monitorer</strong> votre maison (température, électricité, ...)."
 msgstr ""
 
-#: templates/index.html:93
+#: templates/index.html:100
 msgid ""
 "Créer des <strong>scénarios</strong> pour rendre votre maison plus "
 "autonome."
 msgstr ""
 
-#: templates/index.html:94
+#: templates/index.html:101
 msgid "Contrôler votre maison à la <strong>voix</strong>."
 msgstr ""
 
-#: templates/index.html:97
+#: templates/index.html:104
 msgid "Et bien plus encore..."
 msgstr ""
 
-#: templates/index.html:108
+#: templates/index.html:115
 msgid "<span class='fine'>Une solution</span> <strong>moderne</strong>"
 msgstr ""
 
-#: templates/index.html:116
+#: templates/index.html:123
 msgid "Multi-technologies"
 msgstr ""
 
-#: templates/index.html:119
+#: templates/index.html:126
 msgid ""
 "Domogik évolue avec toutes les technologies, qu'elles soient anciennes ou"
 " nouvelles. Il existe de multiple plugins pour supporter ces différentes "
 "technologies : Velbus, Téléinformation, Météo, Zwave, .... "
 msgstr ""
 
-#: templates/index.html:120
+#: templates/index.html:127
 msgid ""
 "Ces plugins sont référencés sur <a href=\"http://repo-"
 "public.domogik.org/\" alt=\"Dépôt de packages\">notre dépôt de "
 "packages</a>."
 msgstr ""
 
-#: templates/index.html:124
+#: templates/index.html:131
 msgid "Interface web responsive"
 msgstr ""
 
-#: templates/index.html:127
+#: templates/index.html:134
 msgid ""
 "Domogik est livré en standard avec une interface d'administration web et "
 "responsive afin que vous puissiez l'utiliser rapidement, que ça soit "
@@ -313,42 +321,42 @@ msgid ""
 "liseuse."
 msgstr ""
 
-#: templates/index.html:131
+#: templates/index.html:138
 msgid "Contrôlez votre maison à la voix"
 msgstr ""
 
-#: templates/index.html:134
+#: templates/index.html:141
 msgid ""
 "Vous pouvez interagir de manière intuitive avec votre installation "
 "domotique en lui parlant. Elle est même capable d'apprendre toute seule!"
 msgstr ""
 
-#: templates/index.html:140
+#: templates/index.html:147
 msgid "Réellement gratuit"
 msgstr ""
 
-#: templates/index.html:143
+#: templates/index.html:150
 msgid ""
 " Domogik est un logiciel libre (GPLv3) et OpenSource. Vous pouvez donc le"
 " télécharger, l'utiliser le redistribuer et le modifier gratuitement. Que"
 " ça soit le core ou les packages, tout est gratuit et libre."
 msgstr ""
 
-#: templates/index.html:147
+#: templates/index.html:154
 msgid "Adapté à vos besoins"
 msgstr ""
 
-#: templates/index.html:150
+#: templates/index.html:157
 msgid ""
 "Grâce à une API documentée il est facile de modifier ou de développer son"
 " propre plugin ou sa propre interface graphique."
 msgstr ""
 
-#: templates/index.html:154
+#: templates/index.html:161
 msgid "Ouvert aux autres"
 msgstr ""
 
-#: templates/index.html:157
+#: templates/index.html:164
 msgid ""
 "Grâce à son API, vous pouvez utiliser Domogik avec d'autres solutions, "
 "comme <a href=\"http://www.openremote.org\" "
@@ -356,82 +364,82 @@ msgid ""
 "contrôle photo réalistes."
 msgstr ""
 
-#: templates/index.html:172
+#: templates/index.html:179
 msgid "<span class='fine'>Une interface web</span> <strong>élégante</strong>"
 msgstr ""
 
-#: templates/index.html:178
+#: templates/index.html:185
 msgid "L'interface s'adapte à toutes les tailles d'écrans"
 msgstr ""
 
-#: templates/index.html:181 templates/index.html:184 templates/index.html:191
-#: templates/index.html:194 templates/index.html:197 templates/index.html:201
+#: templates/index.html:188 templates/index.html:191 templates/index.html:198
+#: templates/index.html:201 templates/index.html:204 templates/index.html:208
 msgid "Interface de Domogik"
 msgstr ""
 
-#: templates/index.html:188
+#: templates/index.html:195
 msgid "Personnalisez facilement le style de votre interface"
 msgstr ""
 
-#: templates/index.html:211
+#: templates/index.html:218
 msgid "Sur les smartphones compatibles utilisez-la comme une application native"
 msgstr ""
 
-#: templates/index.html:224
+#: templates/index.html:231
 msgid "Vous pouvez même utiliser une liseuse"
 msgstr ""
 
-#: templates/index.html:225
+#: templates/index.html:232
 msgid ""
 "De part leur faible consommation les liseuses peuvent devenir des "
 "interfaces de contrôle idéales."
 msgstr ""
 
-#: templates/index.html:226
+#: templates/index.html:233
 msgid "Interface de Domogik sur une liseuse"
 msgstr ""
 
-#: templates/index.html:237
+#: templates/index.html:244
 msgid "<span class='fine'>Administrez depuis</span> <strong>votre canapé</strong>"
 msgstr ""
 
-#: templates/index.html:243
+#: templates/index.html:250
 msgid "L'administration aussi est responsive"
 msgstr ""
 
-#: templates/index.html:244
+#: templates/index.html:251
 msgid ""
 "Vous n'avez plus besoin d'aller sur votre ordinateur pour configurer un "
 "plugin, créer un périphérique  ou encore créer un scénario."
 msgstr ""
 
-#: templates/index.html:247 templates/index.html:250 templates/index.html:255
+#: templates/index.html:254 templates/index.html:257 templates/index.html:262
 msgid "Administration de Domogik"
 msgstr ""
 
-#: templates/index.html:254
+#: templates/index.html:261
 msgid "Créez des scénarios"
 msgstr ""
 
-#: templates/index.html:267
+#: templates/index.html:274
 msgid "<span class='fine'>Faites du</span> <strong>photoréalisme</strong>"
 msgstr ""
 
-#: templates/index.html:272
+#: templates/index.html:279
 msgid ""
 "Avec Domogik et Openremote, vous pouvez créer des interfaces photo "
 "réalistes"
 msgstr ""
 
-#: templates/index.html:273
+#: templates/index.html:280
 msgid "Openremote et Domogik"
 msgstr ""
 
-#: templates/index.html:287
+#: templates/index.html:294
 msgid "<span class='fine'>Votre</span> <strong>majordome</strong>"
 msgstr ""
 
-#: templates/index.html:294
+#: templates/index.html:301
 msgid ""
 "Le majordome de Domogik est votre assistant. Il suffit de lui parler ou "
 "de lui écrire afin d'interagir avec lui. Une application Android permet "
@@ -439,220 +447,217 @@ msgid ""
 " la rejoindre au fil du temps."
 msgstr ""
 
-#: templates/index.html:295
+#: templates/index.html:302
 msgid ""
 "Il est également très simple de faire progresser et de personnaliser "
 "votre majordome, que ça soit en lui parlant ou même en éditant un simple "
 "fichier."
 msgstr ""
 
-#: templates/index.html:298
+#: templates/index.html:305
 msgid "Contrôlez..."
 msgstr ""
 
-#: templates/index.html:306
+#: templates/index.html:313
 msgid "Quelle est la température du salon"
 msgstr ""
 
-#: templates/index.html:314
+#: templates/index.html:321
 msgid "La température du salon est 21 degrés"
 msgstr ""
 
-#: templates/index.html:324
+#: templates/index.html:331
 msgid "Allume le salon."
 msgstr ""
 
-#: templates/index.html:332
+#: templates/index.html:339
 msgid "OK."
 msgstr ""
 
-#: templates/index.html:336
+#: templates/index.html:343
 msgid "Eduquez..."
 msgstr ""
 
-#: templates/index.html:344 templates/index.html:380
+#: templates/index.html:351 templates/index.html:387
 msgid "Il fait combien dehors ?"
 msgstr ""
 
-#: templates/index.html:352
+#: templates/index.html:359
 msgid "Je n'ai pas compris"
 msgstr ""
 
-#: templates/index.html:362
+#: templates/index.html:369
 msgid ""
 "Quand je dis il fait combien dehors ça signifie quelle est la température"
 " de dehors"
 msgstr ""
 
-#: templates/index.html:370
+#: templates/index.html:377
 msgid "C'est noté."
 msgstr ""
 
-#: templates/index.html:388
+#: templates/index.html:395
 msgid "La température de dehors est 13 degrés"
 msgstr ""
 
-#: templates/index.html:396
+#: templates/index.html:403
 msgid "Laissez le apprendre..."
 msgstr ""
 
-#: templates/index.html:404
+#: templates/index.html:411
 msgid "Peux-tu me donner la météo ?"
 msgstr ""
 
-#: templates/index.html:412
+#: templates/index.html:419
 msgid "Est-ce que cela signifie : quelle est la météo aujourd'hui ?"
 msgstr ""
 
-#: templates/index.html:422
+#: templates/index.html:429
 msgid "Oui"
 msgstr ""
 
-#: templates/index.html:430
+#: templates/index.html:437
 msgid ""
 "Le ciel sera partiellement nuageux. Les températures seront comprises "
 "entre 8 et 19 degrés. "
 msgstr ""
 
-#: templates/index.html:434
+#: templates/index.html:441
 msgid "Faites vous assister..."
 msgstr ""
 
-#: templates/index.html:442
+#: templates/index.html:449
 msgid "Calcule 3 plus 4 fois 5 moins 2"
 msgstr ""
 
-#: templates/index.html:460
+#: templates/index.html:467
 msgid "Dis moi quel est le poids d'une pomme ?"
 msgstr ""
 
-#: templates/index.html:468
+#: templates/index.html:475
 msgid "182 grammes."
 msgstr ""
 
-#: templates/index.html:478
+#: templates/index.html:485
 msgid "Quelle heure est-il ?"
 msgstr ""
 
-#: templates/index.html:486
+#: templates/index.html:493
 msgid "Il est 23 heure 25 "
 msgstr ""
 
-#: templates/index.html:522
+#: templates/index.html:529
 msgid "<span class='fine'>Une solution</span> <strong>ouverte</strong>"
 msgstr ""
 
-#: templates/index.html:530
+#: templates/index.html:537
 msgid "Un de vos besoins domotique n'est pas couvert ?"
 msgstr ""
 
-#: templates/index.html:531
+#: templates/index.html:538
 msgid ""
 "Créez votre propre plugin grâce à la documentation et au code des plugins"
 " existants."
 msgstr ""
 
-#: templates/index.html:534
+#: templates/index.html:541
 msgid "Nos interfaces graphiques ne vous plaisent pas ?"
 msgstr ""
 
-#: templates/index.html:535
+#: templates/index.html:542
 msgid ""
 "Tout le monde n'a pas les mêmes goûts! Si vous n'aimez ni Domoweb, ni "
 "Domodroid vous pouvez grâce aux APIs documentées interagir avec Domogik "
 "et créer votre propre interface!"
 msgstr ""
 
-#: templates/index.html:536
+#: templates/index.html:543
 msgid ""
 "Vous pouvez également utiliser des solutions existantes comme <a "
 "href=\"http://www.openremote.org\">OpenRemote</a> pour créer vore "
 "interface graphique."
 msgstr ""
 
-#: templates/index.html:541
+#: templates/index.html:548
 msgid "Votre majordome est trop rigide ?"
 msgstr ""
 
-#: templates/index.html:542
+#: templates/index.html:549
 msgid "Personnalisez le en lui apprenant facilement d'autres interactions."
 msgstr ""
 
-#: templates/index.html:543
+#: templates/index.html:550
 msgid ""
 "Vous pouvez egalement développer des extensions qui lui feront aller "
 "chercher des informations en ligne."
 msgstr ""
 
-#: templates/index.html:546
+#: templates/index.html:553
 msgid "Vous souhaitez participer à l'aventure ?"
 msgstr ""
 
-#: templates/index.html:547
+#: templates/index.html:554
 msgid ""
 "Que ça soit pour une petite contribution ou une grosse, vous êtes le "
 "bienvenue! Ne soyez pas timides et passez nous voir sur irc."
 msgstr ""
 
-#: templates/layout.html:37
+#: templates/layout.html:43
 msgid "Accueil"
 msgstr ""
 
-#: templates/layout.html:38
+#: templates/layout.html:44
 msgid "Blog"
 msgstr ""
 
-#: templates/layout.html:39 templates/screenshots.html:13
+#: templates/layout.html:45 templates/screenshots.html:5
+#: templates/screenshots.html:20
 msgid "Screenshots"
 msgstr ""
 
-#: templates/layout.html:41
-msgid "FAQ"
-msgstr ""
-
-#: templates/layout.html:45
+#: templates/layout.html:51
 msgid "Langue"
 msgstr ""
 
-#: templates/layout.html:47
+#: templates/layout.html:53
 msgid "Français"
 msgstr ""
 
-#: templates/layout.html:48
+#: templates/layout.html:54
 msgid "Anglais"
 msgstr ""
 
-#: templates/layout.html:49
+#: templates/layout.html:55
 msgid "Russe"
 msgstr ""
 
-#: templates/layout.html:67
+#: templates/layout.html:73
 msgid "Derniers tweets"
 msgstr ""
 
-#: templates/layout.html:73
+#: templates/layout.html:79
 msgid "Contacts"
 msgstr ""
 
-#: templates/layout.html:80
+#: templates/layout.html:86
 msgid ""
 "Le canal irc est le meilleur média pour prendre contact avec l'équipe de "
 "Domogik. Il est possible d'y parler français ou anglais."
 msgstr ""
 
-#: templates/layout.html:83
+#: templates/layout.html:89
 msgid "Ressources"
 msgstr ""
 
-#: templates/layout.html:85
+#: templates/layout.html:91
 msgid "API"
 msgstr ""
 
-#: templates/layout.html:86
+#: templates/layout.html:92
 msgid "Sources sur GitHub"
 msgstr ""
 
-#: templates/layout.html:87
+#: templates/layout.html:93
 msgid "Dépot de packages"
 msgstr ""
 
