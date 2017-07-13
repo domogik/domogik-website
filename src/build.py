@@ -27,7 +27,7 @@ IMAGES_DIR = "./images"
 BLOG_URL_PREFIX = "./"
 SITEMAP_TEMPLATE = "./sitemap.xml"
 
-LANG = ["fr", "en", "ru_RU"]
+LANG = ["fr", "en", "ru"]
 #LANG_READMORE = {"fr" : u"Lire plus...", 
 #                 "en" : u"Read more...",
 #                 "ru_RU" : u"Read more..."}
@@ -36,10 +36,10 @@ LANG = ["fr", "en", "ru_RU"]
 #                  "ru_RU" : u"Published on "}
 LANG_SCREENSHOT = {"fr" : u"Capture d'écran de Domogik",
                    "en" : u"Domogik screenshot",
-                   "ru_RU" : u"Domogik screenshot"}
+                   "ru" : u"Domogik screenshot"}
 LANG_IMAGES = {"fr" : u"Domogik, pour connecter votre maison.",
                    "en" : u"Domogik, your connected house.",
-                   "ru_RU" : u"Domogik, your connected house."}
+                   "ru" : u"Domogik, your connected house."}
 
 
 
