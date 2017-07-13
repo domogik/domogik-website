@@ -17,11 +17,21 @@ for lang in $LANGS
     curl -i -L --user $LOGIN:$PASSWORD -X GET "https://www.transifex.com/api/2/project/$PROJECT/resource/$RESOURCE/translation/$lang/?mode=reviewed&file" > $LOCALE_DIR/$lang/LC_MESSAGES/website.po
 done
 
-echo "Done!"
+echo ""
+echo "Check if there was an issue during authentication..."
+grep 401 locale/*/LC_MESSAGES/*
+if [[ $? -eq 0 ]] ; then
+    echo "ERROR : you have used a bad login/password"
+    echo "Exiting..."
+    exit 1
+else
+    echo "... ok"
+fi
+echo "...done"
 
 # build the catalogs
 echo ""
 echo "Build the translations"
 echo "==== i18n : build the catalogs ===="
 pybabel compile -f --directory $LOCALE_DIR --domain $DOMAIN
-
+echo "...done"
