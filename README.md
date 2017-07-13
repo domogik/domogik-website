@@ -43,6 +43,7 @@ You need to upgrade the below files :
 * src/index.html and src/404.html : the if clause
 * src/build_i18n_catalog.sh : LANG
 * src/build.py : LANG
+* src/templates/layout.html : the dropdown menu
 
 Then Launch the script **src/build_i18n_catalog.sh** to build the new language catalogs.
 
