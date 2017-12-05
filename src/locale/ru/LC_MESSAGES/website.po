@@ -3,14 +3,14 @@ Server: nginx
 Vary: Accept-Encoding
 Cache-Control: max-age=0
 Content-Type: text/x-po
-Date: Thu, 13 Jul 2017 11:55:38 GMT
-Expires: Thu, 13 Jul 2017 11:55:38 GMT
+Date: Tue, 05 Dec 2017 08:38:10 GMT
+Expires: Tue, 05 Dec 2017 08:38:10 GMT
 Accept-Ranges: bytes
 X-Content-Type-Options: nosniff
 Content-Disposition: attachment; filename=UTF-8''i18n_website_template.pot_ru.po
 Connection: keep-alive
 Set-Cookie: X-Mapping-fjhppofk=A44BEC4CD0B51682CDC2AA3E9CCFDDF4; path=/
-Last-Modified: Thu, 13 Jul 2017 11:55:38 GMT
+Last-Modified: Tue, 05 Dec 2017 08:38:10 GMT
 Content-Length: 29465
 
 # Translations template for PROJECT.
@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: domogik-website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-02-13 20:26+0100\n"
-"PO-Revision-Date: 2017-07-11 04:46+0000\n"
+"PO-Revision-Date: 2017-09-24 00:06+0000\n"
 "Last-Translator: axboct <axboct@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/domogik/domogik-website/language/ru/)\n"
 "MIME-Version: 1.0\n"

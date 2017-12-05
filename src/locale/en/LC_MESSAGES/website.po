@@ -3,15 +3,15 @@ Server: nginx
 Vary: Accept-Encoding
 Cache-Control: max-age=0
 Content-Type: text/x-po
-Date: Thu, 13 Jul 2017 11:55:38 GMT
-Expires: Thu, 13 Jul 2017 11:55:38 GMT
+Date: Tue, 05 Dec 2017 08:38:10 GMT
+Expires: Tue, 05 Dec 2017 08:38:10 GMT
 Accept-Ranges: bytes
 X-Content-Type-Options: nosniff
 Content-Disposition: attachment; filename=UTF-8''i18n_website_template.pot_en.po
 Connection: keep-alive
-Set-Cookie: X-Mapping-fjhppofk=300CA58EE011BC6BC0E393EE4F2B31F6; path=/
-Last-Modified: Thu, 13 Jul 2017 11:55:38 GMT
-Content-Length: 23671
+Set-Cookie: X-Mapping-fjhppofk=A44BEC4CD0B51682CDC2AA3E9CCFDDF4; path=/
+Last-Modified: Tue, 05 Dec 2017 08:38:10 GMT
+Content-Length: 23660
 
 # Translations template for PROJECT.
 # Copyright (C) 2017 ORGANIZATION
@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: domogik-website\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-02-13 20:26+0100\n"
-"PO-Revision-Date: 2017-02-13 19:27+0000\n"
+"PO-Revision-Date: 2017-12-05 08:34+0000\n"
 "Last-Translator: fritzsmh <fritz.smh@gmail.com>\n"
 "Language-Team: English (http://www.transifex.com/domogik/domogik-website/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -277,7 +277,7 @@ msgstr "It allows you to:"
 
 #: templates/index.html:91
 msgid "<strong>Contrôler</strong> vos lumières, volets, etc."
-msgstr "<strong> Controlling </strong> your lights, shutters, etc."
+msgstr "<strong> Control </strong> your lights, shutters, etc."
 
 #: templates/index.html:92
 msgid ""
@@ -410,7 +410,7 @@ msgstr "Domogik's interface on an e-reader"
 #: templates/index.html:237
 msgid ""
 "<span class='fine'>Administrez depuis</span> <strong>votre canapé</strong>"
-msgstr "<span class='fine'>Administrate from</span> <strong>your couche</strong>"
+msgstr "<span class='fine'>Administer from</span> <strong>your couch</strong>"
 
 #: templates/index.html:243
 msgid "L'administration aussi est responsive"
@@ -432,7 +432,7 @@ msgstr "Create scenarios"
 
 #: templates/index.html:267
 msgid "<span class='fine'>Faites du</span> <strong>photoréalisme</strong>"
-msgstr "<span class='fine'>Create</span <strong>photorealism</strong> <span class='fine'>interfaces</span>"
+msgstr "<span class='fine'>Create</span> photorealistic</strong> <span class='fine'>interfaces</span>"
 
 #: templates/index.html:272
 msgid ""
@@ -555,7 +555,7 @@ msgstr "It is 23 25"
 
 #: templates/index.html:522
 msgid "<span class='fine'>Une solution</span> <strong>ouverte</strong>"
-msgstr "<span class='fine'>A</span> <strong>open</strong> <span class='fine'>solution</span>"
+msgstr "<span class='fine'>An</span> <strong>open</strong> <span class='fine'>solution</span>"
 
 #: templates/index.html:530
 msgid "Un de vos besoins domotique n'est pas couvert ?"
